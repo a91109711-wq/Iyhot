@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>有話大聲說</title>
 
+<style>
+body {
+    font-family: Arial, "Microsoft JhengHei", sans-serif;
+    background-color: #0d1b2a;
+    margin: 0;
+    color: white;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+textarea {
+    height: 120px;
+}
+
+button {
+    width: 100%;
+    background-color: #1b263b;
+    color: white;
+    padding: 15px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="title">
+有話大聲說
+</div>
+
+<form action="https://formsubmit.co/Albert.c@inyuan.com.tw" method="POST">
+
+<label>姓名</label>
+<input type="text" name="姓名" required>
+
+<label>性別</label>
+<select name="性別">
+<option>男</option>
+<option>女</option>
+<option>不方便透露</option>
+</select>
+
+<label>店名</label>
+<input type="text" name="店名" required>
+
+<label>內容</label>
+<textarea name="內容" required></textarea>
+
+<input type="hidden" name="_subject" value="有話大聲說 回報">
+
+<button type="submit">
+送出
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
