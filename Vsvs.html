@@ -3,105 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>產品規格中心 - 官方技術支援平台</title>
+    <title>W-880 系列規格對照 - 產品服務中心</title>
     <style>
         :root { --bg: #0f172a; --card: #1e293b; --blue: #38bdf8; --white: #f8fafc; --gold: #fbbf24; --gray: #94a3b8; }
         body { background: var(--bg); color: var(--white); font-family: -apple-system, sans-serif; margin: 0; padding: 15px; line-height: 1.6; }
-        h1, h2 { color: var(--blue); text-align: center; }
-        .official-note { text-align: center; color: var(--gold); font-size: 0.8rem; margin-bottom: 20px; border: 1px solid var(--gold); display: inline-block; padding: 2px 10px; border-radius: 4px; width: 100%; box-sizing: border-box; }
+        h1 { color: var(--blue); text-align: center; font-size: 1.6rem; text-shadow: 0 0 10px rgba(56,189,248,0.3); margin-top: 30px; }
+        .official-header { text-align: center; margin-bottom: 30px; }
+        .official-header span { border: 1px solid var(--blue); color: var(--blue); padding: 3px 15px; border-radius: 5px; font-size: 0.75rem; text-transform: uppercase; }
         
-        /* 規格表格 */
-        .table-container { width: 100%; overflow-x: auto; border-radius: 12px; background: var(--card); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        table { width: 100%; border-collapse: collapse; min-width: 750px; font-size: 0.85rem; }
-        th, td { padding: 16px 10px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        /* 深度比較表格 */
+        .table-container { width: 100%; overflow-x: auto; border-radius: 12px; background: var(--card); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+        table { width: 100%; border-collapse: collapse; min-width: 500px; font-size: 0.9rem; }
+        th, td { padding: 18px 12px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); }
         th { background: rgba(56, 189, 248, 0.2); color: var(--blue); font-weight: bold; }
-        .feature-name { text-align: left !important; background: rgba(255,255,255,0.03); width: 120px; font-weight: bold; position: sticky; left: 0; z-index: 2; border-right: 1px solid rgba(255,255,255,0.05); }
         
-        .highlight { color: var(--gold); }
-        .btn-box { margin: 30px auto; max-width: 400px; display: flex; flex-direction: column; gap: 10px; }
-        .btn { display: block; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1rem; }
-        .btn-blue { background: #2563eb; color: white; }
-        .footer { text-align: center; margin-top: 50px; color: #475569; font-size: 0.75rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+        .feature-name { text-align: left !important; background: rgba(255,255,255,0.03); width: 110px; font-weight: bold; position: sticky; left: 0; z-index: 2; border-right: 1px solid rgba(255,255,255,0.05); color: var(--gray); }
+        .highlight { color: var(--gold); font-weight: bold; }
+        .spec-label { display: block; font-size: 0.75rem; color: #64748b; margin-top: 5px; }
+        
+        .desc-box { margin-top: 30px; padding: 20px; background: rgba(255, 255, 255, 0.02); border-radius: 12px; font-size: 0.9rem; }
+        .desc-box h3 { color: var(--gold); margin-top: 0; font-size: 1.1rem; }
+        
+        .footer { text-align: center; margin-top: 50px; color: #475569; font-size: 0.75rem; border-top: 1px solid rgba(255,255,255,0.1); padding: 30px 0; }
     </style>
 </head>
 <body>
 
-    <h1>💎 全系列機型規格對照</h1>
-    <div style="text-align: center;"><span class="official-note">官方規格依據：音圓國際產品技術手冊</span></div>
+    <h1>⚖️ W-880 系列產品深度對照</h1>
+    <div class="official-header"><span>Official Product Comparison</span></div>
 
     <div class="table-container">
         <table>
             <thead>
                 <tr>
-                    <th class="feature-name">技術規格</th>
-                    <th>STAR 55 (N2-55)</th>
-                    <th>STAR 46 (N2-46)</th>
-                    <th>STAR 25 (N2-25)</th>
-                    <th>W-880P+</th>
+                    <th class="feature-name">核心參數</th>
+                    <th>W-880 專業主機</th>
+                    <th>W-880P+ 行動一體機</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td class="feature-name">顯示輸出</td>
-                    <td class="highlight">4K UHD / 雙螢幕</td>
-                    <td>4K UHD / 單螢幕</td>
-                    <td>1080P Full HD</td>
-                    <td class="highlight">18.5" 觸控旋轉螢幕</td>
+                    <td class="feature-name">機型定位</td>
+                    <td>固定式家庭劇院<span class="spec-label">適合客廳/包廂安裝</span></td>
+                    <td class="highlight">行動式一體化設計<span class="spec-label">隨開即唱，高機動性</span></td>
                 </tr>
                 <tr>
-                    <td class="feature-name">音源晶片</td>
-                    <td>Japan Roland</td>
-                    <td>Japan Roland</td>
-                    <td>Standard MIDI</td>
-                    <td class="highlight">Japan Roland II</td>
+                    <td class="feature-name">顯示架構</td>
+                    <td>支援外部 4K UHD 輸出<span class="spec-label">對應大型電視/投影機</span></td>
+                    <td class="highlight">內建 18.5 吋觸控螢幕<span class="spec-label">支援同步 HDMI 輸出</span></td>
                 </tr>
                 <tr>
-                    <td class="feature-name">硬碟容量</td>
-                    <td>標配 4TB / 8TB</td>
-                    <td>標配 4TB</td>
-                    <td>標配 2TB</td>
-                    <td>標配 4TB (可擴充)</td>
+                    <td class="feature-name">音源系統</td>
+                    <td>Roland 專業音源晶片<span class="spec-label">頂級 MIDI 音質</span></td>
+                    <td class="highlight">Roland II 高階處理器<span class="spec-label">針對戶外演唱優化</span></td>
                 </tr>
                 <tr>
-                    <td class="feature-name">YouTube 整合</td>
-                    <td>支援 (人聲消除/升降調)</td>
-                    <td>支援 (人聲消除/升降調)</td>
-                    <td>基礎支援</td>
-                    <td class="highlight">深度整合 (專屬入口)</td>
+                    <td class="feature-name">影像解析</td>
+                    <td class="highlight">4K 極致解碼輸出</td>
+                    <td>1080P 高畫質解析</td>
                 </tr>
                 <tr>
-                    <td class="feature-name">AI 語音搜歌</td>
-                    <td>內建 (N2 APP 同步)</td>
-                    <td>內建 (N2 APP 同步)</td>
-                    <td>選配裝置</td>
-                    <td>內建 (支援語音聲控)</td>
+                    <td class="feature-name">網路功能</td>
+                    <td>Gigabit 高速下載<span class="spec-label">支援 YouTube 互動</span></td>
+                    <td>內建 Wi-Fi / 高速下載<span class="spec-label">深度整合雲端歌庫</span></td>
                 </tr>
                 <tr>
-                    <td class="feature-name">錄音/評分</td>
-                    <td>智慧評分 / 錄音備份</td>
-                    <td>智慧評分 / 錄音備份</td>
-                    <td>基礎評分</td>
-                    <td class="highlight">簡譜錄影 / 智慧評分</td>
-                </tr>
-                <tr>
-                    <td class="feature-name">適用定位</td>
-                    <td>頂級豪宅 / 商業會所</td>
-                    <td>標準家庭 / 視聽室</td>
-                    <td>個人空間 / 初階首選</td>
-                    <td>行動舞台 / 里民活動</td>
+                    <td class="feature-name">輸入/控制</td>
+                    <td>AI 智慧語音/APP控制</td>
+                    <td class="highlight">10 點觸控/AI 語音/APP</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <div class="btn-box">
-        <a href="https://a91109711-wq.github.io/Iyhot/W-880-DM.pdf" class="btn btn-blue">查看 W-880 官方 DM</a>
-        <a href="https://a91109711-wq.github.io/Iyhot/N-Series.pdf" class="btn" style="border: 1px solid var(--blue); color: var(--blue);">查看 STAR 系列型錄</a>
+    <div class="desc-box">
+        <h3>💡 選購指引</h3>
+        <p>
+            ● <b>W-880 專業主機：</b> 推薦給已有音響系統與大型電視的家庭客戶，追求極致畫質與專業劇院感受。<br>
+            ● <b>W-880P+ 行動一體機：</b> 推薦給有戶外歌唱、里民活動或需要隨時移動設備的客戶，內建觸控大螢幕讓操作更直覺。
+        </p>
     </div>
 
     <div class="footer">
-        音圓產品技術支援中心<br>
-        本頁面規格資訊同步官方手冊，實際出貨依官方標配為準
+        產品規格服務中心<br>
+        本網頁資訊同步自官方最新產品手冊<br>
+        © 2026 Inyuan Service Platform
     </div>
 
 </body>
