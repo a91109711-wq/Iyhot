@@ -3,92 +3,343 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音圓伴唱機 - 技術支援與常見問題 (FAQ)</title>
     <style>
-        :root { --primary-color: #0056b3; --accent-color: #ff4d4f; --bg-gray: #f8f9fa; }
-        body { font-family: "Microsoft JhengHei", sans-serif; background-color: #f4f7f6; color: #333; line-height: 1.6; margin: 0; padding: 20px; }
-        .container { max-width: 950px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        body {
+            font-family: "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #00c300;
+            padding-bottom: 20px;
+        }
+        h1 {
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+        .date {
+            color: #666;
+            font-size: 0.9em;
+        }
+        h2 {
+            color: #00c300;
+            border-left: 5px solid #00c300;
+            padding-left: 15px;
+            margin-top: 30px;
+        }
+        .qa-box {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        .question {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .question::before {
+            content: "Q：";
+            color: #e74c3c;
+            margin-right: 5px;
+            min-width: 30px;
+        }
+        .answer {
+            color: #555;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+        }
+        .answer-content {
+            display: flex;
+            align-items: flex-start;
+            width: 100%;
+        }
+        .answer-content::before {
+            content: "A：";
+            color: #00c300;
+            font-weight: bold;
+            margin-right: 5px;
+            min-width: 30px;
+        }
+        .code-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background-color: #fff;
+            font-size: 0.95em;
+        }
+        .code-table th, .code-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .code-table th {
+            background-color: #00c300;
+            color: white;
+        }
+        .code-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            color: white;
+            margin-left: 10px;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+        .tag-alert { background-color: #e74c3c; animation: blink 1.5s infinite; } 
+        .tag-new { background-color: #e74c3c; } 
+        .tag-fix { background-color: #3498db; } 
+        .tag-wait { background-color: #f39c12; } 
+        .tag-info { background-color: #2ecc71; } 
+        .tag-hw { background-color: #8e44ad; } 
         
-        /* Header */
-        .header { border-bottom: 3px solid var(--primary-color); padding-bottom: 15px; margin-bottom: 30px; display: flex; justify-content: space-between; align-items: flex-end; }
-        .header h1 { margin: 0; color: var(--primary-color); font-size: 26px; }
-        .last-update { font-size: 13px; color: #888; }
-
-        /* Section Titles */
-        h2 { font-size: 20px; border-left: 5px solid var(--primary-color); padding-left: 12px; margin-top: 40px; margin-bottom: 20px; color: #444; }
-
-        /* Table Style */
-        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
-        th { background: var(--bg-gray); padding: 15px; text-align: left; border-bottom: 2px solid #ddd; }
-        td { padding: 15px; border-bottom: 1px solid #eee; }
-        .new-tag { background: var(--accent-color); color: white; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: bold; margin-left: 8px; }
-        .download-btn { background: var(--primary-color); color: white; text-decoration: none; padding: 6px 12px; border-radius: 5px; font-size: 13px; }
-
-        /* FAQ Style */
-        .faq-item { background: #fff; border: 1px solid #e1e4e8; border-radius: 8px; padding: 15px; margin-bottom: 12px; }
-        .faq-q { font-weight: bold; color: var(--primary-color); margin-bottom: 8px; display: flex; align-items: center; }
-        .faq-q::before { content: "Q:"; margin-right: 8px; font-size: 18px; }
-        .faq-a { color: #555; padding-left: 26px; }
+        @keyframes blink {
+            50% { opacity: 0.6; }
+        }
 
         /* Repair Section */
-        .repair-box { background: #fff0f0; border: 1px dashed var(--accent-color); padding: 20px; border-radius: 8px; text-align: center; }
-        .repair-btn { display: inline-block; background: var(--accent-color); color: white; text-decoration: none; padding: 12px 30px; border-radius: 25px; font-weight: bold; font-size: 16px; margin-top: 15px; transition: 0.3s; }
-        .repair-btn:hover { background: #d32f2f; transform: scale(1.05); }
+        .repair-section {
+            background-color: #fff0f0;
+            border: 2px dashed #e74c3c;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .repair-btn {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+        .repair-btn:hover { background-color: #c0392b; transform: scale(1.05); }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.8em;
+            color: #aaa;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="header">
-        <h1>產品售後維護中心</h1>
-        <span class="last-update">最後更新時間：2026-03-28 22:24</span>
-    </div>
+    <header>
+        <h1>音圓伴唱機 (INYuan) 技術支援與常見問題 (FAQ)</h1>
+        <p class="date">最後更新日期：2026年03月28日</p>
+    </header>
 
-    <h2>最新軟體版本更新</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>產品型號</th>
-                <th>最新版本</th>
-                <th>更新內容</th>
-                <th>下載</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Star 系列 (STAR-55)</strong></td>
-                <td>v1.08 <span class="new-tag">NEW</span></td>
-                <td>優化 YouTube 播放流暢度</td>
-                <td><a href="https://reurl.cc/7EDlk5" class="download-btn" target="_blank">點此下載</a></td>
-            </tr>
-            <tr>
-                <td><strong>Party 系列 (PARTY-7000)</strong></td>
-                <td>v1.09 <span class="new-tag">NEW</span></td>
-                <td>優化 YouTube 播放流暢度</td>
-                <td><a href="https://reurl.cc/gr2lzR" class="download-btn" target="_blank">點此下載</a></td>
-            </tr>
-        </tbody>
-    </table>
+    <section>
+        <h2>🔧 系統與軟體除錯 (Bug Report)</h2>
 
-    <h2>常見問題與解決方法 (FAQ)</h2>
-    <div class="faq-item">
-        <div class="faq-q">YouTube 播放時出現卡頓或無法讀取？</div>
-        <div class="faq-a">請先確認網路連線是否正常。若網路無誤，請更新至最新版本 (Star v1.08 / Party v1.09)，此版本已針對 YouTube 播放進行大幅優化。</div>
-    </div>
-    <div class="faq-item">
-        <div class="faq-q">Star 系列發生無聲 Bug？</div>
-        <div class="faq-a">請進入系統設定，檢查音訊輸出通道是否正確切換，或嘗試將系統恢復原廠設定後重啟。</div>
-    </div>
-    <div class="faq-item">
-        <div class="faq-q">觸控螢幕點擊位置不準確？</div>
-        <div class="faq-a">請執行系統內建的「螢幕校正工具」，依照指示點擊十字標記中心點即可完成修正。</div>
-    </div>
+        <div class="qa-box">
+            <div class="question">YouTube 播放出現轉圈圈或讀取不順？<span class="tag tag-fix">已優化更新</span></div>
+            <div class="answer">
+                <div class="answer-content">
+                    <div>
+                        針對 YouTube 播放問題，官方已於 3/25 發布優化版本。
+                        請將 **Star系列更新至 v1.08**，**Party系列更新至 v1.09**，即可大幅改善播放穩定性。
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <h2>線上維護與報修</h2>
-    <div class="repair-box">
-        <p>如嘗試上述解決方法仍無法排除故障，請點擊下方按鈕進行線上報修。</p>
-        <p style="font-size: 14px; color: #666;">（報修時請備妥：店家名稱、聯絡電話、機型及故障描述影片）</p>
+        <div class="qa-box">
+            <div class="question">Star-25 跳出娛樂功能(YouTube)後，機器變無聲？<span class="tag tag-fix">已修正</span></div>
+            <div class="answer">
+                <div class="answer-content">
+                    <div>這是已知問題，特定歌曲播放後也會出現。目前需重開機恢復，官方確認下一個發布版本已修正。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="qa-box">
+            <div class="question">機器無法「收藏歌曲」或同步出現異常？<span class="tag tag-info">建議嘗試</span></div>
+            <div class="answer">
+                <div class="answer-content">
+                    <div>可能是資料庫內有特殊字元導致。嘗試刪除或收藏一首歌曲後，再次執行同步，重啟即可。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="qa-box">
+            <div class="question">網路升級一半跳回暖場且遙控器沒反應，是當機嗎？<span class="tag tag-info">正常現象</span></div>
+            <div class="answer">
+                <div class="answer-content">
+                    <div>這不是當機，系統會在後台繼續下載程式包。請稍候片刻等待下載完成，切勿強制關機。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="qa-box">
+            <div class="question">使用 SmartTube 音量會自動跳到 70 且無法記憶？<span class="tag tag-fix">已修正</span></div>
+            <div class="answer">
+                <div class="answer-content">
+                    <div>這是音量記憶的 Bug，發生於進入第三方 App 時。官方將於下一個版本進行修正。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="qa-box">
+            <div class="question">為什麼 Party-7000 畫面沒有顯示時間？<span class="tag tag-wait">等待更新</span></div>
+            <div class="answer">
+                <div class="answer-content">
+                    <div>官方確認這是新發現的問題，並非設計如此。將列入未來軟體更新中進行修復。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="qa-box">
+            <div class="question">AI 小圓語音點歌沒有畫面，或反應遲鈍？<span class="tag tag-info">建議嘗試</span></div>
+            <div class="answer">
+                <div class="answer-content">
+                    <div>此功能依賴網路環境，連線不穩可能導致無畫面。目前小圓僅支援觸控操作，長按喚醒之反應時間尚在優化中。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="qa-box">
+            <div class="question">Star 系列升級後，錄影影音不同步？<span class="tag tag-wait">內部測試中</span></div>
+            <div class="answer">
+                <div class="answer-content">
+                    <div>這是近期客戶回報的新狀況。研發部門正嘗試複製並分析不同步之原因。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>🔌 硬體維修與維護 (Hardware & Maintenance)</h2>
+
+        <div class="qa-box">
+            <div class="question">插 3.5mm 接收線可點歌，卻無法開關機？<span class="tag tag-info">硬體限制</span></div>
+            <div class="answer">
+                <div class="answer-content">
+                    <div>新機待機時後方插孔會斷電，因此收不到開機訊號。建議使用 USB 供電之紅外線延伸器，並貼於正面面板接收點。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="qa-box">
+            <div class="question">機器出現巨大爆音或強烈噪音，如何排解？<span class="tag tag-hw">硬體維修</span></div>
+            <div class="answer">
+                <div class="answer-content">
+                    <div>這屬於硬體異常狀況，需回廠更換主機板上的零件 Q8223 與 Q8234。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="qa-box">
+            <div class="question">拆機發現主機板未安裝鈕扣電池，會有影響嗎？<span class="tag tag-info">正常現象</span></div>
+            <div class="answer">
+                <div class="answer-content">
+                    <div>官方確認鈕扣電池之有無並不影響機器正常開機運作。目前維修檢測結果證實此項目無影響。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="qa-box">
+            <div class="question">觸控螢幕開機常沒畫面，需手動重調？<span class="tag tag-info">檢修方向</span></div>
+            <div class="answer">
+                <div class="answer-content">
+                    <div>通常是現場 VGA 線材不良或 HDMI 轉接頭相容性所致。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="qa-box">
+            <div class="question">升級後 LAN/HDD 燈閃爍變慢是故障嗎？<span class="tag tag-info">設計變更</span></div>
+            <div class="answer">
+                <div class="answer-content">
+                    <div>官方證實這是硬體設計變更導致的現象，並非故障。燈號邏輯與舊版不同。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>💡 操作小知識 (Operation Tips)</h2>
+
+        <div class="qa-box">
+            <div class="question">如何使用「歌號區間」自動點播功能？</div>
+            <div class="answer">
+                <div class="answer-content">
+                    <div style="width: 100%;">
+                        直接輸入代碼：
+                        <table class="code-table">
+                            <thead>
+                                <tr><th>類型</th><th>代碼</th><th>類型</th><th>代碼</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>國語</td><td>1 / 0001</td><td>日文</td><td>5 / 0005</td></tr>
+                                <tr><td>台語</td><td>2 / 0002</td><td>原聲</td><td>6 / 0006</td></tr>
+                                <tr><td>客語</td><td>3 / 0003</td><td>影音</td><td>7 / 0007</td></tr>
+                                <tr><td>隨機</td><td>0 / 0000</td><td>最愛</td><td>8 / 0008</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="qa-box">
+            <div class="question">更新後有沒有什麼快速點歌的方法？</div>
+            <div class="answer">
+                <div class="answer-content">
+                    <div>直接點擊螢幕右上角的 **[音圓] (INYuan) LOGO**，系統會立即跳出歌號輸入視窗。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="qa-box">
+            <div class="question">機器可以連接藍牙耳機使用嗎？</div>
+            <div class="answer">
+                <div class="answer-content">
+                    <div>可以，需透過外接藍牙發射器。插在機台耳機孔或 Audio Out 進行配對即可。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="repair-section">
+        <h2>🛠️ 線上報修申請</h2>
+        <p>若以上方法仍無法解決您的問題，請點擊下方按鈕進行報修。</p>
+        <p style="font-size: 0.9em; color: #666;">（請備妥：機型、故障描述影片、聯絡電話）</p>
         <a href="https://line.me/R/ti/p/@inyuan" class="repair-btn" target="_blank">前往官方 LINE@ 報修</a>
-    </div>
+    </section>
+
+    <footer>
+        <p>© 2026 INYUAN Internal Support Summary</p>
+    </footer>
 </div>
 
 </body>
