@@ -135,39 +135,8 @@
         <h2>👇 還是找不到解決辦法嗎？ 👇</h2>
         <p>點擊下方按鈕，直接將問題回報給專屬服務窗口，我們會盡快為您處理！</p>
         
-        <a href="#" id="lineBtn" class="contact-btn">🚨 我有問題，聯絡專人協助 🚨</a>
+        <a href="https://line.me/R/oaMessage/@501vumfz/?我要報修" class="contact-btn">🚨 我有問題，聯絡專人協助 🚨</a>
     </div>
-
-    <script>
-        // 這裡已經換成你的 音圓秋天服務窗口 LINE@ ID
-        const lineId = "@501vumfz"; 
-
-        // 這是要預先填寫好的表單訊息
-        const messageText = `老闆您好！為了能最快協助您排除問題，請幫我填寫以下資訊，並直接回傳到本 LINE@，會盡快為您處理：
-
-【店家基本資料】
-• 店家名稱：
-• 聯絡電話：
-• 聯絡人：
-
-【產品問題描述】
-• 發生問題的機型： (例如：Party-7000, Star-55, N2-550 等)
-• 問題狀況簡述：
-(請簡短描述遇到的狀況，例如：YouTube 無法播放、麥克風無聲、畫面卡頓等)
-
-💡 【加速處理小提醒】
-如果方便的話，請直接將「故障畫面」或「操作影片」傳送到本 LINE@，這能幫助更準確判斷問題點，縮短維修時間喔！`;
-
-        // 將訊息轉換為 URL 編碼格式，這樣 LINE 才看得懂換行和特殊字元
-        const encodedMessage = encodeURIComponent(messageText);
-
-        // 組合 LINE 的 URL Scheme
-        // 格式： https://line.me/R/oaMessage/{LINE_ID}/?{預設訊息}
-        const lineUrl = `https://line.me/R/oaMessage/${lineId}/?${encodedMessage}`;
-
-        // 將組合好的網址塞進按鈕裡面
-        document.getElementById('lineBtn').href = lineUrl;
-    </script>
 
 </body>
 </html>
