@@ -1,142 +1,60 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>音圓機台常見問題與故障排除 (FAQ)</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        h1 {
-            text-align: center;
-            color: #0056b3;
-            border-bottom: 2px solid #0056b3;
-            padding-bottom: 10px;
-        }
-        .intro {
-            background-color: #e6f2ff;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-        .faq-section {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-        .faq-item {
-            margin-bottom: 15px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-        }
-        .faq-item:last-child {
-            border-bottom: none;
-        }
-        .question {
-            font-weight: bold;
-            color: #d9534f;
-            margin-bottom: 5px;
-        }
-        .answer {
-            margin-left: 20px;
-            color: #555;
-        }
-        .contact-section {
-            text-align: center;
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .contact-btn {
-            display: inline-block;
-            background-color: #00c300; /* LINE 綠色 */
-            color: white;
-            font-size: 1.2em;
-            font-weight: bold;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 30px;
-            margin-top: 15px;
-            transition: background-color 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .contact-btn:hover {
-            background-color: #009900;
-        }
+        .update-box { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft JhengHei", sans-serif; max-width: 900px; margin: 20px auto; padding: 25px; border: 1px solid #e1e4e8; border-radius: 12px; background-color: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .update-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #0056b3; padding-bottom: 15px; margin-bottom: 20px; }
+        .update-title { font-size: 22px; color: #0056b3; font-weight: bold; margin: 0; }
+        table { width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 8px; }
+        th { background-color: #f0f4f8; color: #333; font-weight: 600; text-align: left; padding: 15px; border-bottom: 2px solid #dee2e6; }
+        td { padding: 15px; border-bottom: 1px solid #eee; vertical-align: middle; }
+        .product-name { font-weight: bold; color: #333; }
+        .version-badge { background-color: #e8f0fe; color: #1967d2; padding: 4px 10px; border-radius: 15px; font-size: 14px; font-weight: 500; }
+        .new-tag { background-color: #ff4d4f; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; margin-left: 8px; vertical-align: middle; text-transform: uppercase; }
+        .update-note { color: #666; font-size: 14px; line-height: 1.5; }
+        .download-link { display: inline-block; background-color: #007bff; color: white; text-decoration: none; padding: 8px 16px; border-radius: 6px; font-size: 14px; transition: background 0.2s; }
+        .download-link:hover { background-color: #0056b3; }
+        .footer-info { margin-top: 25px; text-align: right; border-top: 1px solid #eee; padding-top: 15px; color: #888; font-size: 13px; }
     </style>
 </head>
 <body>
 
-    <h1>音圓機台常見問題與故障排除</h1>
-
-    <div class="intro">
-        👉 店家老闆您好，遇到狀況別慌張！請先看看以下常見問題，有機會在 1 分鐘內快速解決喔：
+<div class="update-box">
+    <div class="update-header">
+        <h1 class="update-title">音圓產品軟體更新公告</h1>
     </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>機型系列</th>
+                <th>最新版本</th>
+                <th>更新重點</th>
+                <th>下載路徑</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="product-name">Star 系列 (STAR-55)</td>
+                <td><span class="version-badge">v1.08</span><span class="new-tag">NEW</span></td>
+                <td class="update-note">1. 優化 YouTube 播放功能</td>
+                <td><a href="https://reurl.cc/7EDlk5" class="download-link" target="_blank">下載更新檔</a></td>
+            </tr>
+            <tr>
+                <td class="product-name">Party 系列 (PARTY-7000)</td>
+                <td><span class="version-badge">v1.09</span><span class="new-tag">NEW</span></td>
+                <td class="update-note">1. 優化 YouTube 播放功能</td>
+                <td><a href="https://reurl.cc/gr2lzR" class="download-link" target="_blank">下載更新檔</a></td>
+            </tr>
+        </tbody>
+    </table>
 
-    <div class="faq-section">
-        <h2>🛠️ 1. 網路與影音類</h2>
-        
-        <div class="faq-item">
-            <div class="question">❓ 問題：YouTube 一直轉圈圈、卡頓或無法播放</div>
-            <div class="answer">
-                💡 <strong>解決方法：</strong><br>
-                1. 檢查網路連線，建議優先插上「實體網路線」或連接「5G 頻段 Wi-Fi」。<br>
-                2. 進入機台【設定】 -> 【應用程式管理】 -> 找到 YouTube 插件並【清除快取】。<br>
-                3. 將主機重新開機即可恢復。
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="question">❓ 問題：機台開機後沒有聲音 (常見於 Star 系列)</div>
-            <div class="answer">
-                💡 <strong>解決方法：</strong><br>
-                1. 這是偶發的音源輸出未抓取狀況。請進設定手動切換一次音源輸出，讓系統重新偵測。<br>
-                2. 確認已將系統版本更新至最新版本。
-            </div>
-        </div>
+    <div class="footer-info">
+        最後更新時間：2026-03-28 22:17:28
     </div>
-
-    <div class="faq-section">
-        <h2>🛠️ 2. 硬體與周邊類</h2>
-        
-        <div class="faq-item">
-            <div class="question">❓ 問題：外接觸控螢幕點擊不準，或是沒反應</div>
-            <div class="answer">
-                💡 <strong>解決方法：</strong><br>
-                1. 確認「HDMI 線」與「觸控專用 USB 傳輸線」兩條都有確實接上主機。<br>
-                2. 進入系統設定，執行「四點校正」即可恢復精準度。
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="question">❓ 問題：遙控器按了沒反應</div>
-            <div class="answer">
-                💡 <strong>解決方法：</strong><br>
-                1. 先更換遙控器電池。<br>
-                2. 檢查主機前方的紅外線接收區是否有被物品遮擋。<br>
-                3. 若有外接 3.5mm IR 接收器，請確認線材沒有鬆脫。
-            </div>
-        </div>
-    </div>
-
-    <div class="contact-section">
-        <h2>👇 還是找不到解決辦法嗎？ 👇</h2>
-        <p>點擊下方按鈕，直接將問題回報給專屬服務窗口，我們會盡快為您處理！</p>
-        
-        <a href="https://line.me/R/oaMessage/@501vumfz/?我要報修" class="contact-btn">🚨 我有問題，聯絡專人協助 🚨</a>
-    </div>
+</div>
 
 </body>
 </html>
