@@ -3,90 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W-880 系列規格對照 - 產品服務中心</title>
+    <title>官方產品介紹 - 技術支援平台</title>
     <style>
-        :root { --bg: #0f172a; --card: #1e293b; --blue: #38bdf8; --white: #f8fafc; --gold: #fbbf24; --gray: #94a3b8; }
-        body { background: var(--bg); color: var(--white); font-family: -apple-system, sans-serif; margin: 0; padding: 15px; line-height: 1.6; }
-        h1 { color: var(--blue); text-align: center; font-size: 1.6rem; text-shadow: 0 0 10px rgba(56,189,248,0.3); margin-top: 30px; }
-        .official-header { text-align: center; margin-bottom: 30px; }
-        .official-header span { border: 1px solid var(--blue); color: var(--blue); padding: 3px 15px; border-radius: 5px; font-size: 0.75rem; text-transform: uppercase; }
+        :root { --bg: #0f172a; --card: #1e293b; --blue: #38bdf8; --white: #f8fafc; --gray: #94a3b8; --accent: #2563eb; }
+        body { background: var(--bg); color: var(--white); font-family: -apple-system, sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        h1 { color: var(--blue); text-shadow: 0 0 10px rgba(56,189,248,0.3); margin-bottom: 30px; }
+        .container { width: 100%; max-width: 700px; }
         
-        /* 深度比較表格 */
-        .table-container { width: 100%; overflow-x: auto; border-radius: 12px; background: var(--card); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
-        table { width: 100%; border-collapse: collapse; min-width: 500px; font-size: 0.9rem; }
-        th, td { padding: 18px 12px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); }
-        th { background: rgba(56, 189, 248, 0.2); color: var(--blue); font-weight: bold; }
+        /* 產品卡片設計 */
+        .product-card { 
+            background: var(--card); border: 1px solid rgba(255,255,255,0.1); 
+            border-radius: 12px; padding: 25px; margin-bottom: 25px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+        }
+        .product-title { 
+            color: var(--blue); font-size: 1.5rem; font-weight: bold; 
+            margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;
+        }
+        .product-desc { color: var(--gray); line-height: 1.6; margin-bottom: 15px; font-size: 0.95rem; }
+        .feature-list { padding-left: 20px; margin: 0; color: var(--white); }
+        .feature-list li { margin-bottom: 8px; font-size: 0.95rem; }
         
-        .feature-name { text-align: left !important; background: rgba(255,255,255,0.03); width: 110px; font-weight: bold; position: sticky; left: 0; z-index: 2; border-right: 1px solid rgba(255,255,255,0.05); color: var(--gray); }
-        .highlight { color: var(--gold); font-weight: bold; }
-        .spec-label { display: block; font-size: 0.75rem; color: #64748b; margin-top: 5px; }
-        
-        .desc-box { margin-top: 30px; padding: 20px; background: rgba(255, 255, 255, 0.02); border-radius: 12px; font-size: 0.9rem; }
-        .desc-box h3 { color: var(--gold); margin-top: 0; font-size: 1.1rem; }
-        
-        .footer { text-align: center; margin-top: 50px; color: #475569; font-size: 0.75rem; border-top: 1px solid rgba(255,255,255,0.1); padding: 30px 0; }
+        .footer { text-align: center; margin-top: 50px; color: #475569; font-size: 0.75rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; }
     </style>
 </head>
 <body>
 
-    <h1>⚖️ W-880 系列產品深度對照</h1>
-    <div class="official-header"><span>Official Product Comparison</span></div>
+    <h1>🎤 官方主力產品介紹</h1>
 
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th class="feature-name">核心參數</th>
-                    <th>W-880 專業主機</th>
-                    <th>W-880P+ 行動一體機</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="feature-name">機型定位</td>
-                    <td>固定式家庭劇院<span class="spec-label">適合客廳/包廂安裝</span></td>
-                    <td class="highlight">行動式一體化設計<span class="spec-label">隨開即唱，高機動性</span></td>
-                </tr>
-                <tr>
-                    <td class="feature-name">顯示架構</td>
-                    <td>支援外部 4K UHD 輸出<span class="spec-label">對應大型電視/投影機</span></td>
-                    <td class="highlight">內建 18.5 吋觸控螢幕<span class="spec-label">支援同步 HDMI 輸出</span></td>
-                </tr>
-                <tr>
-                    <td class="feature-name">音源系統</td>
-                    <td>Roland 專業音源晶片<span class="spec-label">頂級 MIDI 音質</span></td>
-                    <td class="highlight">Roland II 高階處理器<span class="spec-label">針對戶外演唱優化</span></td>
-                </tr>
-                <tr>
-                    <td class="feature-name">影像解析</td>
-                    <td class="highlight">4K 極致解碼輸出</td>
-                    <td>1080P 高畫質解析</td>
-                </tr>
-                <tr>
-                    <td class="feature-name">網路功能</td>
-                    <td>Gigabit 高速下載<span class="spec-label">支援 YouTube 互動</span></td>
-                    <td>內建 Wi-Fi / 高速下載<span class="spec-label">深度整合雲端歌庫</span></td>
-                </tr>
-                <tr>
-                    <td class="feature-name">輸入/控制</td>
-                    <td>AI 智慧語音/APP控制</td>
-                    <td class="highlight">10 點觸控/AI 語音/APP</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <div class="container">
+        
+        <div class="product-card">
+            <div class="product-title">W-880 / W-880P+ 專業旗艦主機</div>
+            <div class="product-desc">
+                專為頂級視聽娛樂打造的旗艦機種，提供最震撼的音質與最流暢的點歌體驗。無論是家用客廳還是專業包廂，都能完美展現最高水準的演唱效果。
+            </div>
+            <ul class="feature-list">
+                <li>旗艦級音效處理晶片，呈現專業錄音室等級音質</li>
+                <li>支援 4K 高畫質影像輸出，視覺與聽覺的雙重饗宴</li>
+                <li>W-880P+ 升級行動觸控版，操作更直覺、點歌更快速</li>
+                <li>支援手機 APP 智慧點歌及豐富的雲端歌庫更新</li>
+            </ul>
+        </div>
 
-    <div class="desc-box">
-        <h3>💡 選購指引</h3>
-        <p>
-            ● <b>W-880 專業主機：</b> 推薦給已有音響系統與大型電視的家庭客戶，追求極致畫質與專業劇院感受。<br>
-            ● <b>W-880P+ 行動一體機：</b> 推薦給有戶外歌唱、里民活動或需要隨時移動設備的客戶，內建觸控大螢幕讓操作更直覺。
-        </p>
+        <div class="product-card">
+            <div class="product-title">STAR 系列 (25 / 46 / 55)</div>
+            <div class="product-desc">
+                全新世代智慧伴唱機，針對不同空間大小與預算需求提供多樣化選擇。結合最先進的 AI 語音科技，讓家庭娛樂變得更聰明、更簡單。
+            </div>
+            <ul class="feature-list">
+                <li>AI 智慧語音聲控功能，找歌/點歌一句話搞定</li>
+                <li>提供 25、46、55 三種規格，完美適應各種空間配置</li>
+                <li>內建多元影音娛樂應用程式，不只是伴唱機，更是家庭娛樂中心</li>
+                <li>官方高畫質原版 MV 支援，享受最原汁原味的演唱體驗</li>
+            </ul>
+        </div>
+
+        <div class="product-card">
+            <div class="product-title">PARTY-7000 專業行動音響</div>
+            <div class="product-desc">
+                走到哪，唱到哪！一體成型的強大火力，是戶外活動、街頭表演、中大型聚會的神級裝備。免插電也能擁有震撼全場的爆發力。
+            </div>
+            <ul class="feature-list">
+                <li>超大功率震撼輸出，低音飽滿厚實、高音清透宏亮</li>
+                <li>內建大容量長效電池，支援長時間戶外無插電使用</li>
+                <li>一體化設計，支援藍牙連線、USB 播放與專業無線麥克風</li>
+                <li>便攜式拉桿與滾輪設計，輕鬆移動無負擔</li>
+            </ul>
+        </div>
+
     </div>
 
     <div class="footer">
         產品規格服務中心<br>
-        本網頁資訊同步自官方最新產品手冊<br>
         © 2026 Inyuan Service Platform
     </div>
 
