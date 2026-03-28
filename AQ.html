@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音圓機台常見問題與故障排除 (FAQ)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+        }
+        .intro {
+            background-color: #e6f2ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .faq-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .question {
+            font-weight: bold;
+            color: #d9534f;
+            margin-bottom: 5px;
+        }
+        .answer {
+            margin-left: 20px;
+            color: #555;
+        }
+        .contact-section {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .contact-btn {
+            display: inline-block;
+            background-color: #00c300; /* LINE 綠色 */
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .contact-btn:hover {
+            background-color: #009900;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>音圓機台常見問題與故障排除</h1>
+
+    <div class="intro">
+        👉 店家老闆您好，遇到狀況別慌張！請先看看以下常見問題，有機會在 1 分鐘內快速解決喔：
+    </div>
+
+    <div class="faq-section">
+        <h2>🛠️ 1. 網路與影音類</h2>
+        
+        <div class="faq-item">
+            <div class="question">❓ 問題：YouTube 一直轉圈圈、卡頓或無法播放</div>
+            <div class="answer">
+                💡 <strong>解決方法：</strong><br>
+                1. 檢查網路連線，建議優先插上「實體網路線」或連接「5G 頻段 Wi-Fi」。<br>
+                2. 進入機台【設定】 -> 【應用程式管理】 -> 找到 YouTube 插件並【清除快取】。<br>
+                3. 將主機重新開機即可恢復。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">❓ 問題：機台開機後沒有聲音 (常見於 Star 系列)</div>
+            <div class="answer">
+                💡 <strong>解決方法：</strong><br>
+                1. 這是偶發的音源輸出未抓取狀況。請進設定手動切換一次音源輸出，讓系統重新偵測。<br>
+                2. 確認已將系統版本更新至最新版本。
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-section">
+        <h2>🛠️ 2. 硬體與周邊類</h2>
+        
+        <div class="faq-item">
+            <div class="question">❓ 問題：外接觸控螢幕點擊不準，或是沒反應</div>
+            <div class="answer">
+                💡 <strong>解決方法：</strong><br>
+                1. 確認「HDMI 線」與「觸控專用 USB 傳輸線」兩條都有確實接上主機。<br>
+                2. 進入系統設定，執行「四點校正」即可恢復精準度。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">❓ 問題：遙控器按了沒反應</div>
+            <div class="answer">
+                💡 <strong>解決方法：</strong><br>
+                1. 先更換遙控器電池。<br>
+                2. 檢查主機前方的紅外線接收區是否有被物品遮擋。<br>
+                3. 若有外接 3.5mm IR 接收器，請確認線材沒有鬆脫。
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-section">
+        <h2>👇 還是找不到解決辦法嗎？ 👇</h2>
+        <p>點擊下方按鈕，直接將問題回報給專屬服務窗口，我們會盡快為您處理！</p>
+        
+        <a href="#" id="lineBtn" class="contact-btn">🚨 我有問題，聯絡專人協助 🚨</a>
+    </div>
+
+    <script>
+        // 這裡已經換成你的 音圓秋天服務窗口 LINE@ ID
+        const lineId = "@501vumfz"; 
+
+        // 這是要預先填寫好的表單訊息
+        const messageText = `老闆您好！為了能最快協助您排除問題，請幫我填寫以下資訊，並直接回傳到本 LINE@，會盡快為您處理：
+
+【店家基本資料】
+• 店家名稱：
+• 聯絡電話：
+• 聯絡人：
+
+【產品問題描述】
+• 發生問題的機型： (例如：Party-7000, Star-55, N2-550 等)
+• 問題狀況簡述：
+(請簡短描述遇到的狀況，例如：YouTube 無法播放、麥克風無聲、畫面卡頓等)
+
+💡 【加速處理小提醒】
+如果方便的話，請直接將「故障畫面」或「操作影片」傳送到本 LINE@，這能幫助更準確判斷問題點，縮短維修時間喔！`;
+
+        // 將訊息轉換為 URL 編碼格式，這樣 LINE 才看得懂換行和特殊字元
+        const encodedMessage = encodeURIComponent(messageText);
+
+        // 組合 LINE 的 URL Scheme
+        // 格式： https://line.me/R/oaMessage/{LINE_ID}/?{預設訊息}
+        const lineUrl = `https://line.me/R/oaMessage/${lineId}/?${encodedMessage}`;
+
+        // 將組合好的網址塞進按鈕裡面
+        document.getElementById('lineBtn').href = lineUrl;
+    </script>
+
+</body>
+</html>
