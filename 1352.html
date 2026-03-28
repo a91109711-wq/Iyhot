@@ -1,135 +1,89 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>1352集 完整歌單</title>
-
-<style>
-
-body {
-    font-family: Arial, "Microsoft JhengHei", sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-}
-
-.container {
-    max-width: 750px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-}
-
-.title {
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.section {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 25px;
-    border-bottom: 2px solid #6a1b9a;
-    padding-bottom: 5px;
-}
-
-.song {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    font-size: 18px;
-}
-
-.number {
-    font-weight: bold;
-    color: #6a1b9a;
-}
-
-.phone {
-    display: block;
-    text-align: center;
-    background: #28a745;
-    color: white;
-    padding: 14px;
-    margin-top: 25px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 18px;
-}
-
-.footer {
-    margin-top: 30px;
-    text-align: center;
-    font-size: 14px;
-    color: #888;
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最新官方歌單 - 技術支援平台</title>
+    <style>
+        :root { 
+            --bg: #0f172a; --card: #1e293b; --blue: #38bdf8; 
+            --white: #f8fafc; --gray: #94a3b8; --accent: #2563eb;
+        }
+        body { 
+            background: var(--bg); color: var(--white); 
+            font-family: -apple-system, sans-serif; 
+            margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; 
+        }
+        h1 { color: var(--blue); text-shadow: 0 0 10px rgba(56,189,248,0.3); margin-bottom: 30px; }
+        .container { width: 100%; max-width: 600px; }
+        .item { 
+            background: var(--card); border: 1px solid rgba(255,255,255,0.1); 
+            border-radius: 12px; padding: 18px; margin-bottom: 15px; 
+            display: flex; align-items: center; justify-content: space-between; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+        }
+        .file-info { display: flex; align-items: center; }
+        .file-icon { font-size: 2.2rem; margin-right: 15px; }
+        .file-name { font-weight: bold; font-size: 1.05rem; display: block; }
+        .file-type { color: var(--gray); font-size: 0.8rem; margin-top: 3px; display: block; }
+        .dl-btn { 
+            background: var(--accent); color: white; text-decoration: none; 
+            padding: 10px 20px; border-radius: 8px; font-size: 0.9rem; 
+            font-weight: bold; transition: 0.2s; white-space: nowrap;
+        }
+        .dl-btn:active { background: #1d4ed8; transform: scale(0.95); }
+        .footer { 
+            text-align: center; margin-top: 50px; color: #475569; 
+            font-size: 0.75rem; border-top: 1px solid rgba(255,255,255,0.1); 
+            padding-top: 20px; width: 100%; line-height: 1.6;
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
+    <h1>🎤 最新官方歌單下載</h1>
 
-<div class="title">
-1352集 完整歌單
-</div>
+    <div class="container">
+        <div class="item">
+            <div class="file-info">
+                <div class="file-icon">🎵</div>
+                <div>
+                    <span class="file-name">2026年 3月份 最新歌單</span>
+                    <span class="file-type">官方每月發行 (PDF)</span>
+                </div>
+            </div>
+            <a href="#" class="dl-btn">點擊下載</a>
+        </div>
 
-<div class="section">
-台語歌曲
-</div>
+        <div class="item">
+            <div class="file-info">
+                <div class="file-icon">🎵</div>
+                <div>
+                    <span class="file-name">2026年 2月份 官方歌單</span>
+                    <span class="file-type">官方每月發行 (PDF)</span>
+                </div>
+            </div>
+            <a href="#" class="dl-btn">點擊下載</a>
+        </div>
 
-<div class="song"><span class="number">203254</span> 我要飛 / 蔡佳麟</div>
-<div class="song"><span class="number">203252</span> 一生難忘 / 郭嘉榮、林東甲</div>
-<div class="song"><span class="number">203229</span> 心情玫瑰 / 蔡妍</div>
-<div class="song"><span class="number">203255</span> 袂凍漏氣 / 黃慶德</div>
-<div class="song"><span class="number">203226</span> 情海無邊 / 張雪芳</div>
-<div class="song"><span class="number">203253</span> 台中港之戀 / 林東甲</div>
-<div class="song"><span class="number">203204</span> 無聲的思念 / 李英宏</div>
-<div class="song"><span class="number">203231</span> 溫暖的故鄉 / 黃志榮</div>
-<div class="song"><span class="number">203232</span> 頭過身就過 / 黃志義</div>
-<div class="song"><span class="number">203225</span> 觀音山之戀 / 龍哥、貴倫</div>
-<div class="song"><span class="number">203230</span> 懶懶馬一步踏 / 黃志義</div>
-<div class="song"><span class="number">203227</span> 是你不知女人心 / 蔡妍</div>
-<div class="song"><span class="number">203228</span> 閣做你的愛人仔 / 蔡妍</div>
+        <div class="item">
+            <div class="file-info">
+                <div class="file-icon">🎵</div>
+                <div>
+                    <span class="file-name">2026年 1月份 官方歌單</span>
+                    <span class="file-type">官方每月發行 (PDF)</span>
+                </div>
+            </div>
+            <a href="#" class="dl-btn">點擊下載</a>
+        </div>
+        
+        </div>
 
-<div class="section">
-華語歌曲
-</div>
-
-<div class="song"><span class="number">201034</span> Because Anyway / T.R.Y</div>
-<div class="song"><span class="number">202115</span> 迎新年 / 程響</div>
-<div class="song"><span class="number">200842</span> 愛太深 / 王強</div>
-<div class="song"><span class="number">200894</span> 愛到底 / 胡夏</div>
-<div class="song"><span class="number">201227</span> 策馬奔騰 / 鳳凰傳奇</div>
-<div class="song"><span class="number">201050</span> 我的小寶氣 / 沈丹丹</div>
-<div class="song"><span class="number">200841</span> 最美的情歌 / 鄭東</div>
-<div class="song"><span class="number">201732</span> 愛情就像一首歌 / 冷漠</div>
-<div class="song"><span class="number">200900</span> 你的多情傷害了我 / 徐一鳴</div>
-<div class="song"><span class="number">201315</span> 想念也能是一種快樂 / 自由派對</div>
-<div class="song"><span class="number">200843</span> 別再用謊言溫暖我的手 / 王強</div>
-<div class="song"><span class="number">201324</span> 離開你是我這輩子的遺憾 / 陶紅玉</div>
-
-<div class="section">
-原聲原影
-</div>
-
-<div class="song"><span class="number">701594</span> 愛甲著火 / 洪維謙</div>
-<div class="song"><span class="number">701579</span> 無奈的結局 / 佩瑜、施文</div>
-<div class="song"><span class="number">701578</span> 愛妳一生一世 / 嘉齊</div>
-<div class="song"><span class="number">701577</span> 我的人生我佮意 / 佩瑜</div>
-
-<a href="tel:09XXXXXXXX" class="phone">
-📞 需要補歌或設備協助請直接聯絡
-</a>
-
-<div class="footer">
-1352集 歌曲更新完成
-</div>
-
-</div>
+    <div class="footer">
+        產品歌曲服務中心<br>
+        本平台提供之歌單皆為官方正式發佈版本<br>
+        © 2026 Inyuan Service Platform
+    </div>
 
 </body>
 </html>
