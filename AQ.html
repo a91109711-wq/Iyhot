@@ -4,55 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .update-box { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft JhengHei", sans-serif; max-width: 900px; margin: 20px auto; padding: 25px; border: 1px solid #e1e4e8; border-radius: 12px; background-color: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-        .update-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #0056b3; padding-bottom: 15px; margin-bottom: 20px; }
-        .update-title { font-size: 22px; color: #0056b3; font-weight: bold; margin: 0; }
-        table { width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 8px; }
-        th { background-color: #f0f4f8; color: #333; font-weight: 600; text-align: left; padding: 15px; border-bottom: 2px solid #dee2e6; }
-        td { padding: 15px; border-bottom: 1px solid #eee; vertical-align: middle; }
-        .product-name { font-weight: bold; color: #333; }
-        .version-badge { background-color: #e8f0fe; color: #1967d2; padding: 4px 10px; border-radius: 15px; font-size: 14px; font-weight: 500; }
-        .new-tag { background-color: #ff4d4f; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; margin-left: 8px; vertical-align: middle; text-transform: uppercase; }
-        .update-note { color: #666; font-size: 14px; line-height: 1.5; }
-        .download-link { display: inline-block; background-color: #007bff; color: white; text-decoration: none; padding: 8px 16px; border-radius: 6px; font-size: 14px; transition: background 0.2s; }
-        .download-link:hover { background-color: #0056b3; }
-        .footer-info { margin-top: 25px; text-align: right; border-top: 1px solid #eee; padding-top: 15px; color: #888; font-size: 13px; }
+        :root { --primary-color: #0056b3; --accent-color: #ff4d4f; --bg-gray: #f8f9fa; }
+        body { font-family: "Microsoft JhengHei", sans-serif; background-color: #f4f7f6; color: #333; line-height: 1.6; margin: 0; padding: 20px; }
+        .container { max-width: 950px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        
+        /* Header */
+        .header { border-bottom: 3px solid var(--primary-color); padding-bottom: 15px; margin-bottom: 30px; display: flex; justify-content: space-between; align-items: flex-end; }
+        .header h1 { margin: 0; color: var(--primary-color); font-size: 26px; }
+        .last-update { font-size: 13px; color: #888; }
+
+        /* Section Titles */
+        h2 { font-size: 20px; border-left: 5px solid var(--primary-color); padding-left: 12px; margin-top: 40px; margin-bottom: 20px; color: #444; }
+
+        /* Table Style */
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        th { background: var(--bg-gray); padding: 15px; text-align: left; border-bottom: 2px solid #ddd; }
+        td { padding: 15px; border-bottom: 1px solid #eee; }
+        .new-tag { background: var(--accent-color); color: white; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: bold; margin-left: 8px; }
+        .download-btn { background: var(--primary-color); color: white; text-decoration: none; padding: 6px 12px; border-radius: 5px; font-size: 13px; }
+
+        /* FAQ Style */
+        .faq-item { background: #fff; border: 1px solid #e1e4e8; border-radius: 8px; padding: 15px; margin-bottom: 12px; }
+        .faq-q { font-weight: bold; color: var(--primary-color); margin-bottom: 8px; display: flex; align-items: center; }
+        .faq-q::before { content: "Q:"; margin-right: 8px; font-size: 18px; }
+        .faq-a { color: #555; padding-left: 26px; }
+
+        /* Repair Section */
+        .repair-box { background: #fff0f0; border: 1px dashed var(--accent-color); padding: 20px; border-radius: 8px; text-align: center; }
+        .repair-btn { display: inline-block; background: var(--accent-color); color: white; text-decoration: none; padding: 12px 30px; border-radius: 25px; font-weight: bold; font-size: 16px; margin-top: 15px; transition: 0.3s; }
+        .repair-btn:hover { background: #d32f2f; transform: scale(1.05); }
     </style>
 </head>
 <body>
 
-<div class="update-box">
-    <div class="update-header">
-        <h1 class="update-title">音圓產品軟體更新公告</h1>
+<div class="container">
+    <div class="header">
+        <h1>產品售後維護中心</h1>
+        <span class="last-update">最後更新時間：2026-03-28 22:24</span>
     </div>
-    
+
+    <h2>最新軟體版本更新</h2>
     <table>
         <thead>
             <tr>
-                <th>機型系列</th>
+                <th>產品型號</th>
                 <th>最新版本</th>
-                <th>更新重點</th>
-                <th>下載路徑</th>
+                <th>更新內容</th>
+                <th>下載</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td class="product-name">Star 系列 (STAR-55)</td>
-                <td><span class="version-badge">v1.08</span><span class="new-tag">NEW</span></td>
-                <td class="update-note">1. 優化 YouTube 播放功能</td>
-                <td><a href="https://reurl.cc/7EDlk5" class="download-link" target="_blank">下載更新檔</a></td>
+                <td><strong>Star 系列 (STAR-55)</strong></td>
+                <td>v1.08 <span class="new-tag">NEW</span></td>
+                <td>優化 YouTube 播放流暢度</td>
+                <td><a href="https://reurl.cc/7EDlk5" class="download-btn" target="_blank">點此下載</a></td>
             </tr>
             <tr>
-                <td class="product-name">Party 系列 (PARTY-7000)</td>
-                <td><span class="version-badge">v1.09</span><span class="new-tag">NEW</span></td>
-                <td class="update-note">1. 優化 YouTube 播放功能</td>
-                <td><a href="https://reurl.cc/gr2lzR" class="download-link" target="_blank">下載更新檔</a></td>
+                <td><strong>Party 系列 (PARTY-7000)</strong></td>
+                <td>v1.09 <span class="new-tag">NEW</span></td>
+                <td>優化 YouTube 播放流暢度</td>
+                <td><a href="https://reurl.cc/gr2lzR" class="download-btn" target="_blank">點此下載</a></td>
             </tr>
         </tbody>
     </table>
 
-    <div class="footer-info">
-        最後更新時間：2026-03-28 22:17:28
+    <h2>常見問題與解決方法 (FAQ)</h2>
+    <div class="faq-item">
+        <div class="faq-q">YouTube 播放時出現卡頓或無法讀取？</div>
+        <div class="faq-a">請先確認網路連線是否正常。若網路無誤，請更新至最新版本 (Star v1.08 / Party v1.09)，此版本已針對 YouTube 播放進行大幅優化。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">Star 系列發生無聲 Bug？</div>
+        <div class="faq-a">請進入系統設定，檢查音訊輸出通道是否正確切換，或嘗試將系統恢復原廠設定後重啟。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">觸控螢幕點擊位置不準確？</div>
+        <div class="faq-a">請執行系統內建的「螢幕校正工具」，依照指示點擊十字標記中心點即可完成修正。</div>
+    </div>
+
+    <h2>線上維護與報修</h2>
+    <div class="repair-box">
+        <p>如嘗試上述解決方法仍無法排除故障，請點擊下方按鈕進行線上報修。</p>
+        <p style="font-size: 14px; color: #666;">（報修時請備妥：店家名稱、聯絡電話、機型及故障描述影片）</p>
+        <a href="https://line.me/R/ti/p/@inyuan" class="repair-btn" target="_blank">前往官方 LINE@ 報修</a>
     </div>
 </div>
 
