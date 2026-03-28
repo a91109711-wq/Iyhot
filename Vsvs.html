@@ -12,6 +12,7 @@
         
         .container { width: 100%; max-width: 800px; }
         h2 { border-left: 4px solid var(--blue); padding-left: 10px; margin-top: 40px; margin-bottom: 20px; font-size: 1.3rem; }
+        h3 { color: var(--blue); margin-top: 35px; margin-bottom: 15px; font-size: 1.1rem; text-align: center; background: rgba(56,189,248,0.1); padding: 10px; border-radius: 8px; }
         
         /* 產品卡片設計 */
         .product-card { 
@@ -28,10 +29,10 @@
         .feature-list li { margin-bottom: 8px; font-size: 0.95rem; line-height: 1.5; }
         
         /* 比較表設計 */
-        .table-responsive { width: 100%; overflow-x: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        .table-responsive { width: 100%; overflow-x: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); margin-bottom: 30px; }
         table { width: 100%; border-collapse: collapse; background: var(--card); min-width: 600px; }
         th, td { padding: 15px; text-align: center; border: 1px solid rgba(255,255,255,0.1); font-size: 0.95rem; }
-        th { background: rgba(56,189,248,0.1); color: var(--blue); font-weight: bold; white-space: nowrap; }
+        th { background: rgba(56,189,248,0.15); color: var(--blue); font-weight: bold; white-space: nowrap; }
         td { color: var(--white); }
         .highlight { color: #fde047; font-weight: bold; } /* 高亮黃色字 */
         
@@ -72,18 +73,6 @@
         </div>
 
         <div class="product-card">
-            <div class="product-title">N2 系列 (如 N2-250)</div>
-            <div class="product-desc">
-                高 CP 值的家用首選機種，讓您輕鬆擁有專業級的家庭 KTV 歡唱體驗，全家大小都能輕鬆上手。
-            </div>
-            <ul class="feature-list">
-                <li>國民超值首選，價格親民、輕鬆入手無負擔</li>
-                <li>支援 1080P 高畫質影音輸出，畫面清晰流暢</li>
-                <li>完美支援手機 APP 智慧點歌功能</li>
-            </ul>
-        </div>
-
-        <div class="product-card">
             <div class="product-title">PARTY-7000 專業行動音響</div>
             <div class="product-desc">
                 走到哪，唱到哪！一體成型的強大火力，免插電也能擁有震撼全場的爆發力，是戶外活動與中大型聚會的神級裝備。
@@ -96,52 +85,72 @@
         </div>
 
 
-        <h2>二、全系列機型比較表</h2>
+        <h2>二、系列專屬比較表</h2>
         
+        <h3>⭐ STAR 智慧系列 規格比較表</h3>
         <div class="table-responsive">
             <table>
                 <thead>
                     <tr>
-                        <th>機型系列</th>
-                        <th>產品定位</th>
+                        <th>型號</th>
+                        <th>智慧聲控</th>
                         <th>影像畫質</th>
-                        <th>智慧語音聲控</th>
                         <th>核心優勢</th>
                         <th>推薦使用場景</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>W-880 系列</strong></td>
-                        <td>頂級專業旗艦</td>
+                        <td><strong>STAR-55</strong></td>
+                        <td class="highlight">頂級 AI 語音</td>
+                        <td>4K 高畫質</td>
+                        <td>旗艦級容量與影音效能</td>
+                        <td>頂級智慧家庭劇院</td>
+                    </tr>
+                    <tr>
+                        <td><strong>STAR-46</strong></td>
+                        <td class="highlight">高階 AI 語音</td>
+                        <td>4K 高畫質</td>
+                        <td>效能與容量完美平衡</td>
+                        <td>中大型客廳歡唱</td>
+                    </tr>
+                    <tr>
+                        <td><strong>STAR-25</strong></td>
+                        <td class="highlight">標準 AI 語音</td>
+                        <td>4K 高畫質</td>
+                        <td>入門首選、高 CP 值</td>
+                        <td>一般家庭 / 小宅娛樂</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>👑 W-880 專業旗艦系列 比較表</h3>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>型號</th>
+                        <th>專屬觸控螢幕</th>
+                        <th>音效處理</th>
+                        <th>影像畫質</th>
+                        <th>產品定位</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>W-880P+</strong></td>
+                        <td class="highlight">有 (行動觸控版)</td>
+                        <td>錄音室級頂級晶片</td>
                         <td>4K 超高畫質</td>
-                        <td>支援 (需搭配配件/APP)</td>
-                        <td class="highlight">頂尖錄音室級音效</td>
-                        <td>頂級視聽室 / 專業包廂</td>
+                        <td>頂級私人會所 / 科技豪宅</td>
                     </tr>
                     <tr>
-                        <td><strong>STAR 系列</strong></td>
-                        <td>智慧科技旗艦</td>
-                        <td>4K 超高畫質</td>
-                        <td class="highlight">內建 AI 聲控系統</td>
-                        <td>找歌點歌一句話搞定</td>
-                        <td>現代家庭 / 智慧客廳</td>
-                    </tr>
-                    <tr>
-                        <td><strong>N2 系列</strong></td>
-                        <td>國民超值首選</td>
-                        <td>1080P 高畫質</td>
-                        <td>支援 (需搭配配件/APP)</td>
-                        <td class="highlight">最高 CP 值</td>
-                        <td>一般家庭歡唱</td>
-                    </tr>
-                    <tr>
-                        <td><strong>PARTY-7000</strong></td>
-                        <td>專業行動音響</td>
-                        <td>無 (純音響設備)</td>
+                        <td><strong>W-880</strong></td>
                         <td>無</td>
-                        <td class="highlight">內建電池 / 大功率輸出</td>
-                        <td>戶外活動 / 街頭表演</td>
+                        <td>錄音室級頂級晶片</td>
+                        <td>4K 超高畫質</td>
+                        <td>專業 VIP 包廂 / 頂級視聽室</td>
                     </tr>
                 </tbody>
             </table>
