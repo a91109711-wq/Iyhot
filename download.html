@@ -5,18 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>產品文宣下載 - 技術支援平台</title>
     <style>
-        :root { --bg: #0f172a; --card: #1e293b; --blue: #38bdf8; --white: #f8fafc; --gray: #94a3b8; }
-        body { background: var(--bg); color: var(--white); font-family: -apple-system, sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        :root { 
+            --bg: #0f172a; --card: #1e293b; --blue: #38bdf8; 
+            --white: #f8fafc; --gray: #94a3b8; --accent: #2563eb;
+        }
+        body { 
+            background: var(--bg); color: var(--white); 
+            font-family: -apple-system, sans-serif; 
+            margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; 
+        }
         h1 { color: var(--blue); text-shadow: 0 0 10px rgba(56,189,248,0.3); margin-bottom: 30px; }
         .container { width: 100%; max-width: 600px; }
-        .download-item { background: var(--card); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 18px; margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-        .file-info { display: flex; align-items: center; }
-        .file-icon { font-size: 2.2rem; margin-right: 15px; }
-        .file-name { font-weight: bold; display: block; font-size: 1.05rem; }
+        .item { 
+            background: var(--card); border: 1px solid rgba(255,255,255,0.1); 
+            border-radius: 12px; padding: 18px; margin-bottom: 15px; 
+            display: flex; align-items: center; justify-content: space-between; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+        }
+        .file-name { font-weight: bold; font-size: 1.05rem; display: block; }
         .file-type { color: var(--gray); font-size: 0.8rem; margin-top: 3px; display: block; }
-        .dl-btn { background: #2563eb; color: white; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-size: 0.9rem; font-weight: bold; transition: 0.2s; }
+        .dl-btn { 
+            background: var(--accent); color: white; text-decoration: none; 
+            padding: 10px 20px; border-radius: 8px; font-size: 0.9rem; 
+            font-weight: bold; transition: 0.2s; white-space: nowrap;
+        }
         .dl-btn:active { background: #1d4ed8; transform: scale(0.95); }
-        .footer { text-align: center; margin-top: 50px; color: #475569; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; }
+        .footer { 
+            text-align: center; margin-top: 50px; color: #475569; 
+            font-size: 0.75rem; border-top: 1px solid rgba(255,255,255,0.1); 
+            padding-top: 20px; width: 100%; 
+        }
     </style>
 </head>
 <body>
@@ -24,42 +42,57 @@
     <h1>📂 官方產品文宣下載</h1>
 
     <div class="container">
-        <div class="download-item">
-            <div class="file-info">
-                <div class="file-icon">📄</div>
-                <div>
-                    <span class="file-name">STAR 全系列型錄 (N2-25/46/55)</span>
-                    <span class="file-type">官方 PDF 規格書</span>
-                </div>
+        <div class="item">
+            <div>
+                <span class="file-name">STAR 全系列 (25/46/55)</span>
+                <span class="file-type">官方產品型錄 (JPG)</span>
             </div>
-            <a href="https://a91109711-wq.github.io/Iyhot/N-Series.pdf" class="dl-btn">下載</a>
+            <a href="https://a91109711-wq.github.io/Iyhot/STAR%20%3A%20N%E7%B3%BB%E5%88%97.jpg" class="dl-btn">下載圖片</a>
         </div>
 
-        <div class="download-item">
-            <div class="file-info">
-                <div class="file-icon">📋</div>
-                <div>
-                    <span class="file-name">W-880 專業強效機型 DM</span>
-                    <span class="file-type">官方 PDF 文宣</span>
-                </div>
+        <div class="item">
+            <div>
+                <span class="file-name">W-880 專業主機 DM</span>
+                <span class="file-type">官方產品文宣 (JPG)</span>
             </div>
-            <a href="https://a91109711-wq.github.io/Iyhot/W-880-DM.pdf" class="dl-btn">下載</a>
+            <a href="https://a91109711-wq.github.io/Iyhot/W-880%20DM.jpg" class="dl-btn">下載圖片</a>
         </div>
 
-        <div class="download-item">
-            <div class="file-info">
-                <div class="file-icon">🔊</div>
-                <div>
-                    <span class="file-name">PARTY-7000 音響系統說明</span>
-                    <span class="file-type">官方 PDF 規格書</span>
-                </div>
+        <div class="item">
+            <div>
+                <span class="file-name">W-880P+ 行動觸控版</span>
+                <span class="file-type">官方產品文宣 (JPG)</span>
             </div>
-            <a href="https://a91109711-wq.github.io/Iyhot/PARTY-7000.pdf" class="dl-btn">下載</a>
+            <a href="https://a91109711-wq.github.io/Iyhot/W-880P%2B%20DM.jpg" class="dl-btn">下載圖片</a>
+        </div>
+
+        <div class="item">
+            <div>
+                <span class="file-name">PARTY-7000 專業音響</span>
+                <span class="file-type">官方規格說明 (JPG)</span>
+            </div>
+            <a href="https://a91109711-wq.github.io/Iyhot/PARTY%207000.jpg" class="dl-btn">下載圖片</a>
+        </div>
+
+        <div class="item">
+            <div>
+                <span class="file-name">N2 系列詳細規格表</span>
+                <span class="file-type">技術參數對照 (JPG)</span>
+            </div>
+            <a href="https://a91109711-wq.github.io/Iyhot/N2%E7%B3%BB%E5%88%97%E8%A6%8F%E6%A0%BC%E8%A1%A8.jpg" class="dl-btn">下載圖片</a>
+        </div>
+
+        <div class="item">
+            <div>
+                <span class="file-name">產品系列導覽圖</span>
+                <span class="file-type">官方宣傳圖片 (JPG)</span>
+            </div>
+            <a href="https://a91109711-wq.github.io/Iyhot/%E7%94%A2%E5%93%81%E7%85%A7%E7%89%87.jpg" class="dl-btn">下載圖片</a>
         </div>
     </div>
 
     <div class="footer">
-        音圓產品技術支援中心<br>
+        產品規格服務中心<br>
         本平台檔案均取自官方發佈之最新版本<br>
         © 2026 Inyuan Service Platform
     </div>
