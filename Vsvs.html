@@ -3,104 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>專業機型詳細對照 - 產品服務中心</title>
+    <title>產品規格中心 - 官方技術支援平台</title>
     <style>
         :root { --bg: #0f172a; --card: #1e293b; --blue: #38bdf8; --white: #f8fafc; --gold: #fbbf24; --gray: #94a3b8; }
-        body { background: var(--bg); color: var(--white); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 15px; line-height: 1.6; }
-        h1, h2 { color: var(--blue); text-align: center; text-shadow: 0 0 12px rgba(56,189,248,0.4); }
-        .intro-text { text-align: center; color: var(--gray); font-size: 0.9rem; margin-bottom: 30px; }
+        body { background: var(--bg); color: var(--white); font-family: -apple-system, sans-serif; margin: 0; padding: 15px; line-height: 1.6; }
+        h1, h2 { color: var(--blue); text-align: center; }
+        .official-note { text-align: center; color: var(--gold); font-size: 0.8rem; margin-bottom: 20px; border: 1px solid var(--gold); display: inline-block; padding: 2px 10px; border-radius: 4px; width: 100%; box-sizing: border-box; }
         
-        /* 深度比較表格 */
-        .table-container { width: 100%; overflow-x: auto; border-radius: 16px; background: var(--card); border: 1px solid rgba(255,255,255,0.1); margin-top: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.5); }
-        table { width: 100%; border-collapse: collapse; min-width: 700px; font-size: 0.85rem; }
+        /* 規格表格 */
+        .table-container { width: 100%; overflow-x: auto; border-radius: 12px; background: var(--card); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        table { width: 100%; border-collapse: collapse; min-width: 750px; font-size: 0.85rem; }
         th, td { padding: 16px 10px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); }
-        th { background: rgba(56, 189, 248, 0.2); color: var(--blue); font-weight: 800; }
+        th { background: rgba(56, 189, 248, 0.2); color: var(--blue); font-weight: bold; }
+        .feature-name { text-align: left !important; background: rgba(255,255,255,0.03); width: 120px; font-weight: bold; position: sticky; left: 0; z-index: 2; border-right: 1px solid rgba(255,255,255,0.05); }
         
-        .feature-col { text-align: left !important; background: rgba(255,255,255,0.03); font-weight: bold; width: 110px; position: sticky; left: 0; z-index: 2; color: var(--gray); border-right: 1px solid rgba(255,255,255,0.05); }
-        .highlight-text { color: var(--gold); font-weight: bold; }
-        .spec-detail { display: block; font-size: 0.75rem; color: #64748b; margin-top: 4px; }
-        
-        /* 按鈕區 */
-        .btn-box { display: flex; flex-direction: column; gap: 12px; max-width: 400px; margin: 40px auto; }
-        .btn { display: block; text-align: center; padding: 15px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1rem; transition: 0.3s; }
-        .btn-main { background: #2563eb; color: white; }
-        .btn-sub { border: 1px solid var(--blue); color: var(--blue); }
-        
-        .footer { text-align: center; margin-top: 40px; color: #475569; font-size: 0.75rem; border-top: 1px solid rgba(255,255,255,0.1); padding: 25px 0; }
+        .highlight { color: var(--gold); }
+        .btn-box { margin: 30px auto; max-width: 400px; display: flex; flex-direction: column; gap: 10px; }
+        .btn { display: block; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1rem; }
+        .btn-blue { background: #2563eb; color: white; }
+        .footer { text-align: center; margin-top: 50px; color: #475569; font-size: 0.75rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
     </style>
 </head>
 <body>
 
-    <h1>⚖️ 全系列機型規格深度對照</h1>
-    <p class="intro-text">為您的視聽空間選擇最合適的專業核心</p>
+    <h1>💎 全系列機型規格對照</h1>
+    <div style="text-align: center;"><span class="official-note">官方規格依據：音圓國際產品技術手冊</span></div>
 
     <div class="table-container">
         <table>
             <thead>
                 <tr>
-                    <th class="feature-col">核心規格</th>
-                    <th>STAR 55<br><span style="font-size:0.7rem; color:var(--gold)">旗艦極致</span></th>
-                    <th>STAR 46<br><span style="font-size:0.7rem; color:var(--blue)">專業強效</span></th>
-                    <th>STAR 25<br><span style="font-size:0.7rem; color:var(--gray)">經典入門</span></th>
-                    <th>W-880<br><span style="font-size:0.7rem; color:#ec4899">強效混音</span></th>
+                    <th class="feature-name">技術規格</th>
+                    <th>STAR 55 (N2-55)</th>
+                    <th>STAR 46 (N2-46)</th>
+                    <th>STAR 25 (N2-25)</th>
+                    <th>W-880P+</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td class="feature-col">主控設計</td>
-                    <td class="highlight-text">雙螢幕操控<span class="spec-detail">預覽與演唱同步</span></td>
-                    <td>單螢幕系統<span class="spec-detail">流暢觸控介面</span></td>
-                    <td>單螢幕系統<span class="spec-detail">直覺式操作</span></td>
-                    <td>單螢幕系統<span class="spec-detail">專業級混音架構</span></td>
+                    <td class="feature-name">顯示輸出</td>
+                    <td class="highlight">4K UHD / 雙螢幕</td>
+                    <td>4K UHD / 單螢幕</td>
+                    <td>1080P Full HD</td>
+                    <td class="highlight">18.5" 觸控旋轉螢幕</td>
                 </tr>
                 <tr>
-                    <td class="feature-col">影像引擎</td>
-                    <td class="highlight-text">4K UHD<span class="spec-detail">頂級解碼技術</span></td>
-                    <td>4K/1080P<span class="spec-detail">高畫質輸出</span></td>
-                    <td>1080P HD<span class="spec-detail">標準畫質</span></td>
-                    <td class="highlight-text">4K UHD<span class="spec-detail">獨立影像處理</span></td>
+                    <td class="feature-name">音源晶片</td>
+                    <td>Japan Roland</td>
+                    <td>Japan Roland</td>
+                    <td>Standard MIDI</td>
+                    <td class="highlight">Japan Roland II</td>
                 </tr>
                 <tr>
-                    <td class="feature-col">硬碟容量</td>
-                    <td class="highlight-text">標配 8TB<span class="spec-detail">雙抽取槽設計</span></td>
-                    <td>標配 6TB<span class="spec-detail">單槽高擴充</span></td>
-                    <td>標配 4TB<span class="spec-detail">基礎儲存</span></td>
-                    <td>標配 6TB<span class="spec-detail">多媒體擴充</span></td>
+                    <td class="feature-name">硬碟容量</td>
+                    <td>標配 4TB / 8TB</td>
+                    <td>標配 4TB</td>
+                    <td>標配 2TB</td>
+                    <td>標配 4TB (可擴充)</td>
                 </tr>
                 <tr>
-                    <td class="feature-col">語音系統</td>
-                    <td class="highlight-text">內建 AI 語音<span class="spec-detail">全功能控制</span></td>
-                    <td>內建 AI 語音<span class="spec-detail">快速搜歌</span></td>
-                    <td>選配<span class="spec-detail">需加購模組</span></td>
-                    <td class="highlight-text">內建 AI 語音<span class="spec-detail">語音/APP同步</span></td>
+                    <td class="feature-name">YouTube 整合</td>
+                    <td>支援 (人聲消除/升降調)</td>
+                    <td>支援 (人聲消除/升降調)</td>
+                    <td>基礎支援</td>
+                    <td class="highlight">深度整合 (專屬入口)</td>
                 </tr>
                 <tr>
-                    <td class="feature-col">音頻處理</td>
-                    <td>頂級環繞晶片<span class="spec-detail">劇院級音效</span></td>
-                    <td>專業處理晶片<span class="spec-detail">人聲清晰度強化</span></td>
-                    <td>標準音訊輸出<span class="spec-detail">基礎立體聲</span></td>
-                    <td class="highlight-text">強效混音晶片<span class="spec-detail">專業級修音技術</span></td>
+                    <td class="feature-name">AI 語音搜歌</td>
+                    <td>內建 (N2 APP 同步)</td>
+                    <td>內建 (N2 APP 同步)</td>
+                    <td>選配裝置</td>
+                    <td>內建 (支援語音聲控)</td>
                 </tr>
                 <tr>
-                    <td class="feature-col">適用場景</td>
-                    <td>大型會所/豪宅<span class="spec-detail">頂規劇院空間</span></td>
-                    <td>家庭視聽室<span class="spec-detail">5-10坪包廂</span></td>
-                    <td>客廳/臥室<span class="spec-detail">5坪內空間</span></td>
-                    <td>專業練歌房<span class="spec-detail">強調音色表現</span></td>
+                    <td class="feature-name">錄音/評分</td>
+                    <td>智慧評分 / 錄音備份</td>
+                    <td>智慧評分 / 錄音備份</td>
+                    <td>基礎評分</td>
+                    <td class="highlight">簡譜錄影 / 智慧評分</td>
+                </tr>
+                <tr>
+                    <td class="feature-name">適用定位</td>
+                    <td>頂級豪宅 / 商業會所</td>
+                    <td>標準家庭 / 視聽室</td>
+                    <td>個人空間 / 初階首選</td>
+                    <td>行動舞台 / 里民活動</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
     <div class="btn-box">
-        <a href="https://a91109711-wq.github.io/Iyhot/W-880-DM.pdf" class="btn btn-main">📥 下載 W-880 專業 DM</a>
-        <a href="https://a91109711-wq.github.io/Iyhot/N-Series.pdf" class="btn btn-sub">📜 下載 STAR 系列完整型錄</a>
-        <a href="https://a91109711-wq.github.io/Iyhot/talk.html" class="btn btn-sub">💬 諮詢技術支援窗口</a>
+        <a href="https://a91109711-wq.github.io/Iyhot/W-880-DM.pdf" class="btn btn-blue">查看 W-880 官方 DM</a>
+        <a href="https://a91109711-wq.github.io/Iyhot/N-Series.pdf" class="btn" style="border: 1px solid var(--blue); color: var(--blue);">查看 STAR 系列型錄</a>
     </div>
 
     <div class="footer">
-        音圓系列產品技術支援平台<br>
-        © 2026 Service Platform. All rights reserved.
+        音圓產品技術支援中心<br>
+        本頁面規格資訊同步官方手冊，實際出貨依官方標配為準
     </div>
 
 </body>
