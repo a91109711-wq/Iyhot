@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>機型介紹 - 服務平台</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --neon-blue: #38bdf8;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: var(--neon-blue);
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+        }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            border-color: var(--neon-blue);
+        }
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        h2 {
+            margin: 10px 0;
+            font-size: 1.4rem;
+        }
+        p {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+        .btn:active {
+            opacity: 0.8;
+        }
+        footer {
+            margin-top: 50px;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>機型介紹 Model Info</h1>
+
+    <div class="grid">
+        <div class="card">
+            <div class="icon">📺</div>
+            <h2>STAR N5 旗艦款</h2>
+            <p>雙螢幕設計，支援智慧語音點歌與 4K 超高清輸出，給您最頂級的 K 歌體驗。</p>
+            <a href="https://a91109711-wq.github.io/Iyhot/STAR%20:%20N%E7%B3%BB%20%E5%88%97.pdf" class="btn">下載型錄 (PDF)</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">📟</div>
+            <h2>STAR N2 專業款</h2>
+            <p>高性能音訊處理器，內建雲端歌曲更新功能，穩定性高，適合家庭與商業場所。</p>
+            <a href="https://a91109711-wq.github.io/Iyhot/STAR%20:%20N%E7%B3%BB%20%E5%88%97.pdf" class="btn">下載型錄 (PDF)</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔊</div>
+            <h2>PARTY-7000 系統</h2>
+            <p>專業音響擴大機系統，大功率輸出，完美呈現人聲細節與震撼低音。</p>
+            <a href="https://a91109711-wq.github.io/Iyhot/PARTY-7000.pdf" class="btn">下載型錄 (PDF)</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">📄</div>
+            <h2>W-880 系列</h2>
+            <p>輕量化設計與多功能操作，提供最靈活的介面連結方案。</p>
+            <a href="https://a91109711-wq.github.io/Iyhot/W-880%20DM.pdf" class="btn">下載型錄 (PDF)</a>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 服務平台 - 音圓國際代理維護
+    </footer>
+
+</body>
+</html>
