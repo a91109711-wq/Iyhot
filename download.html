@@ -1,82 +1,68 @@
-html lang="zh-Hant">
+<!DOCTYPE html>
+<html lang="zh-TW">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>下載文宣</title>
-
-<style>
-body {
-    font-family: Arial, "Microsoft JhengHei", sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-}
-
-.container {
-    max-width: 750px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-}
-
-.title {
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.button {
-    display: block;
-    text-align: center;
-    background: #6a1b9a;
-    color: white;
-    padding: 16px;
-    margin-top: 15px;
-    text-decoration: none;
-    border-radius: 10px;
-    font-size: 18px;
-}
-
-.button:hover {
-    background: #4a148c;
-}
-
-.footer {
-    margin-top: 30px;
-}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>產品文宣下載 - 技術支援平台</title>
+    <style>
+        :root { --bg: #0f172a; --card: #1e293b; --blue: #38bdf8; --white: #f8fafc; --gray: #94a3b8; }
+        body { background: var(--bg); color: var(--white); font-family: -apple-system, sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        h1 { color: var(--blue); text-shadow: 0 0 10px rgba(56,189,248,0.3); margin-bottom: 30px; }
+        .container { width: 100%; max-width: 600px; }
+        .download-item { background: var(--card); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 18px; margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .file-info { display: flex; align-items: center; }
+        .file-icon { font-size: 2.2rem; margin-right: 15px; }
+        .file-name { font-weight: bold; display: block; font-size: 1.05rem; }
+        .file-type { color: var(--gray); font-size: 0.8rem; margin-top: 3px; display: block; }
+        .dl-btn { background: #2563eb; color: white; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-size: 0.9rem; font-weight: bold; transition: 0.2s; }
+        .dl-btn:active { background: #1d4ed8; transform: scale(0.95); }
+        .footer { text-align: center; margin-top: 50px; color: #475569; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
+    <h1>📂 官方產品文宣下載</h1>
 
-<div class="title">
-下載文宣
-</div>
+    <div class="container">
+        <div class="download-item">
+            <div class="file-info">
+                <div class="file-icon">📄</div>
+                <div>
+                    <span class="file-name">STAR 全系列型錄 (N2-25/46/55)</span>
+                    <span class="file-type">官方 PDF 規格書</span>
+                </div>
+            </div>
+            <a href="https://a91109711-wq.github.io/Iyhot/N-Series.pdf" class="dl-btn">下載</a>
+        </div>
 
-<a href="STAR：N系列.pdf" class="button">
-📄 STAR / N 系列 主機型
-</a>
+        <div class="download-item">
+            <div class="file-info">
+                <div class="file-icon">📋</div>
+                <div>
+                    <span class="file-name">W-880 專業強效機型 DM</span>
+                    <span class="file-type">官方 PDF 文宣</span>
+                </div>
+            </div>
+            <a href="https://a91109711-wq.github.io/Iyhot/W-880-DM.pdf" class="dl-btn">下載</a>
+        </div>
 
-<a href="W-880 DM.pdf" class="button">
-📄 W-880 行動式伴唱系統
-</a>
+        <div class="download-item">
+            <div class="file-info">
+                <div class="file-icon">🔊</div>
+                <div>
+                    <span class="file-name">PARTY-7000 音響系統說明</span>
+                    <span class="file-type">官方 PDF 規格書</span>
+                </div>
+            </div>
+            <a href="https://a91109711-wq.github.io/Iyhot/PARTY-7000.pdf" class="dl-btn">下載</a>
+        </div>
+    </div>
 
-<a href="PARTY-7000.pdf" class="button">
-📄 PARTY-7000 行動 KTV
-</a>
-
-<div class="footer">
-
-<a href="index.html" class="button">
-回到首頁
-</a>
-
-</div>
-
-</div>
+    <div class="footer">
+        音圓產品技術支援中心<br>
+        本平台檔案均取自官方發佈之最新版本<br>
+        © 2026 Inyuan Service Platform
+    </div>
 
 </body>
 </html>
