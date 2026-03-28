@@ -1,171 +1,262 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>產品介紹與比較 - 產品服務中心</title>
-    <style>
-        :root { --bg: #0f172a; --card: #1e293b; --blue: #38bdf8; --white: #f8fafc; --gray: #94a3b8; --accent: #2563eb; }
-        body { background: var(--bg); color: var(--white); font-family: -apple-system, sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
-        h1 { color: var(--blue); text-shadow: 0 0 10px rgba(56,189,248,0.3); margin-bottom: 10px; font-size: 1.8rem; text-align: center; }
-        .subtitle { color: var(--gray); margin-bottom: 40px; font-size: 0.95rem; text-align: center; }
-        
-        .container { width: 100%; max-width: 900px; }
-        h2 { border-left: 4px solid var(--blue); padding-left: 10px; margin-top: 40px; margin-bottom: 20px; font-size: 1.3rem; }
-        h3 { color: var(--blue); margin-top: 35px; margin-bottom: 15px; font-size: 1.1rem; text-align: center; background: rgba(56,189,248,0.1); padding: 10px; border-radius: 8px; }
-        
-        /* 產品卡片設計 */
-        .product-card { 
-            background: var(--card); border: 1px solid rgba(255,255,255,0.1); 
-            border-radius: 12px; padding: 25px; margin-bottom: 25px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
-        }
-        .product-title { 
-            color: var(--blue); font-size: 1.4rem; font-weight: bold; 
-            margin-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;
-        }
-        .product-desc { color: var(--gray); line-height: 1.6; margin-bottom: 15px; font-size: 0.95rem; }
-        .feature-list { padding-left: 20px; margin: 0; color: var(--white); }
-        .feature-list li { margin-bottom: 8px; font-size: 0.95rem; line-height: 1.5; }
-        
-        /* 比較表設計 */
-        .table-responsive { width: 100%; overflow-x: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); margin-bottom: 30px; }
-        table { width: 100%; border-collapse: collapse; background: var(--card); min-width: 800px; }
-        th, td { padding: 15px; text-align: center; border: 1px solid rgba(255,255,255,0.1); font-size: 0.95rem; white-space: nowrap; }
-        th { background: rgba(56,189,248,0.15); color: var(--blue); font-weight: bold; }
-        td { color: var(--white); }
-        .highlight { color: #fde047; font-weight: bold; } /* 高亮黃色字 */
-        
-        .footer { text-align: center; margin-top: 50px; color: #475569; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>機型整合比較</title>
+
+<style>
+body {
+    font-family: Arial, "Microsoft JhengHei";
+    background-color: #1f2b3a;
+    margin: 0;
+    padding: 20px;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background: #2f3e55;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 40px;
+    color: #ffd966;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #555;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #445b78;
+}
+
+tr:nth-child(even) {
+    background-color: #3a4e69;
+}
+</style>
+
 </head>
+
 <body>
 
-    <h1>🎤 音圓全系列主力產品</h1>
-    <div class="subtitle">官方詳細規格與機型比較表</div>
+<div class="container">
 
-    <div class="container">
-        
-        <h2>一、各型號重點介紹</h2>
+<h1>機型整合比較</h1>
 
-        <div class="product-card">
-            <div class="product-title">W-880 / W-880P+ 專業旗艦主機</div>
-            <div class="product-desc">專為頂級視聽娛樂與專業包廂打造的旗艦機種，提供最震撼的音質與最流暢的點歌體驗。W-880P+ 更配備專屬觸控螢幕，操作更具科技感。</div>
-            <ul class="feature-list">
-                <li>旗艦級專業伴唱機，呈現錄音室等級極致音質</li>
-                <li>支援 4K 高畫質影像輸出，視覺與聽覺雙重饗宴</li>
-                <li>內建高階音效處理晶片，專業防嘯叫與人聲細膩處理</li>
-            </ul>
-        </div>
+<h2>系列型式</h2>
 
-        <div class="product-card">
-            <div class="product-title">STAR 系列 (25 / 46 / 55)</div>
-            <div class="product-desc">全新世代智慧伴唱機，結合最先進的 AI 語音科技，針對不同空間與預算提供多樣化選擇，讓客廳秒變智慧娛樂中心。</div>
-            <ul class="feature-list">
-                <li>最強 AI 智慧語音聲控，找歌、點歌一句話輕鬆搞定</li>
-                <li>多元硬碟容量規格，支援雲端歌庫即時更新</li>
-                <li>官方高畫質原版 MV 支援，享受最原汁原味的演唱體驗</li>
-            </ul>
-        </div>
+<table>
+<tr>
+<th>項目</th>
+<th>STAR 系列</th>
+<th>W-880 系列</th>
+</tr>
 
-        <div class="product-card">
-            <div class="product-title">PARTY-7000 專業行動音響</div>
-            <div class="product-desc">走到哪，唱到哪！一體成型的強大火力，免插電也能擁有震撼全場的爆發力，是戶外活動與中大型聚會的神級裝備。</div>
-            <ul class="feature-list">
-                <li>超大功率震撼輸出，低音飽滿厚實、高音清透宏亮</li>
-                <li>內建大容量長效電池，支援長時間戶外無插電演唱</li>
-                <li>支援藍牙連線與無線麥克風，便攜滾輪設計輕鬆移動</li>
-            </ul>
-        </div>
+<tr>
+<td>設備型式</td>
+<td>主機型</td>
+<td>一體式</td>
+</tr>
 
-        <h2>二、系列詳細規格比較表</h2>
-        
-        <h3>⭐ STAR 智慧系列 規格比較</h3>
-        <div class="table-responsive">
-            <table>
-                <thead>
-                    <tr>
-                        <th>型號</th>
-                        <th>硬碟容量等級</th>
-                        <th>AI 智慧聲控</th>
-                        <th>影音輸出支援</th>
-                        <th>音效處理晶片</th>
-                        <th>雲端/APP擴充</th>
-                        <th>推薦使用場景</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>STAR-55</strong></td>
-                        <td class="highlight">旗艦級超大容量</td>
-                        <td>搭載最新 AI 聲控</td>
-                        <td>4K 超高畫質</td>
-                        <td>旗艦級 DSP 音效晶片</td>
-                        <td>支援雲端更新 / 多元 APP</td>
-                        <td>頂級智慧家庭劇院</td>
-                    </tr>
-                    <tr>
-                        <td><strong>STAR-46</strong></td>
-                        <td class="highlight">專業級大容量</td>
-                        <td>搭載最新 AI 聲控</td>
-                        <td>4K 超高畫質</td>
-                        <td>專業級 DSP 音效晶片</td>
-                        <td>支援雲端更新 / 多元 APP</td>
-                        <td>中大型客廳歡唱</td>
-                    </tr>
-                    <tr>
-                        <td><strong>STAR-25</strong></td>
-                        <td>標準級容量</td>
-                        <td>搭載最新 AI 聲控</td>
-                        <td>4K 超高畫質</td>
-                        <td>標準級 DSP 音效晶片</td>
-                        <td>支援雲端更新 / 多元 APP</td>
-                        <td>小資家庭 / 入門首選</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+<tr>
+<td>安裝方式</td>
+<td>固定安裝</td>
+<td>即插即用</td>
+</tr>
 
-        <h3>👑 W-880 專業旗艦系列 規格比較</h3>
-        <div class="table-responsive">
-            <table>
-                <thead>
-                    <tr>
-                        <th>型號</th>
-                        <th>專屬操作介面</th>
-                        <th>影音解析度</th>
-                        <th>專業音效處理</th>
-                        <th>智慧點歌系統</th>
-                        <th>產品定位</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>W-880P+</strong></td>
-                        <td class="highlight">專屬行動觸控螢幕</td>
-                        <td>4K HDR 超高畫質</td>
-                        <td>錄音室頂級晶片 / 防嘯叫技術</td>
-                        <td>觸控面板 / 手機 APP 雙支援</td>
-                        <td>頂級私人會所 / 科技豪宅</td>
-                    </tr>
-                    <tr>
-                        <td><strong>W-880</strong></td>
-                        <td>專業主機實體面板</td>
-                        <td>4K HDR 超高畫質</td>
-                        <td>錄音室頂級晶片 / 防嘯叫技術</td>
-                        <td>智慧遙控器 / 手機 APP 支援</td>
-                        <td>專業 VIP 包廂 / 頂級視聽室</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+<tr>
+<td>內建喇叭</td>
+<td>需外接</td>
+<td>內建</td>
+</tr>
 
-    </div>
+<tr>
+<td>內建螢幕</td>
+<td>需外接</td>
+<td>內建</td>
+</tr>
 
-    <div class="footer">
-        產品規格服務中心<br>
-        © 2026 Inyuan Service Platform
-    </div>
+<tr>
+<td>移動方式</td>
+<td>固定式</td>
+<td>可移動</td>
+</tr>
+
+<tr>
+<td>常見場域</td>
+<td>家庭 / 店面 / 包廂</td>
+<td>家庭 / 店面 / 活動</td>
+</tr>
+</table>
+
+<h2>STAR 系列機型</h2>
+
+<table>
+<tr>
+<th>項目</th>
+<th>STAR-25</th>
+<th>STAR-46</th>
+<th>STAR-55</th>
+</tr>
+
+<tr>
+<td>使用場域</td>
+<td>家庭</td>
+<td>家庭 / 店面</td>
+<td>店面 / 包廂</td>
+</tr>
+
+<tr>
+<td>安裝方式</td>
+<td>固定安裝</td>
+<td>固定安裝</td>
+<td>固定安裝</td>
+</tr>
+
+<tr>
+<td>WiFi</td>
+<td>支援</td>
+<td>支援</td>
+<td>支援</td>
+</tr>
+
+<tr>
+<td>藍牙</td>
+<td>支援</td>
+<td>支援</td>
+<td>支援</td>
+</tr>
+
+<tr>
+<td>雲端下載歌曲</td>
+<td>支援</td>
+<td>支援</td>
+<td>支援</td>
+</tr>
+
+<tr>
+<td>USB</td>
+<td>支援</td>
+<td>支援</td>
+<td>支援</td>
+</tr>
+
+<tr>
+<td>HDMI</td>
+<td>支援</td>
+<td>支援</td>
+<td>支援</td>
+</tr>
+
+<tr>
+<td>操作方式</td>
+<td>觸控 / 遙控</td>
+<td>觸控 / 遙控</td>
+<td>觸控 / 遙控</td>
+</tr>
+
+<tr>
+<td>常見使用方式</td>
+<td>家庭娛樂</td>
+<td>餐廳 / 小吃店</td>
+<td>包廂 / 固定場域</td>
+</tr>
+
+</table>
+
+<h2>W-880 系列機型</h2>
+
+<table>
+<tr>
+<th>項目</th>
+<th>W-880</th>
+<th>W-880P</th>
+<th>W-880P Plus</th>
+</tr>
+
+<tr>
+<td>設備型式</td>
+<td>一體式</td>
+<td>一體式</td>
+<td>一體式</td>
+</tr>
+
+<tr>
+<td>是否可移動</td>
+<td>可移動</td>
+<td>可移動</td>
+<td>可移動</td>
+</tr>
+
+<tr>
+<td>內建螢幕</td>
+<td>有</td>
+<td>有</td>
+<td>有</td>
+</tr>
+
+<tr>
+<td>內建喇叭</td>
+<td>有</td>
+<td>有</td>
+<td>有</td>
+</tr>
+
+<tr>
+<td>WiFi</td>
+<td>支援</td>
+<td>支援</td>
+<td>支援</td>
+</tr>
+
+<tr>
+<td>藍牙</td>
+<td>支援</td>
+<td>支援</td>
+<td>支援</td>
+</tr>
+
+<tr>
+<td>USB</td>
+<td>支援</td>
+<td>支援</td>
+<td>支援</td>
+</tr>
+
+<tr>
+<td>操作方式</td>
+<td>觸控操作</td>
+<td>觸控操作</td>
+<td>觸控操作</td>
+</tr>
+
+<tr>
+<td>常見使用方式</td>
+<td>家庭 / 店面</td>
+<td>店面 / 活動</td>
+<td>店面 / 活動</td>
+</tr>
+
+</table>
+
+</div>
 
 </body>
 </html>
