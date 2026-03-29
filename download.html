@@ -7,75 +7,196 @@
     <style>
         :root { --bg: #0f172a; --card: #1e293b; --blue: #38bdf8; --white: #f8fafc; --gray: #94a3b8; --accent: #2563eb; --highlight: #ef4444; }
         body { background: var(--bg); color: var(--white); font-family: -apple-system, sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
-        h1 { color: var(--blue); text-shadow: 0 0 10px rgba(56,189,248,0.3); margin-bottom: 30px; }
-        .container { width: 100%; max-width: 600px; }
-        .item { background: var(--card); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 18px; margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between; }
-        .item.hot { border: 1px solid var(--highlight); box-shadow: 0 0 10px rgba(239,68,68,0.2); }
-        .file-name { font-weight: bold; font-size: 1.05rem; display: flex; align-items: center; }
+        h1 { color: var(--blue); text-shadow: 0 0 10px rgba(56,189,248,0.3); margin-bottom: 30px; text-align: center; }
+        .container { width: 100%; max-width: 800px; }
         
-        /* 新增的 PDF 標籤設計 */
-        .pdf-tag { background-color: #e11d48; color: white; font-size: 0.7rem; padding: 3px 6px; border-radius: 4px; margin-left: 10px; font-weight: bold; white-space: nowrap; }
+        /* 圖片網格排版 */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            width: 100%;
+        }
         
-        .dl-btn { background: var(--accent); color: white; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-size: 0.9rem; font-weight: bold; transition: 0.2s; white-space: nowrap; margin-left: 15px; }
-        .dl-btn:active { background: #1d4ed8; transform: scale(0.95); }
-        .dl-btn.hot-btn { background: var(--highlight); }
-        .dl-btn.hot-btn:active { background: #b91c1c; }
-        .footer { text-align: center; margin-top: 50px; color: #475569; font-size: 0.75rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; }
+        /* 單張卡片設計 */
+        .card {
+            background: var(--card); border-radius: 12px; overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+        .card.hot { border: 2px solid var(--highlight); box-shadow: 0 0 15px rgba(239,68,68,0.3); }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.5); }
+        .card a { text-decoration: none; color: var(--white); display: flex; flex-direction: column; height: 100%; }
+        
+        /* 圖片預覽區 */
+        .card-img {
+            width: 100%;
+            aspect-ratio: 3/4; /* DM 直式比例 */
+            background-color: #334155;
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden;
+            position: relative;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        /* 系統自動抓取的縮圖 */
+        .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+        .card:hover .card-img img { transform: scale(1.08); } /* 滑過微放大特效 */
+        
+        /* 點擊提示浮水印 */
+        .click-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center;
+            opacity: 0; transition: opacity 0.2s; color: white; font-weight: bold; font-size: 1rem;
+            pointer-events: none; /* 讓滑鼠點擊可以穿透 */
+        }
+        .card:hover .click-overlay { opacity: 1; }
+
+        /* 文字資訊區 */
+        .card-info { padding: 15px 10px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; align-items: center; }
+        .file-name { font-size: 0.95rem; font-weight: bold; margin-bottom: 10px; line-height: 1.4; }
+        .pdf-tag { background-color: #e11d48; color: white; font-size: 0.75rem; padding: 4px 10px; border-radius: 4px; display: inline-block; font-weight: bold; }
+        
+        .footer { text-align: center; margin-top: 50px; color: #475569; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; }
     </style>
 </head>
 <body>
 
-    <h1>📂 官方產品文宣下載</h1>
+    <h1>📂 官方文宣影像下載</h1>
 
     <div class="container">
-        <div class="item hot">
-            <div class="file-name">🔥 最新活動：原廠舊換新專案 DM <span class="pdf-tag">PDF</span></div>
-            <a href="https://drive.google.com/file/d/1-kicqb90M16nE1wGtYGFYz7c-5_zswp_/view?usp=drivesdk" target="_blank" class="dl-btn hot-btn">點擊開啟</a>
-        </div>
+        <div class="grid-container">
 
-        <div class="item">
-            <div class="file-name">STAR 系列 (總覽) <span class="pdf-tag">PDF</span></div>
-            <a href="https://drive.google.com/file/d/13Yjg2y5FqJuW3c19IWyssxHaPrCT8l94/view?usp=drivesdk" target="_blank" class="dl-btn">點擊開啟</a>
-        </div>
+            <div class="card hot">
+                <a href="https://drive.google.com/file/d/1-kicqb90M16nE1wGtYGFYz7c-5_zswp_/view?usp=drivesdk" target="_blank">
+                    <div class="card-img">
+                        <img src="https://drive.google.com/thumbnail?id=1-kicqb90M16nE1wGtYGFYz7c-5_zswp_&sz=w400" alt="舊換新專案 DM">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info">
+                        <div class="file-name">🔥 最新活動：原廠舊換新專案 DM</div>
+                        <span class="pdf-tag">PDF</span>
+                    </div>
+                </a>
+            </div>
 
-        <div class="item">
-            <div class="file-name">STAR 系列 正面圖 <span class="pdf-tag">PDF</span></div>
-            <a href="https://drive.google.com/file/d/1DneJ44RFJPBsB5neT1uO4N6LIJlK5YMs/view?usp=drivesdk" target="_blank" class="dl-btn">點擊開啟</a>
-        </div>
+            <div class="card">
+                <a href="https://drive.google.com/file/d/13Yjg2y5FqJuW3c19IWyssxHaPrCT8l94/view?usp=drivesdk" target="_blank">
+                    <div class="card-img">
+                        <img src="https://drive.google.com/thumbnail?id=13Yjg2y5FqJuW3c19IWyssxHaPrCT8l94&sz=w400" alt="STAR 總覽">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info">
+                        <div class="file-name">STAR 系列 (總覽)</div>
+                        <span class="pdf-tag">PDF</span>
+                    </div>
+                </a>
+            </div>
 
-        <div class="item">
-            <div class="file-name">STAR 系列 側視圖 <span class="pdf-tag">PDF</span></div>
-            <a href="https://drive.google.com/file/d/1CgCcYTPRNgNIy6v6qq-BEjXCI8tlFbLj/view?usp=drivesdk" target="_blank" class="dl-btn">點擊開啟</a>
-        </div>
+            <div class="card">
+                <a href="https://drive.google.com/file/d/1DneJ44RFJPBsB5neT1uO4N6LIJlK5YMs/view?usp=drivesdk" target="_blank">
+                    <div class="card-img">
+                        <img src="https://drive.google.com/thumbnail?id=1DneJ44RFJPBsB5neT1uO4N6LIJlK5YMs&sz=w400" alt="STAR 正面圖">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info">
+                        <div class="file-name">STAR 系列 正面圖</div>
+                        <span class="pdf-tag">PDF</span>
+                    </div>
+                </a>
+            </div>
 
-        <div class="item">
-            <div class="file-name">STAR 系列 主圖 <span class="pdf-tag">PDF</span></div>
-            <a href="https://drive.google.com/file/d/13OwuOGCVbUO3u4vpsCbO2RZTrXP2XU0d/view?usp=drivesdk" target="_blank" class="dl-btn">點擊開啟</a>
-        </div>
+            <div class="card">
+                <a href="https://drive.google.com/file/d/1CgCcYTPRNgNIy6v6qq-BEjXCI8tlFbLj/view?usp=drivesdk" target="_blank">
+                    <div class="card-img">
+                        <img src="https://drive.google.com/thumbnail?id=1CgCcYTPRNgNIy6v6qq-BEjXCI8tlFbLj&sz=w400" alt="STAR 側視圖">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info">
+                        <div class="file-name">STAR 系列 側視圖</div>
+                        <span class="pdf-tag">PDF</span>
+                    </div>
+                </a>
+            </div>
 
-        <div class="item">
-            <div class="file-name">W-880 專業主機 DM <span class="pdf-tag">PDF</span></div>
-            <a href="https://drive.google.com/file/d/1y5HekxZM5vU1dF8nEVsC7NtHs3RAfSPL/view?usp=drivesdk" target="_blank" class="dl-btn">點擊開啟</a>
-        </div>
+            <div class="card">
+                <a href="https://drive.google.com/file/d/13OwuOGCVbUO3u4vpsCbO2RZTrXP2XU0d/view?usp=drivesdk" target="_blank">
+                    <div class="card-img">
+                        <img src="https://drive.google.com/thumbnail?id=13OwuOGCVbUO3u4vpsCbO2RZTrXP2XU0d&sz=w400" alt="STAR 主圖">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info">
+                        <div class="file-name">STAR 系列 主圖</div>
+                        <span class="pdf-tag">PDF</span>
+                    </div>
+                </a>
+            </div>
 
-        <div class="item">
-            <div class="file-name">W-880P+ 行動觸控版 <span class="pdf-tag">PDF</span></div>
-            <a href="https://drive.google.com/file/d/1FVCp95x3terKNC_ey_nO3qXOHx2StN-O/view?usp=drivesdk" target="_blank" class="dl-btn">點擊開啟</a>
-        </div>
+            <div class="card">
+                <a href="https://drive.google.com/file/d/1y5HekxZM5vU1dF8nEVsC7NtHs3RAfSPL/view?usp=drivesdk" target="_blank">
+                    <div class="card-img">
+                        <img src="https://drive.google.com/thumbnail?id=1y5HekxZM5vU1dF8nEVsC7NtHs3RAfSPL&sz=w400" alt="W-880 DM">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info">
+                        <div class="file-name">W-880 專業主機 DM</div>
+                        <span class="pdf-tag">PDF</span>
+                    </div>
+                </a>
+            </div>
 
-        <div class="item">
-            <div class="file-name">PARTY-7000 專業音響 <span class="pdf-tag">PDF</span></div>
-            <a href="https://drive.google.com/file/d/1yJYZ_Ecd2KnRdh5iPabgH9bdcVprjlXU/view?usp=drivesdk" target="_blank" class="dl-btn">點擊開啟</a>
-        </div>
+            <div class="card">
+                <a href="https://drive.google.com/file/d/1FVCp95x3terKNC_ey_nO3qXOHx2StN-O/view?usp=drivesdk" target="_blank">
+                    <div class="card-img">
+                        <img src="https://drive.google.com/thumbnail?id=1FVCp95x3terKNC_ey_nO3qXOHx2StN-O&sz=w400" alt="W-880P+ DM">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info">
+                        <div class="file-name">W-880P+ 行動觸控版</div>
+                        <span class="pdf-tag">PDF</span>
+                    </div>
+                </a>
+            </div>
 
-        <div class="item">
-            <div class="file-name">N2 系列詳細規格表 <span class="pdf-tag">PDF</span></div>
-            <a href="https://drive.google.com/file/d/1WkkRZjhvvUCnfAmzbvfl9UNyyYI86woS/view?usp=drivesdk" target="_blank" class="dl-btn">點擊開啟</a>
-        </div>
+            <div class="card">
+                <a href="https://drive.google.com/file/d/1yJYZ_Ecd2KnRdh5iPabgH9bdcVprjlXU/view?usp=drivesdk" target="_blank">
+                    <div class="card-img">
+                        <img src="https://drive.google.com/thumbnail?id=1yJYZ_Ecd2KnRdh5iPabgH9bdcVprjlXU&sz=w400" alt="PARTY-7000 DM">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info">
+                        <div class="file-name">PARTY-7000 專業音響</div>
+                        <span class="pdf-tag">PDF</span>
+                    </div>
+                </a>
+            </div>
 
-        <div class="item">
-            <div class="file-name">產品系列導覽圖 <span class="pdf-tag">PDF</span></div>
-            <a href="https://drive.google.com/file/d/1DwV5_LO-p9QeAzXi0gIISvu4b4AwvBhw/view?usp=drivesdk" target="_blank" class="dl-btn">點擊開啟</a>
+            <div class="card">
+                <a href="https://drive.google.com/file/d/1WkkRZjhvvUCnfAmzbvfl9UNyyYI86woS/view?usp=drivesdk" target="_blank">
+                    <div class="card-img">
+                        <img src="https://drive.google.com/thumbnail?id=1WkkRZjhvvUCnfAmzbvfl9UNyyYI86woS&sz=w400" alt="N2 規格表">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info">
+                        <div class="file-name">N2 系列詳細規格表</div>
+                        <span class="pdf-tag">PDF</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="https://drive.google.com/file/d/1DwV5_LO-p9QeAzXi0gIISvu4b4AwvBhw/view?usp=drivesdk" target="_blank">
+                    <div class="card-img">
+                        <img src="https://drive.google.com/thumbnail?id=1DwV5_LO-p9QeAzXi0gIISvu4b4AwvBhw&sz=w400" alt="導覽圖">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info">
+                        <div class="file-name">產品系列導覽圖</div>
+                        <span class="pdf-tag">PDF</span>
+                    </div>
+                </a>
+            </div>
+
         </div>
     </div>
 
