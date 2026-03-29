@@ -10,7 +10,6 @@
         h1 { color: var(--blue); text-shadow: 0 0 10px rgba(56,189,248,0.3); margin-bottom: 30px; text-align: center; }
         .container { width: 100%; max-width: 800px; }
         
-        /* 圖片網格排版 */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -18,7 +17,6 @@
             width: 100%;
         }
         
-        /* 單張卡片設計 */
         .card {
             background: var(--card); border-radius: 12px; overflow: hidden;
             border: 1px solid rgba(255,255,255,0.1);
@@ -29,20 +27,15 @@
         .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.5); }
         .card a { text-decoration: none; color: var(--white); display: flex; flex-direction: column; height: 100%; }
         
-        /* 圖片預覽區 */
         .card-img {
-            width: 100%;
-            aspect-ratio: 3/4; /* DM 直式比例 */
-            background-color: #334155;
+            width: 100%; aspect-ratio: 3/4; background-color: #334155;
             display: flex; align-items: center; justify-content: center;
-            overflow: hidden;
-            position: relative;
+            overflow: hidden; position: relative;
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
         .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
-        .card:hover .card-img img { transform: scale(1.08); } /* 滑過微放大特效 */
+        .card:hover .card-img img { transform: scale(1.08); }
         
-        /* 點擊提示浮水印 */
         .click-overlay {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center;
@@ -51,7 +44,6 @@
         }
         .card:hover .click-overlay { opacity: 1; }
 
-        /* 文字資訊區 */
         .card-info { padding: 15px 10px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; align-items: center; }
         .file-name { font-size: 0.95rem; font-weight: bold; margin-bottom: 10px; line-height: 1.4; }
         .pdf-tag { background-color: #e11d48; color: white; font-size: 0.75rem; padding: 4px 10px; border-radius: 4px; display: inline-block; font-weight: bold; }
@@ -67,9 +59,9 @@
         <div class="grid-container">
 
             <div class="card hot">
-                <a href="https://drive.google.com/file/d/1-kicqb90M16nE1wGtYGFYz7c-5_zswp_/view?usp=drivesdk" target="_blank">
+                <a href="舊換新專案.pdf" target="_blank">
                     <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=1-kicqb90M16nE1wGtYGFYz7c-5_zswp_&sz=w400" alt="舊換新">
+                        <img src="舊換新專案.jpg" alt="舊換新" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
                         <div class="click-overlay">📥 點擊下載</div>
                     </div>
                     <div class="card-info">
@@ -80,9 +72,9 @@
             </div>
 
             <div class="card">
-                <a href="https://drive.google.com/file/d/1DwV5_LO-p9QeAzXi0gIISvu4b4AwvBhw/view?usp=drivesdk" target="_blank">
+                <a href="產品導覽圖.pdf" target="_blank">
                     <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=1DwV5_LO-p9QeAzXi0gIISvu4b4AwvBhw&sz=w400" alt="導覽圖">
+                        <img src="產品導覽圖.jpg" alt="導覽圖" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
                         <div class="click-overlay">📥 點擊下載</div>
                     </div>
                     <div class="card-info">
@@ -93,9 +85,9 @@
             </div>
 
             <div class="card">
-                <a href="https://drive.google.com/file/d/1DneJ44RFJPBsB5neT1uO4N6LIJlK5YMs/view?usp=drivesdk" target="_blank">
+                <a href="STAR55.pdf" target="_blank">
                     <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=1DneJ44RFJPBsB5neT1uO4N6LIJlK5YMs&sz=w400" alt="STAR55">
+                        <img src="STAR55.jpg" alt="STAR55" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
                         <div class="click-overlay">📥 點擊下載</div>
                     </div>
                     <div class="card-info">
@@ -106,9 +98,9 @@
             </div>
 
             <div class="card">
-                <a href="https://drive.google.com/file/d/1CgCcYTPRNgNIy6v6qq-BEjXCI8tlFbLj/view?usp=drivesdk" target="_blank">
+                <a href="STAR46.pdf" target="_blank">
                     <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=1CgCcYTPRNgNIy6v6qq-BEjXCI8tlFbLj&sz=w400" alt="STAR46">
+                        <img src="STAR46.jpg" alt="STAR46" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
                         <div class="click-overlay">📥 點擊下載</div>
                     </div>
                     <div class="card-info">
@@ -119,9 +111,9 @@
             </div>
 
             <div class="card">
-                <a href="https://drive.google.com/file/d/13OwuOGCVbUO3u4vpsCbO2RZTrXP2XU0d/view?usp=drivesdk" target="_blank">
+                <a href="STAR25.pdf" target="_blank">
                     <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=13OwuOGCVbUO3u4vpsCbO2RZTrXP2XU0d&sz=w400" alt="STAR25">
+                        <img src="STAR25.jpg" alt="STAR25" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
                         <div class="click-overlay">📥 點擊下載</div>
                     </div>
                     <div class="card-info">
@@ -132,9 +124,9 @@
             </div>
 
             <div class="card">
-                <a href="https://drive.google.com/file/d/1y5HekxZM5vU1dF8nEVsC7NtHs3RAfSPL/view?usp=drivesdk" target="_blank">
+                <a href="W880.pdf" target="_blank">
                     <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=1y5HekxZM5vU1dF8nEVsC7NtHs3RAfSPL&sz=w400" alt="W-880">
+                        <img src="W880.jpg" alt="W-880" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
                         <div class="click-overlay">📥 點擊下載</div>
                     </div>
                     <div class="card-info">
@@ -145,9 +137,9 @@
             </div>
 
             <div class="card">
-                <a href="https://drive.google.com/file/d/1FVCp95x3terKNC_ey_nO3qXOHx2StN-O/view?usp=drivesdk" target="_blank">
+                <a href="W880P.pdf" target="_blank">
                     <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=1FVCp95x3terKNC_ey_nO3qXOHx2StN-O&sz=w400" alt="W-880P+">
+                        <img src="W880P.jpg" alt="W-880P+" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
                         <div class="click-overlay">📥 點擊下載</div>
                     </div>
                     <div class="card-info">
@@ -158,9 +150,9 @@
             </div>
 
             <div class="card">
-                <a href="https://drive.google.com/file/d/1yJYZ_Ecd2KnRdh5iPabgH9bdcVprjlXU/view?usp=drivesdk" target="_blank">
+                <a href="PARTY7000.pdf" target="_blank">
                     <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=1yJYZ_Ecd2KnRdh5iPabgH9bdcVprjlXU&sz=w400" alt="PARTY-7000">
+                        <img src="PARTY7000.jpg" alt="PARTY-7000" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
                         <div class="click-overlay">📥 點擊下載</div>
                     </div>
                     <div class="card-info">
@@ -171,9 +163,9 @@
             </div>
 
             <div class="card">
-                <a href="https://drive.google.com/file/d/1WkkRZjhvvUCnfAmzbvfl9UNyyYI86woS/view?usp=drivesdk" target="_blank">
+                <a href="N2.pdf" target="_blank">
                     <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=1WkkRZjhvvUCnfAmzbvfl9UNyyYI86woS&sz=w400" alt="N2-350 / 250">
+                        <img src="N2.jpg" alt="N2-350 / 250" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
                         <div class="click-overlay">📥 點擊下載</div>
                     </div>
                     <div class="card-info">
@@ -184,9 +176,9 @@
             </div>
 
             <div class="card">
-                <a href="https://drive.google.com/file/d/13Yjg2y5FqJuW3c19IWyssxHaPrCT8l94/view?usp=drivesdk" target="_blank">
+                <a href="全系列總覽.pdf" target="_blank">
                     <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=13Yjg2y5FqJuW3c19IWyssxHaPrCT8l94&sz=w400" alt="全系列總覽">
+                        <img src="全系列總覽.jpg" alt="全系列總覽" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
                         <div class="click-overlay">📥 點擊下載</div>
                     </div>
                     <div class="card-info">
