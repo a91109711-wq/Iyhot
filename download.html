@@ -39,7 +39,6 @@
             position: relative;
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
-        /* 系統自動抓取的縮圖 */
         .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
         .card:hover .card-img img { transform: scale(1.08); } /* 滑過微放大特效 */
         
@@ -48,7 +47,7 @@
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center;
             opacity: 0; transition: opacity 0.2s; color: white; font-weight: bold; font-size: 1rem;
-            pointer-events: none; /* 讓滑鼠點擊可以穿透 */
+            pointer-events: none;
         }
         .card:hover .click-overlay { opacity: 1; }
 
@@ -70,115 +69,11 @@
             <div class="card hot">
                 <a href="https://drive.google.com/file/d/1-kicqb90M16nE1wGtYGFYz7c-5_zswp_/view?usp=drivesdk" target="_blank">
                     <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=1-kicqb90M16nE1wGtYGFYz7c-5_zswp_&sz=w400" alt="舊換新專案 DM">
+                        <img src="https://drive.google.com/thumbnail?id=1-kicqb90M16nE1wGtYGFYz7c-5_zswp_&sz=w400" alt="舊換新">
                         <div class="click-overlay">📥 點擊下載</div>
                     </div>
                     <div class="card-info">
-                        <div class="file-name">🔥 最新活動：原廠舊換新專案 DM</div>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="https://drive.google.com/file/d/13Yjg2y5FqJuW3c19IWyssxHaPrCT8l94/view?usp=drivesdk" target="_blank">
-                    <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=13Yjg2y5FqJuW3c19IWyssxHaPrCT8l94&sz=w400" alt="STAR 總覽">
-                        <div class="click-overlay">📥 點擊下載</div>
-                    </div>
-                    <div class="card-info">
-                        <div class="file-name">STAR 系列 (總覽)</div>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="https://drive.google.com/file/d/1DneJ44RFJPBsB5neT1uO4N6LIJlK5YMs/view?usp=drivesdk" target="_blank">
-                    <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=1DneJ44RFJPBsB5neT1uO4N6LIJlK5YMs&sz=w400" alt="STAR 正面圖">
-                        <div class="click-overlay">📥 點擊下載</div>
-                    </div>
-                    <div class="card-info">
-                        <div class="file-name">STAR 系列 正面圖</div>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="https://drive.google.com/file/d/1CgCcYTPRNgNIy6v6qq-BEjXCI8tlFbLj/view?usp=drivesdk" target="_blank">
-                    <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=1CgCcYTPRNgNIy6v6qq-BEjXCI8tlFbLj&sz=w400" alt="STAR 側視圖">
-                        <div class="click-overlay">📥 點擊下載</div>
-                    </div>
-                    <div class="card-info">
-                        <div class="file-name">STAR 系列 側視圖</div>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="https://drive.google.com/file/d/13OwuOGCVbUO3u4vpsCbO2RZTrXP2XU0d/view?usp=drivesdk" target="_blank">
-                    <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=13OwuOGCVbUO3u4vpsCbO2RZTrXP2XU0d&sz=w400" alt="STAR 主圖">
-                        <div class="click-overlay">📥 點擊下載</div>
-                    </div>
-                    <div class="card-info">
-                        <div class="file-name">STAR 系列 主圖</div>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="https://drive.google.com/file/d/1y5HekxZM5vU1dF8nEVsC7NtHs3RAfSPL/view?usp=drivesdk" target="_blank">
-                    <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=1y5HekxZM5vU1dF8nEVsC7NtHs3RAfSPL&sz=w400" alt="W-880 DM">
-                        <div class="click-overlay">📥 點擊下載</div>
-                    </div>
-                    <div class="card-info">
-                        <div class="file-name">W-880 專業主機 DM</div>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="https://drive.google.com/file/d/1FVCp95x3terKNC_ey_nO3qXOHx2StN-O/view?usp=drivesdk" target="_blank">
-                    <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=1FVCp95x3terKNC_ey_nO3qXOHx2StN-O&sz=w400" alt="W-880P+ DM">
-                        <div class="click-overlay">📥 點擊下載</div>
-                    </div>
-                    <div class="card-info">
-                        <div class="file-name">W-880P+ 行動觸控版</div>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="https://drive.google.com/file/d/1yJYZ_Ecd2KnRdh5iPabgH9bdcVprjlXU/view?usp=drivesdk" target="_blank">
-                    <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=1yJYZ_Ecd2KnRdh5iPabgH9bdcVprjlXU&sz=w400" alt="PARTY-7000 DM">
-                        <div class="click-overlay">📥 點擊下載</div>
-                    </div>
-                    <div class="card-info">
-                        <div class="file-name">PARTY-7000 專業音響</div>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="https://drive.google.com/file/d/1WkkRZjhvvUCnfAmzbvfl9UNyyYI86woS/view?usp=drivesdk" target="_blank">
-                    <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=1WkkRZjhvvUCnfAmzbvfl9UNyyYI86woS&sz=w400" alt="N2 規格表">
-                        <div class="click-overlay">📥 點擊下載</div>
-                    </div>
-                    <div class="card-info">
-                        <div class="file-name">N2 系列詳細規格表</div>
+                        <div class="file-name">🔥 舊換新專案</div>
                         <span class="pdf-tag">PDF</span>
                     </div>
                 </a>
@@ -191,7 +86,111 @@
                         <div class="click-overlay">📥 點擊下載</div>
                     </div>
                     <div class="card-info">
-                        <div class="file-name">產品系列導覽圖</div>
+                        <div class="file-name">產品導覽圖</div>
+                        <span class="pdf-tag">PDF</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="https://drive.google.com/file/d/1DneJ44RFJPBsB5neT1uO4N6LIJlK5YMs/view?usp=drivesdk" target="_blank">
+                    <div class="card-img">
+                        <img src="https://drive.google.com/thumbnail?id=1DneJ44RFJPBsB5neT1uO4N6LIJlK5YMs&sz=w400" alt="STAR55">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info">
+                        <div class="file-name">STAR55</div>
+                        <span class="pdf-tag">PDF</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="https://drive.google.com/file/d/1CgCcYTPRNgNIy6v6qq-BEjXCI8tlFbLj/view?usp=drivesdk" target="_blank">
+                    <div class="card-img">
+                        <img src="https://drive.google.com/thumbnail?id=1CgCcYTPRNgNIy6v6qq-BEjXCI8tlFbLj&sz=w400" alt="STAR46">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info">
+                        <div class="file-name">STAR46</div>
+                        <span class="pdf-tag">PDF</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="https://drive.google.com/file/d/13OwuOGCVbUO3u4vpsCbO2RZTrXP2XU0d/view?usp=drivesdk" target="_blank">
+                    <div class="card-img">
+                        <img src="https://drive.google.com/thumbnail?id=13OwuOGCVbUO3u4vpsCbO2RZTrXP2XU0d&sz=w400" alt="STAR25">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info">
+                        <div class="file-name">STAR25</div>
+                        <span class="pdf-tag">PDF</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="https://drive.google.com/file/d/1y5HekxZM5vU1dF8nEVsC7NtHs3RAfSPL/view?usp=drivesdk" target="_blank">
+                    <div class="card-img">
+                        <img src="https://drive.google.com/thumbnail?id=1y5HekxZM5vU1dF8nEVsC7NtHs3RAfSPL&sz=w400" alt="W-880">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info">
+                        <div class="file-name">W-880</div>
+                        <span class="pdf-tag">PDF</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="https://drive.google.com/file/d/1FVCp95x3terKNC_ey_nO3qXOHx2StN-O/view?usp=drivesdk" target="_blank">
+                    <div class="card-img">
+                        <img src="https://drive.google.com/thumbnail?id=1FVCp95x3terKNC_ey_nO3qXOHx2StN-O&sz=w400" alt="W-880P+">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info">
+                        <div class="file-name">W-880P+</div>
+                        <span class="pdf-tag">PDF</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="https://drive.google.com/file/d/1yJYZ_Ecd2KnRdh5iPabgH9bdcVprjlXU/view?usp=drivesdk" target="_blank">
+                    <div class="card-img">
+                        <img src="https://drive.google.com/thumbnail?id=1yJYZ_Ecd2KnRdh5iPabgH9bdcVprjlXU&sz=w400" alt="PARTY-7000">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info">
+                        <div class="file-name">PARTY-7000</div>
+                        <span class="pdf-tag">PDF</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="https://drive.google.com/file/d/1WkkRZjhvvUCnfAmzbvfl9UNyyYI86woS/view?usp=drivesdk" target="_blank">
+                    <div class="card-img">
+                        <img src="https://drive.google.com/thumbnail?id=1WkkRZjhvvUCnfAmzbvfl9UNyyYI86woS&sz=w400" alt="N2-350 / 250">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info">
+                        <div class="file-name">N2-350 / 250</div>
+                        <span class="pdf-tag">PDF</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="https://drive.google.com/file/d/13Yjg2y5FqJuW3c19IWyssxHaPrCT8l94/view?usp=drivesdk" target="_blank">
+                    <div class="card-img">
+                        <img src="https://drive.google.com/thumbnail?id=13Yjg2y5FqJuW3c19IWyssxHaPrCT8l94&sz=w400" alt="全系列總覽">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info">
+                        <div class="file-name">全系列總覽</div>
                         <span class="pdf-tag">PDF</span>
                     </div>
                 </a>
