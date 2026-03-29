@@ -7,9 +7,22 @@
     <style>
         :root { --bg: #0f172a; --card: #1e293b; --blue: #38bdf8; --white: #f8fafc; --gray: #94a3b8; --accent: #2563eb; --highlight: #ef4444; }
         body { background: var(--bg); color: var(--white); font-family: -apple-system, sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
-        h1 { color: var(--blue); text-shadow: 0 0 10px rgba(56,189,248,0.3); margin-bottom: 30px; text-align: center; }
+        h1 { color: var(--blue); text-shadow: 0 0 10px rgba(56,189,248,0.3); margin-bottom: 10px; text-align: center; }
+        .subtitle { color: var(--gray); margin-bottom: 30px; font-size: 0.95rem; text-align: center; }
         .container { width: 100%; max-width: 800px; }
         
+        /* 分類標題設計 */
+        .category-title {
+            border-left: 4px solid var(--blue);
+            padding-left: 12px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.25rem;
+            color: var(--white);
+            font-weight: bold;
+        }
+        
+        /* 圖片網格排版 */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -17,6 +30,7 @@
             width: 100%;
         }
         
+        /* 單張卡片設計 */
         .card {
             background: var(--card); border-radius: 12px; overflow: hidden;
             border: 1px solid rgba(255,255,255,0.1);
@@ -27,6 +41,7 @@
         .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.5); }
         .card a { text-decoration: none; color: var(--white); display: flex; flex-direction: column; height: 100%; }
         
+        /* 圖片預覽區 */
         .card-img {
             width: 100%; aspect-ratio: 3/4; background-color: #334155;
             display: flex; align-items: center; justify-content: center;
@@ -36,6 +51,7 @@
         .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
         .card:hover .card-img img { transform: scale(1.08); }
         
+        /* 點擊提示浮水印 */
         .click-overlay {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center;
@@ -44,6 +60,7 @@
         }
         .card:hover .click-overlay { opacity: 1; }
 
+        /* 文字資訊區 */
         .card-info { padding: 15px 10px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; align-items: center; }
         .file-name { font-size: 0.95rem; font-weight: bold; margin-bottom: 10px; line-height: 1.4; }
         .pdf-tag { background-color: #e11d48; color: white; font-size: 0.75rem; padding: 4px 10px; border-radius: 4px; display: inline-block; font-weight: bold; }
@@ -54,141 +71,116 @@
 <body>
 
     <h1>📂 官方文宣影像下載</h1>
+    <div class="subtitle">點擊圖片即可下載 PDF 高清原檔</div>
 
     <div class="container">
-        <div class="grid-container">
 
+        <div class="category-title">🔥 最新活動與總覽</div>
+        <div class="grid-container">
             <div class="card hot">
                 <a href="舊換新專案.pdf" target="_blank">
                     <div class="card-img">
                         <img src="舊換新專案.jpg" alt="舊換新" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
                         <div class="click-overlay">📥 點擊下載</div>
                     </div>
-                    <div class="card-info">
-                        <div class="file-name">🔥 舊換新專案</div>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
+                    <div class="card-info"><div class="file-name">🔥 舊換新專案</div><span class="pdf-tag">PDF</span></div>
                 </a>
             </div>
-
             <div class="card">
                 <a href="產品導覽圖.pdf" target="_blank">
                     <div class="card-img">
                         <img src="產品導覽圖.jpg" alt="導覽圖" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
                         <div class="click-overlay">📥 點擊下載</div>
                     </div>
-                    <div class="card-info">
-                        <div class="file-name">產品導覽圖</div>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
+                    <div class="card-info"><div class="file-name">產品導覽圖</div><span class="pdf-tag">PDF</span></div>
                 </a>
             </div>
-
-            <div class="card">
-                <a href="STAR55.pdf" target="_blank">
-                    <div class="card-img">
-                        <img src="STAR55.jpg" alt="STAR55" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
-                        <div class="click-overlay">📥 點擊下載</div>
-                    </div>
-                    <div class="card-info">
-                        <div class="file-name">STAR55</div>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="STAR46.pdf" target="_blank">
-                    <div class="card-img">
-                        <img src="STAR46.jpg" alt="STAR46" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
-                        <div class="click-overlay">📥 點擊下載</div>
-                    </div>
-                    <div class="card-info">
-                        <div class="file-name">STAR46</div>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="STAR25.pdf" target="_blank">
-                    <div class="card-img">
-                        <img src="STAR25.jpg" alt="STAR25" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
-                        <div class="click-overlay">📥 點擊下載</div>
-                    </div>
-                    <div class="card-info">
-                        <div class="file-name">STAR25</div>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="W880.pdf" target="_blank">
-                    <div class="card-img">
-                        <img src="W880.jpg" alt="W-880" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
-                        <div class="click-overlay">📥 點擊下載</div>
-                    </div>
-                    <div class="card-info">
-                        <div class="file-name">W-880</div>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="W880P.pdf" target="_blank">
-                    <div class="card-img">
-                        <img src="W880P.jpg" alt="W-880P+" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
-                        <div class="click-overlay">📥 點擊下載</div>
-                    </div>
-                    <div class="card-info">
-                        <div class="file-name">W-880P+</div>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="PARTY7000.pdf" target="_blank">
-                    <div class="card-img">
-                        <img src="PARTY7000.jpg" alt="PARTY-7000" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
-                        <div class="click-overlay">📥 點擊下載</div>
-                    </div>
-                    <div class="card-info">
-                        <div class="file-name">PARTY-7000</div>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="N2.pdf" target="_blank">
-                    <div class="card-img">
-                        <img src="N2.jpg" alt="N2-350 / 250" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
-                        <div class="click-overlay">📥 點擊下載</div>
-                    </div>
-                    <div class="card-info">
-                        <div class="file-name">N2-350 / 250</div>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
-                </a>
-            </div>
-
             <div class="card">
                 <a href="全系列總覽.pdf" target="_blank">
                     <div class="card-img">
                         <img src="全系列總覽.jpg" alt="全系列總覽" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
                         <div class="click-overlay">📥 點擊下載</div>
                     </div>
-                    <div class="card-info">
-                        <div class="file-name">全系列總覽</div>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
+                    <div class="card-info"><div class="file-name">全系列總覽</div><span class="pdf-tag">PDF</span></div>
                 </a>
             </div>
-
         </div>
+
+        <div class="category-title">⭐ STAR 智慧系列</div>
+        <div class="grid-container">
+            <div class="card">
+                <a href="STAR55.pdf" target="_blank">
+                    <div class="card-img">
+                        <img src="STAR55.jpg" alt="STAR55" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info"><div class="file-name">STAR55</div><span class="pdf-tag">PDF</span></div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="STAR46.pdf" target="_blank">
+                    <div class="card-img">
+                        <img src="STAR46.jpg" alt="STAR46" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info"><div class="file-name">STAR46</div><span class="pdf-tag">PDF</span></div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="STAR25.pdf" target="_blank">
+                    <div class="card-img">
+                        <img src="STAR25.jpg" alt="STAR25" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info"><div class="file-name">STAR25</div><span class="pdf-tag">PDF</span></div>
+                </a>
+            </div>
+        </div>
+
+        <div class="category-title">👑 W-880 專業旗艦系列</div>
+        <div class="grid-container">
+            <div class="card">
+                <a href="W880.pdf" target="_blank">
+                    <div class="card-img">
+                        <img src="W880.jpg" alt="W-880" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info"><div class="file-name">W-880</div><span class="pdf-tag">PDF</span></div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="W880P.pdf" target="_blank">
+                    <div class="card-img">
+                        <img src="W880P.jpg" alt="W-880P+" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info"><div class="file-name">W-880P+</div><span class="pdf-tag">PDF</span></div>
+                </a>
+            </div>
+        </div>
+
+        <div class="category-title">🎵 其他主力機型</div>
+        <div class="grid-container">
+            <div class="card">
+                <a href="PARTY7000.pdf" target="_blank">
+                    <div class="card-img">
+                        <img src="PARTY7000.jpg" alt="PARTY-7000" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info"><div class="file-name">PARTY-7000</div><span class="pdf-tag">PDF</span></div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="N2.pdf" target="_blank">
+                    <div class="card-img">
+                        <img src="N2.jpg" alt="N2-350 / 250" onerror="this.src='https://placehold.co/400x533/334155/FFF?text=PDF';">
+                        <div class="click-overlay">📥 點擊下載</div>
+                    </div>
+                    <div class="card-info"><div class="file-name">N2-350 / 250</div><span class="pdf-tag">PDF</span></div>
+                </a>
+            </div>
+        </div>
+
     </div>
 
     <div class="footer">
