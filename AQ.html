@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>常見問題與線上報修 - 音圓伴唱機</title>
     <style>
-        :root { --bg: #0f172a; --card: #1e293b; --blue: #38bdf8; --white: #f8fafc; --gray: #94a3b8; --accent: #2563eb; --highlight: #ef4444; --line: #06C755; }
+        :root { --bg: #0f172a; --card: #1e293b; --blue: #38bdf8; --white: #f8fafc; --gray: #94a3b8; --accent: #2563eb; --highlight: #ef4444; --line: #06C755; --yellow: #fbbf24; }
         body { background: var(--bg); color: var(--white); font-family: -apple-system, sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
         h1 { color: var(--blue); text-shadow: 0 0 10px rgba(56,189,248,0.3); margin-bottom: 5px; text-align: center; }
         .subtitle { color: var(--gray); margin-bottom: 30px; font-size: 0.95rem; text-align: center; }
@@ -25,13 +25,17 @@
         }
         
         .repair-box { border: 2px solid rgba(239, 68, 68, 0.3); background: rgba(239, 68, 68, 0.05); }
+        .notice-list { margin: 15px 0; padding: 0; list-style: none; }
+        .notice-item { margin-bottom: 12px; display: flex; align-items: flex-start; line-height: 1.6; }
+        .notice-icon { margin-right: 10px; font-size: 1.2rem; }
+        .notice-text b { color: var(--yellow); }
+
         .repair-format { 
             background: #0f172a; padding: 15px; border-radius: 8px; 
             font-family: monospace; color: #cbd5e1; line-height: 1.6; margin: 15px 0;
             border: 1px dashed var(--gray);
         }
         
-        /* 報修按鈕的特別設計 */
         .btn-line {
             display: block; width: 100%; text-align: center; background: var(--line); 
             color: white; font-weight: bold; padding: 15px; border-radius: 8px; 
@@ -46,7 +50,6 @@
         .faq-q::before { content: "Q:"; color: var(--highlight); margin-right: 8px; font-weight: 900; }
         .faq-a { color: #cbd5e1; line-height: 1.6; padding-left: 28px; }
         .tag { display: inline-block; background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 5px; color: var(--gray); }
-        .tag-alert { background: rgba(239, 68, 68, 0.2); color: #fca5a5; }
 
         .footer { text-align: center; margin-top: 50px; color: #475569; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; }
     </style>
@@ -60,7 +63,18 @@
 
         <div class="section-title urgent">🚨 我要報修 / 專人協助</div>
         <div class="card repair-box">
-            <p style="margin-top: 0; color: #cbd5e1; line-height: 1.5;">若下方的常見問題無法解決您的狀況，請直接複製以下格式，並點擊下方按鈕加入 LINE 官方帳號傳送給我們，我們將盡速為您處理！</p>
+            <div class="notice-list">
+                <div class="notice-item">
+                    <span class="notice-icon">💻</span>
+                    <div class="notice-text"><b>軟體或系統相關問題</b>：若遇到操作疑慮、軟體異常或系統更新問題，請先透過 LINE 諮詢，我們可進行遠端教學或線上協助排除。</div>
+                </div>
+                <div class="notice-item">
+                    <span class="notice-icon">📦</span>
+                    <div class="notice-text"><b>硬體零件故障維修</b>：若經判定為硬體零件損壞、主機不開機或需更換耗材，則<b>仍須請您透過貨運寄回原廠</b>進行專業檢修。</div>
+                </div>
+            </div>
+
+            <p style="color: #cbd5e1; font-size: 0.9rem;">請複製以下格式並傳送，秋天會第一時間為您處理：</p>
             
             <div class="repair-format">
 📍 店家名稱：<br>
@@ -70,27 +84,21 @@
 📝 問題狀況簡述：
             </div>
             
-            <p style="font-size: 0.85rem; color: var(--gray); margin-bottom: 15px;">💡 貼心提醒：若能附上「故障畫面照片」或「操作異常影片」，處理速度會更快喔！</p>
-            
             <a href="https://line.me/R/ti/p/@501vumfz" class="btn-line" target="_blank">💬 點擊開啟 LINE 傳送報修資訊</a>
         </div>
-
 
         <div class="section-title">📍 最新軟體更新公告</div>
         <div class="card">
             <div class="faq-item">
                 <div class="faq-q">Party系列 v1.08 / Star系列 v1.07 更新重點</div>
                 <div class="faq-a">
-                    <span class="tag">音質提升</span> 音樂、麥克風、錄音音質及效果器全面優化。<br>
-                    <span class="tag">新功能</span> 點擊右上角 [音圓] LOGO 可快速輸入歌號；新增「自動點播區間」功能。<br>
-                    <span class="tag">優化</span> 文字傳情置中、網路與雲端同步改善。
+                    音樂與錄音音質優化、新增 [音圓] LOGO 快捷輸入歌號、新增「自動點播區間」功能。
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-q">N2系列 v3.07 更新重點與注意事項</div>
+                <div class="faq-q">N2系列 v3.07 更新重點</div>
                 <div class="faq-a">
-                    修復 YouTube 人聲消除失效、點播「最愛歌曲」當機的問題。<br>
-                    <span class="tag tag-alert">⚠️ 注意</span> 部分客戶反饋升級後 YT 點播與手機連結失效，目前原廠持續觀察追蹤中。
+                    修復 YouTube 人聲消除失效、點播「最愛歌曲」當機問題。
                 </div>
             </div>
         </div>
@@ -98,45 +106,31 @@
         <div class="section-title">🛠 已知問題與系統除錯</div>
         <div class="card">
             <div class="faq-item">
-                <div class="faq-q">YouTube 點播無限轉圈怎麼辦？</div>
-                <div class="faq-a">此為 YouTube 伺服器端變動導致，第一首正常，第二首開始會轉圈並跳回公播。原廠目前正「最高優先」搶修中，請等待後續更新包釋出。</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q">Star 系列錄影時出現影音不同步？</div>
-                <div class="faq-a">這是升級 v1.07 後發生的偶發狀況，原廠研發團隊正在測試抓漏中，敬請見諒。</div>
+                <div class="faq-q">YouTube 點播無限轉圈？</div>
+                <div class="faq-a">此為 YouTube 伺服器端變動，原廠正最高優先搶修中，請等待後續更新包。</div>
             </div>
             <div class="faq-item">
                 <div class="faq-q">觸控螢幕開機沒有畫面？</div>
-                <div class="faq-a">通常是「VGA 線材」老化或「轉接頭相容性」引起，絕大多數非機器程式異常，建議先交叉測試線材。</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q">AI 小圓語音點歌的限制有哪些？</div>
-                <div class="faq-a">呼叫後只能透過「觸控螢幕」點擊（遙控器無效）；推薦歌單有時為 MIDI 檔（若要原聲原影建議手動點播）；長按喚醒反應偏慢屬正常現象。</div>
+                <div class="faq-a">多為 VGA 線材或轉接頭老化引起，建議先交叉測試線材。</div>
             </div>
             <div class="faq-item">
                 <div class="faq-q">機器出現巨大爆音或噪音？</div>
-                <div class="faq-a"><span class="tag tag-alert">需回廠維修</span> 此屬硬體異常，需送回原廠更換主機板上的 Q8223 與 Q8234 零件，請填寫上方報修表單。</div>
+                <div class="faq-a"><span class="tag" style="background: rgba(239, 68, 68, 0.2); color: #fca5a5;">需回廠維修</span> 此屬硬體異常，需送回原廠更換主機板電子零件。</div>
             </div>
         </div>
 
         <div class="section-title">🔌 硬體設定與操作教學</div>
         <div class="card">
             <div class="faq-item">
-                <div class="faq-q">LAN 或 HDD 指示燈閃爍變慢是壞了嗎？</div>
-                <div class="faq-a">這是在 v1.06 / v1.07 更新後的硬體設計變更，為「正常現象」，並非機器故障，請安心使用。</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q">紅外線接收線「無法遙控開機」的解法？</div>
-                <div class="faq-a">新款機器待機時，背後 3.5mm 插孔會完全斷電。建議改買「獨立插 USB 供電的紅外線訊號延伸器」，將發射貼片貼在機器「正面面板」接收點即可解決。</div>
+                <div class="faq-q">LAN 或 HDD 指示燈閃爍變慢？</div>
+                <div class="faq-a">此為更新後的硬體設計變更，為「正常現象」，並非故障。</div>
             </div>
             <div class="faq-item">
                 <div class="faq-q">如何快速設定「自動點播-歌號區間」？</div>
                 <div class="faq-a">
-                    在播歌或暖場時直接輸入以下快捷代碼（按【退回】可離開）：<br>
-                    • 1 (或0001)：國語歌曲　• 2 (或0002)：台語歌曲<br>
-                    • 3 (或0003)：客語歌曲　• 4 (或0004)：山地歌曲<br>
-                    • 5 (或0005)：日文歌曲　• 6 (或0006)：原聲原影<br>
-                    • 8 (或0008)：最愛歌曲　• 0 (或0000)：全區隨機
+                    在播歌時直接輸入代碼：<br>
+                    • 1：國語　• 2：台語　• 3：客語　• 4：山地<br>
+                    • 5：日文　• 6：原聲原影　• 8：最愛　• 0：全區隨機
                 </div>
             </div>
         </div>
@@ -144,7 +138,7 @@
     </div>
 
     <div class="footer">
-        代理商維護專員 - 秋霖<br>
+        代理商維護專員 - 秋天<br>
         © 2026 INYUAN Service Platform
     </div>
 
