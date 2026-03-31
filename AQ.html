@@ -38,11 +38,16 @@
         
         .btn-line {
             display: block; width: 100%; text-align: center; background: var(--line); 
-            color: white; font-weight: bold; padding: 15px; border-radius: 8px; 
-            text-decoration: none; font-size: 1.1rem; transition: 0.2s; box-shadow: 0 4px 15px rgba(6, 199, 85, 0.3);
-            box-sizing: border-box;
+            color: white; font-weight: bold; padding: 18px; border-radius: 8px; 
+            text-decoration: none; font-size: 1.2rem; transition: 0.2s; box-shadow: 0 4px 15px rgba(6, 199, 85, 0.4);
+            box-sizing: border-box; animation: pulse 2s infinite;
         }
-        .btn-line:hover { background: #05b34c; transform: translateY(-2px); }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        .btn-line:hover { background: #05b34c; }
 
         .faq-item { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.05); }
         .faq-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
@@ -74,32 +79,22 @@
                 </div>
             </div>
 
-            <p style="color: #cbd5e1; font-size: 0.9rem;">請複製以下格式並傳送，秋天會第一時間為您處理：</p>
+            <p style="color: #cbd5e1; font-size: 0.95rem; text-align: center; margin-bottom: 20px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 5px;">
+                💡 <b>使用說明：</b>點擊下方按鈕跳轉後，<br><b style="color:var(--yellow)">直接點擊 LINE 內的「傳送」按鈕</b>，<br>系統將立即自動回覆報修格式給您。
+            </p>
             
-            <div class="repair-format">
-📍 店家名稱：<br>
-👤 聯絡人：<br>
-📞 聯絡電話：<br>
-🎤 發生問題機型：<br>
-📝 問題狀況簡述：
-            </div>
-            
-            <a href="https://line.me/R/ti/p/@501vumfz" class="btn-line" target="_blank">💬 點擊開啟 LINE 傳送報修資訊</a>
+            <a href="https://line.me/R/oaMessage/@501vumfz/?報修" class="btn-line">💬 點我跳轉並「傳送報修」</a>
         </div>
 
         <div class="section-title">📍 最新軟體更新公告</div>
         <div class="card">
             <div class="faq-item">
                 <div class="faq-q">Party系列 v1.08 / Star系列 v1.07 更新重點</div>
-                <div class="faq-a">
-                    音樂與錄音音質優化、新增 [音圓] LOGO 快捷輸入歌號、新增「自動點播區間」功能。
-                </div>
+                <div class="faq-a">音樂與錄音音質優化、新增 [音圓] LOGO 快捷輸入歌號、新增「自動點播區間」功能。</div>
             </div>
             <div class="faq-item">
                 <div class="faq-q">N2系列 v3.07 更新重點</div>
-                <div class="faq-a">
-                    修復 YouTube 人聲消除失效、點播「最愛歌曲」當機問題。
-                </div>
+                <div class="faq-a">修復 YouTube 人聲消除失效、點播「最愛歌曲」當機問題。</div>
             </div>
         </div>
 
@@ -119,26 +114,10 @@
             </div>
         </div>
 
-        <div class="section-title">🔌 硬體設定與操作教學</div>
-        <div class="card">
-            <div class="faq-item">
-                <div class="faq-q">LAN 或 HDD 指示燈閃爍變慢？</div>
-                <div class="faq-a">此為更新後的硬體設計變更，為「正常現象」，並非故障。</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q">如何快速設定「自動點播-歌號區間」？</div>
-                <div class="faq-a">
-                    在播歌時直接輸入代碼：<br>
-                    • 1：國語　• 2：台語　• 3：客語　• 4：山地<br>
-                    • 5：日文　• 6：原聲原影　• 8：最愛　• 0：全區隨機
-                </div>
-            </div>
-        </div>
-
     </div>
 
     <div class="footer">
-        代理商維護專員 - 秋天<br>
+        秋天（albert)<br>
         © 2026 INYUAN Service Platform
     </div>
 
