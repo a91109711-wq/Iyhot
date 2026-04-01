@@ -3,52 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>常見問題與線上報修 - 音圓伴唱機</title>
+    <title>常見問題 - 音圓伴唱機</title>
     <style>
-        :root { --bg: #0f172a; --card: #1e293b; --blue: #38bdf8; --white: #f8fafc; --gray: #94a3b8; --accent: #2563eb; --highlight: #ef4444; --line: #06C755; --yellow: #fbbf24; }
+        :root { --bg: #0f172a; --card: #1e293b; --blue: #38bdf8; --white: #f8fafc; --gray: #94a3b8; --highlight: #ef4444; }
         body { background: var(--bg); color: var(--white); font-family: -apple-system, sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
         h1 { color: var(--blue); text-shadow: 0 0 10px rgba(56,189,248,0.3); margin-bottom: 5px; text-align: center; }
         .subtitle { color: var(--gray); margin-bottom: 30px; font-size: 0.95rem; text-align: center; }
         .container { width: 100%; max-width: 800px; }
         
-        .section-title {
-            border-left: 4px solid var(--blue);
-            padding-left: 12px; margin-top: 40px; margin-bottom: 20px;
-            font-size: 1.3rem; color: var(--white); font-weight: bold;
-        }
-        .section-title.urgent { border-left-color: var(--highlight); color: var(--highlight); }
-
-        .card {
-            background: var(--card); border-radius: 12px; padding: 20px;
-            border: 1px solid rgba(255,255,255,0.05); margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
+        .section-title { border-left: 4px solid var(--blue); padding-left: 12px; margin-top: 40px; margin-bottom: 20px; font-size: 1.3rem; font-weight: bold; }
+        .card { background: var(--card); border-radius: 12px; padding: 20px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
         
-        .repair-box { border: 2px solid rgba(239, 68, 68, 0.3); background: rgba(239, 68, 68, 0.05); }
-        .notice-list { margin: 15px 0; padding: 0; list-style: none; }
-        .notice-item { margin-bottom: 12px; display: flex; align-items: flex-start; line-height: 1.6; }
-        .notice-icon { margin-right: 10px; font-size: 1.2rem; }
-        .notice-text b { color: var(--yellow); }
-
-        .repair-format { 
-            background: #0f172a; padding: 15px; border-radius: 8px; 
-            font-family: monospace; color: #cbd5e1; line-height: 1.6; margin: 15px 0;
-            border: 1px dashed var(--gray);
-        }
-        
-        .btn-line {
-            display: block; width: 100%; text-align: center; background: var(--line); 
-            color: white; font-weight: bold; padding: 18px; border-radius: 8px; 
-            text-decoration: none; font-size: 1.2rem; transition: 0.2s; box-shadow: 0 4px 15px rgba(6, 199, 85, 0.4);
-            box-sizing: border-box; animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-            100% { transform: scale(1); }
-        }
-        .btn-line:hover { background: #05b34c; }
-
         .faq-item { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.05); }
         .faq-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
         .faq-q { font-weight: bold; font-size: 1.1rem; color: #38bdf8; margin-bottom: 8px; display: flex; align-items: flex-start; }
@@ -56,45 +21,27 @@
         .faq-a { color: #cbd5e1; line-height: 1.6; padding-left: 28px; }
         .tag { display: inline-block; background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 5px; color: var(--gray); }
 
-        .footer { text-align: center; margin-top: 50px; color: #475569; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; }
+        .btn-link { display: block; width: 100%; text-align: center; background: #334155; color: white; font-weight: bold; padding: 15px; border-radius: 8px; text-decoration: none; margin-top: 30px; box-sizing: border-box; }
+        .btn-link:hover { background: #475569; }
+
+        .footer { text-align: center; margin-top: 50px; color: #475569; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
     </style>
 </head>
 <body>
 
-    <h1>🔧 服務與支援中心</h1>
-    <div class="subtitle">音圓伴唱機 INYUAN - 常見問題與線上報修</div>
+    <h1>🔧 常見問題解答</h1>
+    <div class="subtitle">音圓伴唱機 INYUAN - 疑難排解中心</div>
 
     <div class="container">
-
-        <div class="section-title urgent">🚨 我要報修 / 專人協助</div>
-        <div class="card repair-box">
-            <div class="notice-list">
-                <div class="notice-item">
-                    <span class="notice-icon">💻</span>
-                    <div class="notice-text"><b>軟體或系統相關問題</b>：若遇到操作疑慮、軟體異常或系統更新問題，請先透過 LINE 諮詢，我們可進行遠端教學或線上協助排除。</div>
-                </div>
-                <div class="notice-item">
-                    <span class="notice-icon">📦</span>
-                    <div class="notice-text"><b>硬體零件故障維修</b>：若經判定為硬體零件損壞、主機不開機或需更換耗材，則<b>仍須請您透過貨運寄回原廠</b>進行專業檢修。</div>
-                </div>
-            </div>
-
-            <p style="color: #cbd5e1; font-size: 0.95rem; text-align: center; margin-bottom: 20px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 5px;">
-                💡 <b>使用說明：</b>點擊下方按鈕跳轉後，<br><b style="color:var(--yellow)">直接點擊 LINE 內的「傳送」按鈕</b>，<br>系統將立即自動回覆報修格式給您。
-            </p>
-            
-            <a href="https://line.me/R/oaMessage/@501vumfz/?報修" class="btn-line">💬 點我跳轉並「傳送報修」</a>
-        </div>
-
         <div class="section-title">📍 最新軟體更新公告</div>
         <div class="card">
             <div class="faq-item">
                 <div class="faq-q">Party系列 v1.08 / Star系列 v1.07 更新重點</div>
-                <div class="faq-a">音樂與錄音音質優化、新增 [音圓] LOGO 快捷輸入歌號、新增「自動點播區間」功能。</div>
+                <div class="faq-a">音樂、麥克風、錄音音質全面優化、新增「自動點播區間」功能、改善網路同步。</div>
             </div>
             <div class="faq-item">
                 <div class="faq-q">N2系列 v3.07 更新重點</div>
-                <div class="faq-a">修復 YouTube 人聲消除失效、點播「最愛歌曲」當機問題。</div>
+                <div class="faq-a">修復 YouTube 人聲消除失效、點播「最愛歌曲」當機的問題。</div>
             </div>
         </div>
 
@@ -102,24 +49,37 @@
         <div class="card">
             <div class="faq-item">
                 <div class="faq-q">YouTube 點播無限轉圈？</div>
-                <div class="faq-a">此為 YouTube 伺服器端變動，原廠正最高優先搶修中，請等待後續更新包。</div>
+                <div class="faq-a">此為 YouTube 伺服器端變動，原廠正最高優先搶修中，請等待更新包。</div>
             </div>
             <div class="faq-item">
                 <div class="faq-q">觸控螢幕開機沒有畫面？</div>
-                <div class="faq-a">多為 VGA 線材或轉接頭老化引起，建議先交叉測試線材。</div>
+                <div class="faq-a">通常是「VGA 線材」老化引起，絕大多數非機器程式異常，建議先交叉測試線材。</div>
             </div>
             <div class="faq-item">
                 <div class="faq-q">機器出現巨大爆音或噪音？</div>
-                <div class="faq-a"><span class="tag" style="background: rgba(239, 68, 68, 0.2); color: #fca5a5;">需回廠維修</span> 此屬硬體異常，需送回原廠更換主機板電子零件。</div>
+                <div class="faq-a"><span class="tag" style="background: rgba(239, 68, 68, 0.2); color: #fca5a5;">需回廠維修</span> 此屬硬體電子零件故障，請點擊下方按鈕進行報修。</div>
             </div>
         </div>
 
+        <div class="section-title">🔌 硬體設定與操作教學</div>
+        <div class="card">
+            <div class="faq-item">
+                <div class="faq-q">LAN 或 HDD 指示燈閃爍變慢？</div>
+                <div class="faq-a">此為更新後的硬體設計變更，為「正常現象」，並非機器故障。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">如何快速設定「自動點播-歌號區間」？</div>
+                <div class="faq-a">
+                    在播歌時直接輸入代碼：<br>
+                    • 1：國語　• 2：台語　• 3：客語　• 4：山地<br>
+                    • 5：日文　• 6：原聲原影　• 8：最愛　• 0：全區隨機
+                </div>
+            </div>
+        </div>
+
+        <a href="repair.html" class="btn-link">👉 找不到解答？前往線上報修</a>
     </div>
 
-    <div class="footer">
-        秋天（albert)<br>
-        © 2026 INYUAN Service Platform
-    </div>
-
+    <div class="footer">代理商維護專員 - 秋天 | © 2026 INYUAN Service Platform</div>
 </body>
 </html>
