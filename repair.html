@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>線上報修 - 音圓伴唱機</title>
+    <style>
+        :root { --bg: #0f172a; --card: #1e293b; --white: #f8fafc; --gray: #94a3b8; --highlight: #ef4444; --line: #06C755; --yellow: #fbbf24; }
+        body { background: var(--bg); color: var(--white); font-family: -apple-system, sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        h1 { color: var(--highlight); text-shadow: 0 0 10px rgba(239,68,68,0.3); margin-bottom: 5px; text-align: center; }
+        .subtitle { color: var(--gray); margin-bottom: 30px; font-size: 0.95rem; text-align: center; }
+        .container { width: 100%; max-width: 800px; }
+        
+        .card { background: rgba(239, 68, 68, 0.05); border-radius: 12px; padding: 20px; border: 2px solid rgba(239, 68, 68, 0.3); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        
+        .notice-list { margin: 15px 0; padding: 0; list-style: none; }
+        .notice-item { margin-bottom: 15px; display: flex; align-items: flex-start; line-height: 1.6; }
+        .notice-icon { margin-right: 10px; font-size: 1.3rem; }
+        .notice-text b { color: var(--yellow); font-size: 1.1rem; display: block; margin-bottom: 3px; }
+
+        .repair-format { background: #0f172a; padding: 15px; border-radius: 8px; font-family: monospace; color: #cbd5e1; line-height: 1.6; margin: 20px 0; border: 1px dashed var(--gray); }
+        
+        .btn-line { display: block; width: 100%; text-align: center; background: var(--line); color: white; font-weight: bold; padding: 15px; border-radius: 8px; text-decoration: none; font-size: 1.1rem; transition: 0.2s; box-shadow: 0 4px 15px rgba(6, 199, 85, 0.3); box-sizing: border-box; }
+        .btn-line:hover { background: #05b34c; transform: translateY(-2px); }
+        
+        .btn-back { display: block; width: 100%; text-align: center; color: var(--gray); margin-top: 20px; text-decoration: none; font-size: 0.9rem; }
+
+        .footer { text-align: center; margin-top: 50px; color: #475569; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>🚨 線上報修與專人協助</h1>
+    <div class="subtitle">音圓伴唱機 INYUAN - 維護專線</div>
+
+    <div class="container">
+        <div class="card">
+            <p style="text-align: center; color: #cbd5e1; margin-top: 0;">報修前請先詳閱以下說明，以加速您的處理進度：</p>
+            
+            <div class="notice-list">
+                <div class="notice-item">
+                    <span class="notice-icon">💻</span>
+                    <div class="notice-text"><b>軟體或系統相關問題</b>若遇到操作疑慮、軟體異常或系統更新問題，請先透過 LINE 諮詢，秋天可進行遠端教學或線上協助排除。</div>
+                </div>
+                <div class="notice-item">
+                    <span class="notice-icon">📦</span>
+                    <div class="notice-text"><b>硬體零件故障維修</b>若經判定為硬體零件損壞、主機不開機或需更換耗材，則<b>仍須請您透過貨運寄回原廠</b>進行專業檢修。</div>
+                </div>
+            </div>
+
+            <p style="color: #cbd5e1; font-size: 0.9rem; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px;">請複製以下格式並傳送，我會第一時間為您處理：</p>
+            
+            <div class="repair-format">
+📍 店家名稱：<br>
+👤 聯絡人：<br>
+📞 聯絡電話：<br>
+🎤 發生問題機型：<br>
+📝 問題狀況簡述：
+            </div>
+            
+            <a href="https://line.me/R/ti/p/@501vumfz" class="btn-line" target="_blank">💬 點擊開啟 LINE 傳送報修資訊</a>
+        </div>
+        
+        <a href="AQ.html" class="btn-back">← 返回常見問題</a>
+    </div>
+
+    <div class="footer">代理商維護專員 - 秋天 | © 2026 INYUAN Service Platform</div>
+</body>
+</html>
