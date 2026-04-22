@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文案分享 - 音圓服務平台</title>
+    <style>
+        :root {
+            --bg-dark: #050a18;
+            --neon-pink: #ff2d55;
+            --neon-gold: #ffb800;
+            --card-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: white;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* 頂部霓虹圖片區 */
+        .hero-image {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.3);
+            display: block;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: var(--neon-pink);
+            text-shadow: 0 0 10px var(--neon-pink);
+            margin-bottom: 30px;
+        }
+
+        /* 文案卡片樣式 */
+        .copy-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .card-tag {
+            background: var(--neon-gold);
+            color: black;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #ddd;
+            background: rgba(0,0,0,0.3);
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        /* 複製按鈕 */
+        .btn-copy {
+            background: transparent;
+            border: 1px solid var(--neon-pink);
+            color: var(--neon-pink);
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-copy:hover {
+            background: var(--neon-pink);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="image_9.png" class="hero-image" alt="音圓服務平台">
+
+    <div class="container">
+        <h2>文案分享專區</h2>
+
+        <div class="copy-card">
+            <div class="card-tag">母親節限定</div>
+            <pre id="text1">【今年母親節，把 KTV 搬回家！🎁】
+
+還在煩惱母親節送什麼嗎？送健康、送紅包，不如送媽媽一整年的快樂！看著媽媽拿起麥克風、唱著她最愛的經典老歌，那種笑容才是無價的。❤️
+
+✨ 母親節限時優惠：
+即日起來店洽詢【音圓專業歌唱系統】，即享專屬好禮！
+
+📍 [店家名稱]
+🏠 地址：[請輸入地址]
+📞 預約專線：[請輸入電話]
+#音圓電腦鶯歌 #母親節禮物 #全家同樂 #家庭KTV #最愛媽媽</pre>
+            <button class="btn-copy" onclick="copyToClipboard('text1')">一鍵複製文案</button>
+        </div>
+
+        <div class="copy-card">
+            <div class="card-tag">舊換新攻略</div>
+            <pre id="text2">【告別舊時代！音圓「舊換新」限時募集 🚀】
+
+你家裡的點歌機還在跑不動、畫面模糊嗎？別讓老舊設備掃了全家唱歌的興致！
+
+換上 AI 智能評分、4K 極致畫質、手機雲端點歌，你會發現：原來唱歌可以這麼享受！
+
+✅ 舊換新亮點：
+1. 畫面更清：4K 震撼視覺
+2. 速度更快：點歌不卡頓
+3. 舊機折抵：現場評估現折
+
+📍 [店家名稱]
+🏠 地址：[請輸入地址]
+📞 諮詢專線：[請輸入電話]
+#音圓 #舊換新 #升級有感 #卡拉OK #音圓專員Albert推薦</pre>
+            <button class="btn-copy" onclick="copyToClipboard('text2')">一鍵複製文案</button>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(id) {
+            const text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('文案已複製！可以直接貼到 FB 或 IG 囉。');
+            });
+        }
+    </script>
+</body>
+</html>
