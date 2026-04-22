@@ -3,137 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>最新公告 - 音圓秋天服務窗口</title>
+    <title>最新公告 - 秋天服務窗口</title>
     <style>
         :root {
-            --primary-red: #e60012;
-            --dark-bg: #1a1a1a;
-            --text-gray: #f5f5f5;
+            --brand-red: #e60012;
+            --main-dark: #1a1a1a;
+            --accent-gray: #333333;
+            --text-light: #ffffff;
+            --bg-light: #f8f9fa;
         }
 
         body {
-            font-family: "Microsoft JhengHei", sans-serif;
-            background-color: #f0f0f0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft JhengHei", sans-serif;
+            background-color: #eeeeee;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
         }
 
-        .container {
+        .phone-wrapper {
             width: 100%;
-            max-width: 500px;
-            background-color: white;
+            max-width: 480px;
+            background-color: var(--bg-light);
             min-height: 100vh;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
         }
 
-        /* 標題裝飾區（仿照圖片風格） */
+        /* 頂部標題區 - 模仿圖片紅黑配色 */
         .header {
-            background: linear-gradient(135deg, var(--primary-red) 0%, #a00000 100%);
-            color: white;
-            padding: 30px 20px;
+            background-color: var(--main-dark);
+            padding: 40px 20px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            border-bottom: 5px solid var(--brand-red);
         }
 
         .header h1 {
+            color: var(--text-light);
             margin: 0;
-            font-size: 28px;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 26px;
+            letter-spacing: 3px;
         }
 
-        .header p {
-            margin: 10px 0 0;
-            opacity: 0.9;
+        .header .subtitle {
+            color: var(--brand-red);
+            font-weight: bold;
+            margin-top: 10px;
+            letter-spacing: 1px;
             font-size: 14px;
         }
 
-        /* 公告內容區 */
+        /* 公告列表區 */
         .content {
             padding: 20px;
+            flex-grow: 1;
         }
 
-        .announcement-card {
+        .post-card {
             background: white;
-            border-left: 5px solid var(--primary-red);
-            border-radius: 8px;
-            padding: 15px;
+            border-radius: 12px;
             margin-bottom: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
         }
 
-        .tag {
-            background-color: var(--primary-red);
+        .post-card:active {
+            transform: scale(0.98);
+        }
+
+        .post-tag {
+            background-color: var(--brand-red);
             color: white;
-            padding: 2px 8px;
-            border-radius: 4px;
+            padding: 5px 12px;
             font-size: 12px;
             font-weight: bold;
             display: inline-block;
+        }
+
+        .post-body {
+            padding: 15px 20px;
+        }
+
+        .post-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--main-dark);
             margin-bottom: 10px;
         }
 
-        .title {
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 8px;
-        }
-
-        .info {
+        .post-text {
             font-size: 15px;
             color: #555;
             line-height: 1.6;
-            white-space: pre-wrap; /* 讓換行符號生效 */
+            margin-bottom: 15px;
         }
 
-        .date {
+        .post-footer {
+            border-top: 1px solid #f0f0f0;
+            padding: 10px 20px;
             font-size: 13px;
             color: #999;
-            margin-top: 12px;
             text-align: right;
         }
 
+        /* 底部裝飾 */
         .footer {
             text-align: center;
-            padding: 20px;
+            padding: 30px 20px;
             color: #bbb;
             font-size: 12px;
+            background-color: #fff;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
+<div class="phone-wrapper">
     <div class="header">
-        <h1>最新消息</h1>
-        <p>重要公告通知</p>
+        <h1>最新公告</h1>
+        <div class="subtitle">LATEST ANNOUNCEMENT</div>
     </div>
 
     <div class="content">
-        <div class="announcement-card">
-            <span class="tag">重要</span>
-            <div class="title">音圓控價戰情室系統更新通知</div>
-            <div class="info">親愛的經銷商夥伴：
-系統將於今日進行版本優化，提升產品監測精準度，期間若有短暫連線中斷敬請見諒。</div>
-            <div class="date">2026-04-22</div>
+        <div class="post-card">
+            <div class="post-tag">重要通知</div>
+            <div class="post-body">
+                <div class="post-title">代理商維護系統更新</div>
+                <div class="post-text">
+                    為提供更穩定的服務品質，後台維護系統將於近期進行架構調整，優化資料讀取速度。如遇操作異常，請隨時回報。
+                </div>
+            </div>
+            <div class="post-footer">發佈日期：2026-04-22</div>
         </div>
 
-        <div class="announcement-card">
-            <span class="tag">一般</span>
-            <div class="title">五一勞動節連假出貨調整</div>
-            <div class="info">因應勞動節連假，代理商維護服務及出貨流程將調整如下...</div>
-            <div class="date">2026-04-20</div>
-        </div>
-    </div>
-
-    <div class="footer">
-        © 2026 音圓秋天服務窗口
-    </div>
-</div>
-
-</body>
-</html>
+        <div class="post-card">
+            <div class="post-tag">活動公告</div>
+            <div class="post-body">
+                <div class="post-
