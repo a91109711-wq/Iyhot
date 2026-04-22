@@ -1,103 +1,138 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
-<meta charset="UTF-8">
-<title>產品售價調整預告</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最新公告 - 音圓秋天服務窗口</title>
+    <style>
+        :root {
+            --primary-red: #e60012;
+            --dark-bg: #1a1a1a;
+            --text-gray: #f5f5f5;
+        }
 
-<style>
-body {
-    font-family: "Microsoft JhengHei", Arial, sans-serif;
-    background-color: #f4f6f9;
-    margin: 0;
-    padding: 20px;
-    line-height: 1.8;
-}
+        body {
+            font-family: "Microsoft JhengHei", sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
 
-.container {
-    max-width: 820px;
-    margin: auto;
-    background: #ffffff;
-    padding: 28px;
-    border-radius: 10px;
-}
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background-color: white;
+            min-height: 100vh;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
 
-h1 {
-    text-align: center;
-    color: #d63031;
-}
+        /* 標題裝飾區（仿照圖片風格） */
+        .header {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #a00000 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-.notice-box {
-    background: #fff3cd;
-    padding: 16px;
-    border-radius: 8px;
-    margin-top: 20px;
-}
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
 
-.date {
-    text-align: right;
-    margin-top: 40px;
-    color: #555;
-}
+        .header p {
+            margin: 10px 0 0;
+            opacity: 0.9;
+            font-size: 14px;
+        }
 
-.footer {
-    margin-top: 30px;
-    text-align: center;
-    color: gray;
-    font-size: 14px;
-}
-</style>
+        /* 公告內容區 */
+        .content {
+            padding: 20px;
+        }
+
+        .announcement-card {
+            background: white;
+            border-left: 5px solid var(--primary-red);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .tag {
+            background-color: var(--primary-red);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .info {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.6;
+            white-space: pre-wrap; /* 讓換行符號生效 */
+        }
+
+        .date {
+            font-size: 13px;
+            color: #999;
+            margin-top: 12px;
+            text-align: right;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #bbb;
+            font-size: 12px;
+        }
+    </style>
 </head>
-
 <body>
 
 <div class="container">
+    <div class="header">
+        <h1>最新消息</h1>
+        <p>重要公告通知</p>
+    </div>
 
-<h1>產品售價調整預告</h1>
+    <div class="content">
+        <div class="announcement-card">
+            <span class="tag">重要</span>
+            <div class="title">音圓控價戰情室系統更新通知</div>
+            <div class="info">親愛的經銷商夥伴：
+系統將於今日進行版本優化，提升產品監測精準度，期間若有短暫連線中斷敬請見諒。</div>
+            <div class="date">2026-04-22</div>
+        </div>
 
-<p>
-受全球半導體供應鏈波動及 AI 需求增加雙重影響，  
-伴唱機核心零件如記憶體（DRAM）與硬碟（SSD / HDD）  
-近年價格持續上升。
-</p>
+        <div class="announcement-card">
+            <span class="tag">一般</span>
+            <div class="title">五一勞動節連假出貨調整</div>
+            <div class="info">因應勞動節連假，代理商維護服務及出貨流程將調整如下...</div>
+            <div class="date">2026-04-20</div>
+        </div>
+    </div>
 
-<p>
-面對整體市場環境之變動，經審慎評估後，  
-將自 <strong>2026 年 4 月 24 日</strong> 起，  
-進行產品售價調整。
-</p>
-
-<div class="notice-box">
-
-<strong>重要提醒：</strong>
-
-<ul>
-<li>近期如有設備採購或升級計畫，建議提前安排</li>
-<li>調整前期間仍維持原價格</li>
-<li>詳細資訊請洽各區經銷窗口</li>
-</ul>
-
-</div>
-
-<p>
-感謝您長期以來的體諒與支持，  
-我們將持續致力於產品研發與服務品質提升，  
-為您提供更優質的使用體驗。
-</p>
-
-<div class="date">
-
-敬啟<br><br>
-2026 年 4 月 16 日
-
-</div>
-
-<div class="footer">
-
-本公告僅供參考，如有異動以正式通知為準
-
-</div>
-
+    <div class="footer">
+        © 2026 音圓秋天服務窗口
+    </div>
 </div>
 
 </body>
