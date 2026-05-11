@@ -7,6 +7,7 @@
     <style>
         :root {
             --bg-dark: #050a18;
+            --neon-blue: #00f2ff;
             --neon-pink: #ff2d55;
             --neon-gold: #ffb800;
             --card-bg: rgba(255, 255, 255, 0.05);
@@ -15,13 +16,12 @@
         body {
             background-color: var(--bg-dark);
             color: white;
-            font-family: sans-serif;
+            font-family: "Microsoft JhengHei", sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
         }
 
-        /* 頂部霓虹圖片區 */
         .hero-image {
             width: 100%;
             max-width: 800px;
@@ -32,30 +32,32 @@
         }
 
         .container {
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
             padding: 20px;
         }
 
         h2 {
-            color: var(--neon-pink);
-            text-shadow: 0 0 10px var(--neon-pink);
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px var(--neon-blue);
+            margin-bottom: 10px;
+        }
+
+        p.subtitle {
+            color: #aaa;
             margin-bottom: 30px;
         }
 
-        /* 文案卡片樣式 */
         .copy-card {
             background: var(--card-bg);
             border: 1px solid rgba(255,255,255,0.1);
             border-radius: 12px;
             padding: 20px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             text-align: left;
         }
 
         .card-tag {
-            background: var(--neon-gold);
-            color: black;
             padding: 4px 12px;
             border-radius: 20px;
             font-size: 0.8rem;
@@ -64,34 +66,46 @@
             margin-bottom: 15px;
         }
 
+        .tag-warm { background: var(--neon-pink); color: white; }
+        .tag-summer { background: #007bff; color: white; }
+        .tag-quick { background: var(--neon-gold); color: black; }
+
         pre {
             white-space: pre-wrap;
             word-wrap: break-word;
             font-size: 0.95rem;
             line-height: 1.6;
-            color: #ddd;
-            background: rgba(0,0,0,0.3);
+            color: #eee;
+            background: rgba(0,0,0,0.4);
             padding: 15px;
             border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* 複製按鈕 */
         .btn-copy {
             background: transparent;
-            border: 1px solid var(--neon-pink);
-            color: var(--neon-pink);
-            padding: 10px 20px;
-            border-radius: 5px;
+            border: 1px solid var(--neon-blue);
+            color: var(--neon-blue);
+            padding: 12px 20px;
+            border-radius: 8px;
             cursor: pointer;
             width: 100%;
             font-size: 1rem;
             margin-top: 10px;
             transition: 0.3s;
+            font-weight: bold;
         }
 
         .btn-copy:hover {
-            background: var(--neon-pink);
-            color: white;
+            background: var(--neon-blue);
+            color: black;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding-bottom: 30px;
+            font-size: 0.8rem;
+            color: #555;
         }
     </style>
 </head>
@@ -100,50 +114,80 @@
     <img src="image_9.png" class="hero-image" alt="音圓服務平台">
 
     <div class="container">
-        <h2>文案分享專區</h2>
+        <h2>最新文案分享</h2>
+        <p class="subtitle">點擊下方按鈕即可快速複製，貼至 FB / IG / LINE</p>
 
         <div class="copy-card">
-            <div class="card-tag">母親節限定</div>
-            <pre id="text1">【今年母親節，把 KTV 搬回家！🎁】
+            <div class="card-tag tag-warm">日常陪伴篇 (FB/LINE)</div>
+            <pre id="text1">【錯過了節日，別錯過陪伴的心 🎤】
 
-還在煩惱母親節送什麼嗎？送健康、送紅包，不如送媽媽一整年的快樂！看著媽媽拿起麥克風、唱著她最愛的經典老歌，那種笑容才是無價的。❤️
+母親節剛過，回味著全家聚在一起唱歌的溫馨嗎？
+其實對爸媽來說，最好的禮物不是大餐，而是平時拿起麥克風合唱的快樂時光。
 
-✨ 母親節限時優惠：
-即日起來店洽詢【音圓專業歌唱系統】，即享專屬好禮！
+讓家裡的客廳，一年 365 天都是專屬包廂。
+
+✨ 為什麼選擇音圓？
+● 操作超直覺：長輩一教就會，點歌不求人。
+● 畫質極致清：4K 高清背景，唱起來就像在拍 MV。
+● 功能最全面：AI 智能評分，讓唱歌更有趣！
 
 📍 [店家名稱]
 🏠 地址：[請輸入地址]
-📞 預約專線：[請輸入電話]
-#音圓電腦伴唱機 #母親節禮物 #全家同樂 #家庭KTV #最愛媽媽</pre>
-            <button class="btn-copy" onclick="copyToClipboard('text1')">一鍵複製文案</button>
+📞 洽詢專線：[請輸入電話]
+#音圓 #家庭陪伴 #唱歌最快樂 #N5專業系列 #居家娛樂</pre>
+            <button class="btn-copy" onclick="copyToClipboard('text1')">一鍵複製溫情篇</button>
         </div>
 
         <div class="copy-card">
-            <div class="card-tag">舊換新攻略</div>
-            <pre id="text2">【告別舊時代！音圓「舊換新」限時募集 🚀】
+            <div class="card-tag tag-summer">消暑升級篇 (FB/IG)</div>
+            <pre id="text2">【天氣漸漸熱，在家唱歌最涼快！❄️🎤】
 
-你家裡的點歌機還在跑不動、畫面模糊嗎？別讓老舊設備掃了全家唱歌的興致！
+外面太陽這麼大，去 KTV 訂不到房又怕曬？
+不如把家裡的「老古董」換掉，升級最強音圓機型！
 
-換上 AI 智能評分、4K 極致畫質、手機雲端點歌，你會發現：原來唱歌可以這麼享受！
+音圓「舊換新」限時募集進行中！
+換購 N2/N5 系列，折抵優惠超有感！
 
-✅ 舊換新亮點：
-1. 畫面更清：4K 震撼視覺
-2. 速度更快：點歌不卡頓
-3. 舊機折抵：現場評估現折
+✅ 升級亮點：
+1️⃣ 告別卡頓：新一代系統，點歌秒反應。
+2️⃣ 手機連動：手機就是點歌本，雲端下載超快速。
+3️⃣ 絕美音質：專業級音質，在家唱出小巨蛋感。
 
 📍 [店家名稱]
 🏠 地址：[請輸入地址]
 📞 諮詢專線：[請輸入電話]
-#音圓 #舊換新 #升級有感 #卡拉OK </pre>
-            <button class="btn-copy" onclick="copyToClipboard('text2')">一鍵複製文案</button>
+#舊換新 #音圓 #升級有感 #避暑首選 #卡拉OK升級</pre>
+            <button class="btn-copy" onclick="copyToClipboard('text2')">一鍵複製消暑篇</button>
         </div>
+
+        <div class="copy-card">
+            <div class="card-tag tag-quick">快速轉發版 (LINE/限動)</div>
+            <pre id="text3">🎤 音圓專業歌唱系統｜舊換新優惠中！
+
+想要體驗 4K 畫質、手機點歌、AI 評分嗎？
+🚀 現在舊機換新機，享限時折抵優惠！
+讓家裡的點歌機也跟上時代，換一台全家人都愛的「音圓」！
+
+🎁 歡迎預約來店試唱，體驗專業音質。
+📞 專線：[請輸入電話]
+📍 地點：[請輸入地址]
+#Inyuan #音圓 #舊換新 #唱歌 #點歌機升級</pre>
+            <button class="btn-copy" onclick="copyToClipboard('text3')">一鍵複製精華版</button>
+        </div>
+
     </div>
+
+    <footer>
+        &copy; 2026 音圓服務平台｜文案管理系統
+    </footer>
 
     <script>
         function copyToClipboard(id) {
             const text = document.getElementById(id).innerText;
             navigator.clipboard.writeText(text).then(() => {
-                alert('文案已複製！可以直接貼到 FB 或 IG 囉。');
+                alert('文案已成功複製！');
+            }).catch(err => {
+                console.error('複製失敗', err);
             });
         }
     </script>
