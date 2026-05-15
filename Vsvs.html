@@ -1,262 +1,192 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>機型整合比較</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>機型規格大車拼 - 音圓伴唱機</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card: #1e293b;
+            --blue: #38bdf8;
+            --accent: #fbbf24;
+            --red: #ef4444;
+            --text: #f8fafc;
+        }
 
-<style>
-body {
-    font-family: Arial, "Microsoft JhengHei";
-    background-color: #1f2b3a;
-    margin: 0;
-    padding: 20px;
-    color: white;
-}
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: "Microsoft JhengHei", sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-.container {
-    max-width: 1200px;
-    margin: auto;
-    background: #2f3e55;
-    padding: 25px;
-    border-radius: 12px;
-}
+        h1 { color: var(--blue); text-align: center; font-size: 24px; margin-bottom: 20px; }
 
-h1 {
-    text-align: center;
-}
+        /* 比較表格樣式 */
+        .vs-table {
+            width: 100%;
+            max-width: 600px;
+            border-collapse: collapse;
+            background: var(--card);
+            border-radius: 15px;
+            overflow: hidden;
+            font-size: 14px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
 
-h2 {
-    margin-top: 40px;
-    color: #ffd966;
-}
+        .vs-table th, .vs-table td {
+            padding: 15px 8px;
+            text-align: center;
+            border-bottom: 1px solid #334155;
+        }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-}
+        .vs-table th {
+            background-color: #334155;
+            color: var(--blue);
+            font-weight: bold;
+        }
 
-th, td {
-    border: 1px solid #555;
-    padding: 10px;
-    text-align: center;
-}
+        .feature-name {
+            background-color: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            font-weight: bold;
+            width: 70px;
+        }
 
-th {
-    background-color: #445b78;
-}
+        .highlight {
+            color: var(--accent);
+            font-weight: bold;
+        }
 
-tr:nth-child(even) {
-    background-color: #3a4e69;
-}
-</style>
+        /* 銷售秘笈下載區 */
+        .guide-section {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 600px;
+        }
 
+        .guide-title {
+            color: var(--accent);
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .guide-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .guide-card {
+            background: #334155;
+            padding: 15px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            transition: all 0.2s;
+            border: 1px solid #475569;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .guide-card:hover {
+            background: var(--blue);
+            border-color: var(--text);
+            transform: translateY(-3px);
+        }
+
+        .icon-pdf {
+            background: var(--red);
+            font-size: 10px;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            display: block;
+            text-align: center;
+            margin-top: 40px;
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
+    <h1>⚖️ 機型規格快速比較</h1>
 
-<h1>機型整合比較</h1>
+    <table class="vs-table">
+        <thead>
+            <tr>
+                <th>特色</th>
+                <th>STAR 系列</th>
+                <th>N2 系列</th>
+                <th>N5 系列</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="feature-name">定位</td>
+                <td>鏡面美型<br>旗艦首選</td>
+                <td>經典入門<br>高CP值</td>
+                <td>專業多功能<br>效能強大</td>
+            </tr>
+            <tr>
+                <td class="feature-name">畫質</td>
+                <td class="highlight">4K UHD</td>
+                <td>1080P Full HD</td>
+                <td class="highlight">4K 極致輸出</td>
+            </tr>
+            <tr>
+                <td class="feature-name">YouTube</td>
+                <td>可消除人聲</td>
+                <td>線上觀看</td>
+                <td class="highlight">深度整合濾除</td>
+            </tr>
+            <tr>
+                <td class="feature-name">評分</td>
+                <td class="highlight">⭐⭐⭐⭐⭐</td>
+                <td>⭐⭐⭐⭐</td>
+                <td class="highlight">⭐⭐⭐⭐⭐</td>
+            </tr>
+        </tbody>
+    </table>
 
-<h2>系列型式</h2>
+    <div class="guide-section">
+        <div class="guide-title">📂 專業銷售圖資下載</div>
+        <div class="guide-box">
+            <a href="STAR系列伴唱機選購指南.pdf" class="guide-card" target="_blank">
+                <span class="icon-pdf">PDF</span>
+                <span style="font-size: 14px; font-weight: bold;">STAR系列<br>選購指南</span>
+            </a>
+            <a href="音圓W系列比較與銷售秘笈.pdf" class="guide-card" target="_blank">
+                <span class="icon-pdf">PDF</span>
+                <span style="font-size: 14px; font-weight: bold;">W系列比較<br>銷售秘笈</span>
+            </a>
+        </div>
+    </div>
 
-<table>
-<tr>
-<th>項目</th>
-<th>STAR 系列</th>
-<th>W-880 系列</th>
-</tr>
+    <p style="text-align: center; font-size: 12px; color: #64748b; margin-top: 25px; line-height: 1.5;">
+        *規格僅供參考，詳情請下載上方指南<br>
+        © 2026 Inyuan Service Platform
+    </p>
 
-<tr>
-<td>設備型式</td>
-<td>主機型</td>
-<td>一體式</td>
-</tr>
-
-<tr>
-<td>安裝方式</td>
-<td>固定安裝</td>
-<td>即插即用</td>
-</tr>
-
-<tr>
-<td>內建喇叭</td>
-<td>需外接</td>
-<td>內建</td>
-</tr>
-
-<tr>
-<td>內建螢幕</td>
-<td>需外接</td>
-<td>內建</td>
-</tr>
-
-<tr>
-<td>移動方式</td>
-<td>固定式</td>
-<td>可移動</td>
-</tr>
-
-<tr>
-<td>常見場域</td>
-<td>家庭 / 店面 / 包廂</td>
-<td>家庭 / 店面 / 活動</td>
-</tr>
-</table>
-
-<h2>STAR 系列機型</h2>
-
-<table>
-<tr>
-<th>項目</th>
-<th>STAR-25</th>
-<th>STAR-46</th>
-<th>STAR-55</th>
-</tr>
-
-<tr>
-<td>使用場域</td>
-<td>家庭</td>
-<td>家庭 / 店面</td>
-<td>店面 / 包廂</td>
-</tr>
-
-<tr>
-<td>安裝方式</td>
-<td>固定安裝</td>
-<td>固定安裝</td>
-<td>固定安裝</td>
-</tr>
-
-<tr>
-<td>WiFi</td>
-<td>支援</td>
-<td>支援</td>
-<td>支援</td>
-</tr>
-
-<tr>
-<td>藍牙</td>
-<td>支援</td>
-<td>支援</td>
-<td>支援</td>
-</tr>
-
-<tr>
-<td>雲端下載歌曲</td>
-<td>支援</td>
-<td>支援</td>
-<td>支援</td>
-</tr>
-
-<tr>
-<td>USB</td>
-<td>支援</td>
-<td>支援</td>
-<td>支援</td>
-</tr>
-
-<tr>
-<td>HDMI</td>
-<td>支援</td>
-<td>支援</td>
-<td>支援</td>
-</tr>
-
-<tr>
-<td>操作方式</td>
-<td>觸控 / 遙控</td>
-<td>觸控 / 遙控</td>
-<td>觸控 / 遙控</td>
-</tr>
-
-<tr>
-<td>常見使用方式</td>
-<td>家庭娛樂</td>
-<td>餐廳 / 小吃店</td>
-<td>包廂 / 固定場域</td>
-</tr>
-
-</table>
-
-<h2>W-880 系列機型</h2>
-
-<table>
-<tr>
-<th>項目</th>
-<th>W-880</th>
-<th>W-880P</th>
-<th>W-880P Plus</th>
-</tr>
-
-<tr>
-<td>設備型式</td>
-<td>一體式</td>
-<td>一體式</td>
-<td>一體式</td>
-</tr>
-
-<tr>
-<td>是否可移動</td>
-<td>可移動</td>
-<td>可移動</td>
-<td>可移動</td>
-</tr>
-
-<tr>
-<td>內建螢幕</td>
-<td>有</td>
-<td>有</td>
-<td>有</td>
-</tr>
-
-<tr>
-<td>內建喇叭</td>
-<td>有</td>
-<td>有</td>
-<td>有</td>
-</tr>
-
-<tr>
-<td>WiFi</td>
-<td>支援</td>
-<td>支援</td>
-<td>支援</td>
-</tr>
-
-<tr>
-<td>藍牙</td>
-<td>支援</td>
-<td>支援</td>
-<td>支援</td>
-</tr>
-
-<tr>
-<td>USB</td>
-<td>支援</td>
-<td>支援</td>
-<td>支援</td>
-</tr>
-
-<tr>
-<td>操作方式</td>
-<td>觸控操作</td>
-<td>觸控操作</td>
-<td>觸控操作</td>
-</tr>
-
-<tr>
-<td>常見使用方式</td>
-<td>家庭 / 店面</td>
-<td>店面 / 活動</td>
-<td>店面 / 活動</td>
-</tr>
-
-</table>
-
-</div>
+    <a href="index.html" class="back-btn">← 回到主選單</a>
 
 </body>
 </html>
