@@ -3,114 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>產品文宣下載中心</title>
+    <title>產品文宣下載中心 - 音圓伴唱機</title>
     <style>
-        :root { --bg: #0f172a; --card: #1e293b; --blue: #38bdf8; --white: #f8fafc; --gray: #94a3b8; --accent: #2563eb; --highlight: #ef4444; }
-        body { background: var(--bg); color: var(--white); font-family: -apple-system, sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
-        h1 { color: var(--blue); text-shadow: 0 0 10px rgba(56,189,248,0.3); margin-bottom: 10px; text-align: center; }
-        .subtitle { color: var(--gray); margin-bottom: 40px; font-size: 0.95rem; text-align: center; }
-        .container { width: 100%; max-width: 800px; }
-        
-        /* 圖片網格排版 */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 20px;
-            width: 100%;
+        :root {
+            --bg: #0f172a;
+            --card: #1e293b;
+            --blue: #38bdf8;
+            --red: #ef4444;
+            --text: #f8fafc;
         }
-        
-        /* 單張卡片設計 */
-        .card {
-            background: var(--card); border-radius: 12px; overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-            position: relative;
-        }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.5); border-color: var(--blue); }
-        .card a { text-decoration: none; color: var(--white); display: flex; flex-direction: column; height: 100%; }
-        
-        /* 圖片預覽區 */
-        .card-img {
-            width: 100%; aspect-ratio: 3/4; background-color: #1e293b;
-            display: flex; align-items: center; justify-content: center;
-            overflow: hidden; position: relative;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-        .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
-        .card:hover .card-img img { transform: scale(1.08); }
-        
-        /* 點擊提示浮水印 */
-        .click-overlay {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center;
-            opacity: 0; transition: opacity 0.2s; color: white; font-weight: bold; font-size: 1.1rem;
-            pointer-events: none; backdrop-filter: blur(2px);
-        }
-        .card:hover .click-overlay { opacity: 1; }
 
-        /* 文字資訊區 */
-        .card-info { padding: 15px 10px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; align-items: center; }
-        .file-name { font-size: 0.95rem; font-weight: bold; margin-bottom: 10px; line-height: 1.4; word-break: break-all; }
-        .pdf-tag { background-color: #e11d48; color: white; font-size: 0.75rem; padding: 4px 10px; border-radius: 4px; display: inline-block; font-weight: bold; }
-        
-        .footer { text-align: center; margin-top: 50px; color: #475569; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: "Microsoft JhengHei", sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 { color: var(--blue); margin-bottom: 5px; text-shadow: 0 0 15px rgba(56, 189, 248, 0.4); text-align: center; }
+        .subtitle { color: #94a3b8; margin-bottom: 40px; font-size: 0.9rem; text-align: center; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #334155;
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover { transform: translateY(-5px); border-color: var(--blue); }
+
+        .img-box {
+            width: 100%;
+            height: 200px;
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* 確保型錄圖片比例正確不被切掉 */
+            background-color: #1a1a1a;
+        }
+
+        .card-body { padding: 20px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .card-title { font-size: 1.2rem; font-weight: bold; margin-bottom: 15px; color: var(--blue); }
+
+        .btn-group { display: flex; gap: 10px; justify-content: center; }
+
+        .btn {
+            flex: 1;
+            padding: 10px 5px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: bold;
+            transition: opacity 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-dm { background-color: var(--red); color: white; }
+        .btn-manual { background-color: #475569; color: white; }
+        .btn:hover { opacity: 0.8; }
+        .btn-disabled { background-color: #334155; color: #64748b; pointer-events: none; }
+
+        footer { margin-top: 50px; color: #475569; font-size: 0.8rem; text-align: center; line-height: 1.6; }
     </style>
 </head>
 <body>
 
-    <h1>📂 官方產品文件下載中心</h1>
-    <div class="subtitle">點擊圖片即可下載 PDF 高清原檔</div>
+    <h1>📂 官方產品文宣下載中心</h1>
+    <div class="subtitle">點擊下方按鈕即可下載 PDF 高清型錄與說明書</div>
 
-    <div class="container">
-        <div class="grid-container">
+    <div class="grid">
 
-            <div class="card">
-                <a href="https://drive.google.com/file/d/18aWWu6q0cuYwbGERJVTfmBre0dQBPIFL/view?usp=drivesdk" target="_blank">
-                    <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=18aWWu6q0cuYwbGERJVTfmBre0dQBPIFL&sz=w400" alt="STAR 系列" onerror="this.src='https://placehold.co/400x533/1e293b/e11d48?text=PDF';">
-                        <div class="click-overlay">📥 點擊下載</div>
-                    </div>
-                    <div class="card-info"><div class="file-name">STAR 系列</div><span class="pdf-tag">PDF</span></div>
-                </a>
+        <div class="card">
+            <div class="img-box"><img src="3in1/front3IN1.jpg"></div>
+            <div class="card-body">
+                <div class="card-title">3in1 系列</div>
+                <div class="btn-group">
+                    <a href="3in1/front3IN1.jpg" class="btn btn-dm" target="_blank">預覽圖片</a>
+                    <a href="#" class="btn btn-disabled">暫無 PDF</a>
+                </div>
             </div>
-
-            <div class="card">
-                <a href="https://drive.google.com/file/d/1DwV5_LO-p9QeAzXi0gIISvu4b4AwvBhw/view?usp=drivesdk" target="_blank">
-                    <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=1DwV5_LO-p9QeAzXi0gIISvu4b4AwvBhw&sz=w400" alt="STAR 46" onerror="this.src='https://placehold.co/400x533/1e293b/e11d48?text=PDF';">
-                        <div class="click-overlay">📥 點擊下載</div>
-                    </div>
-                    <div class="card-info"><div class="file-name">STAR 46</div><span class="pdf-tag">PDF</span></div>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="https://drive.google.com/file/d/156_riC32e1K8bOX2exatOaBdxaXdsFSQ/view?usp=drivesdk" target="_blank">
-                    <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=156_riC32e1K8bOX2exatOaBdxaXdsFSQ&sz=w400" alt="N2-800" onerror="this.src='https://placehold.co/400x533/1e293b/e11d48?text=PDF';">
-                        <div class="click-overlay">📥 點擊下載</div>
-                    </div>
-                    <div class="card-info"><div class="file-name">N2-800</div><span class="pdf-tag">PDF</span></div>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="https://drive.google.com/file/d/1K0mBma2ZFK817S6Bv-qrXEuFJR0f3wEg/view?usp=drivesdk" target="_blank">
-                    <div class="card-img">
-                        <img src="https://drive.google.com/thumbnail?id=1K0mBma2ZFK817S6Bv-qrXEuFJR0f3wEg&sz=w400" alt="W-880" onerror="this.src='https://placehold.co/400x533/1e293b/e11d48?text=PDF';">
-                        <div class="click-overlay">📥 點擊下載</div>
-                    </div>
-                    <div class="card-info"><div class="file-name">W-880</div><span class="pdf-tag">PDF</span></div>
-                </a>
-            </div>
-
         </div>
+
+        <div class="card">
+            <div class="img-box"><img src="N2800/frontN2800DM.jpg"></div>
+            <div class="card-body">
+                <div class="card-title">N2800 系列</div>
+                <div class="btn-group">
+                    <a href="N2800/N2800DM.pdf" class="btn btn-dm" target="_blank">下載 DM</a>
+                    <a href="N2800/N2800說明書.pdf" class="btn btn-manual" target="_blank">說明書</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-box"><img src="P268/frontP268.jpg"></div>
+            <div class="card-body">
+                <div class="card-title">P268 系列</div>
+                <div class="btn-group">
+                    <a href="P268/P268.pdf" class="btn btn-dm" target="_blank">下載 DM</a>
+                    <a href="P268/P268-說明書.pdf" class="btn btn-manual" target="_blank">說明書</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-box"><img src="P7000/front.P7000.jpg"></div>
+            <div class="card-body">
+                <div class="card-title">P7000 系列</div>
+                <div class="btn-group">
+                    <a href="P7000/PARTY7000DM.pdf" class="btn btn-dm" target="_blank">下載 DM</a>
+                    <a href="P7000/N5Party使用說明.pdf" class="btn btn-manual" target="_blank">說明書</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-box"><img src="P880/front.P880.jpg"></div>
+            <div class="card-body">
+                <div class="card-title">P880 系列</div>
+                <div class="btn-group">
+                    <a href="P880/W880DM.pdf" class="btn btn-dm" target="_blank">下載 DM</a>
+                    <a href="P880/w880說明書.pdf" class="btn btn-manual" target="_blank">說明書</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-box"><img src="STAR系列/STAR系列.jpg"></div>
+            <div class="card-body">
+                <div class="card-title">STAR 系列</div>
+                <div class="btn-group">
+                    <a href="STAR系列/STAR46活動DM.pdf" class="btn btn-dm" target="_blank">STAR 46 DM</a>
+                    <a href="STAR系列/N5Star說明書.pdf" class="btn btn-manual" target="_blank">說明書</a>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    <div class="footer">
-        產品規格服務中心<br>
+    <footer>
+        音圓伴唱機 產品規格服務中心<br>
         © 2026 Inyuan Service Platform
-    </div>
+    </footer>
 
 </body>
 </html>
