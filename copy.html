@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文案分享 - 音圓服務平台</title>
+    <title>六月文案分享 - 音圓服務平台</title>
     <style>
         :root {
             --bg-dark: #050a18;
@@ -40,14 +40,39 @@
         h2 {
             color: var(--neon-blue);
             text-shadow: 0 0 10px var(--neon-blue);
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         p.subtitle {
             color: #aaa;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
+        /* 提示說明區塊 */
+        .notice-box {
+            background: rgba(255, 184, 0, 0.1);
+            border: 1px solid var(--neon-gold);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 35px;
+            text-align: left;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .notice-box h3 {
+            color: var(--neon-gold);
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .notice-box ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #ddd;
+        }
+
+        /* 文案卡片樣式 */
         .copy-card {
             background: var(--card-bg);
             border: 1px solid rgba(255,255,255,0.1);
@@ -111,81 +136,91 @@
 </head>
 <body>
 
+    <!-- 頂部宣傳圖 -->
     <img src="image_9.png" class="hero-image" alt="音圓服務平台">
 
     <div class="container">
-        <h2>最新文案分享</h2>
-        <p class="subtitle">點擊下方按鈕即可快速複製，貼至 FB / IG / LINE</p>
+        <h2>六月份最新文案分享</h2>
+        <p class="subtitle">專屬 STAR-46 舊換新活動 & Party7000 強力推薦</p>
 
+        <!-- 欄位用意標示與貼心提醒 -->
+        <div class="notice-box">
+            <h3>💡 專員 Albert 的貼心提醒（發文前必看）：</h3>
+            <ul>
+                <li><strong>文字中的 <code>[...]</code> 欄位：</strong> 請記得改成您店家的專屬資訊（店名、地址、電話、折抵金額）。</li>
+                <li><strong>標籤 <code>#音圓電腦[請輸入您的區域]</code> 的用意：</strong> 這是為了讓您當地的鄉親在 FB 或 IG 上搜尋時（例如搜尋「音圓電腦桃園」、「音圓電腦嘉義」），能第一時間找到您的店！發文前請把中括號換成您的在地據點（如：<code>#音圓電腦羅東</code>）。</li>
+            </ul>
+        </div>
+
+        <!-- 文案 1: 端午連假篇 -->
         <div class="copy-card">
-            <div class="card-tag tag-warm">日常陪伴篇 (FB/LINE)</div>
-            <pre id="text1">【錯過了節日，別錯過陪伴的心 🎤】
+            <div class="card-tag tag-warm">端午連假篇 (FB/LINE)</div>
+            <pre id="text1">【端午佳節慶團圓！飄粽香，家裡點歌機也該換新迎端午 🎋🎤】
 
-母親節剛過，回味著全家聚在一起唱歌的溫馨嗎？
-其實對爸媽來說，最好的禮物不是大餐，而是平時拿起麥克風合唱的快樂時光。
+端午連假要到啦！除了吃粽子，全家人難得聚在一起，最棒的飯後娛樂就是一起點歌開唱！
 
-讓家裡的客廳，一年 365 天都是專屬包廂。
+別讓老舊卡頓、畫面模糊的舊唱機壞了興致。音圓【STAR-46 舊換新】限時募集火熱進行中！現在帶上家裡任何品牌的老舊點歌機來店換購 STAR-46，即享驚喜折抵優惠！一秒把客廳變身豪華 KTV 包廂。
 
-✨ 為什麼選擇音圓？
-● 操作超直覺：長輩一教就會，點歌不求人。
-● 畫質極致清：4K 高清背景，唱起來就像在拍 MV。
-● 功能最全面：AI 智能評分，讓唱歌更有趣！
+戶外派對同場加映 🚀 如果連假打算家族出遊、露營烤肉，別忘了帶上【音圓 Party7000 獨立型行動點歌機】，一機搞定音響與專業曲庫，提了就走、隨開隨唱！
+
+✨ 六月端午加碼：即日起至 6/30 來店洽詢，享專屬升級好禮！
 
 📍 [店家名稱]
 🏠 地址：[請輸入地址]
-📞 洽詢專線：[請輸入電話]
-#音圓 #家庭陪伴 #唱歌最快樂 #N5專業系列 #居家娛樂</pre>
-            <button class="btn-copy" onclick="copyToClipboard('text1')">一鍵複製溫情篇</button>
+📞 預約試唱專線：[請輸入電話]
+#音圓電腦[請輸入您的區域] #STAR46 #舊換新 #Party7000 #端午連假 #行動點歌機 #家庭KTV</pre>
+            <button class="btn-copy" onclick="copyToClipboard('text1')">一鍵複製端午篇</button>
         </div>
 
+        <!-- 文案 2: 夏日避暑篇 -->
         <div class="copy-card">
-            <div class="card-tag tag-summer">消暑升級篇 (FB/IG)</div>
-            <pre id="text2">【天氣漸漸熱，在家唱歌最涼快！❄️🎤】
+            <div class="card-tag tag-summer">夏日避暑篇 (FB/IG)</div>
+            <pre id="text2">【六月高溫警報！出門曬太陽，不如在家享受 STAR-46 震撼飆歌 🥵❄️】
 
-外面太陽這麼大，去 KTV 訂不到房又怕曬？
-不如把家裡的「老古董」換掉，升級最強音圓機型！
+外面動不動就飆破 35 度，出門塞車又怕曬？最聰明的避暑方案：把客廳舊歌機淘汰，換上最熱銷的【音圓 STAR-46】！
 
-音圓「舊換新」限時募集進行中！
-換購 N2/N5 系列，折抵優惠超有感！
+📢 音圓【STAR-46 舊換新】感恩企劃正式開跑！
+不管你家舊機是什麼品牌、幾年份，現在來店換購 STAR-46，舊機直接折抵現金！馬上體驗行家等級的專業音質，讓全家大小在家吹冷氣嗨翻天。
 
-✅ 升級亮點：
-1️⃣ 告別卡頓：新一代系統，點歌秒反應。
-2️⃣ 手機連動：手機就是點歌本，雲端下載超快速。
-3️⃣ 絕美音質：專業級音質，在家唱出小巨蛋感。
+想要隨處開唱？我們還有【Party7000 獨立型點歌機】供您挑選！內建大功率專業喇叭，免去繁雜接線，室內戶外一機全能！
+
+趕快帶上舊機，來店體驗升級的超爽快感！
 
 📍 [店家名稱]
 🏠 地址：[請輸入地址]
 📞 諮詢專線：[請輸入電話]
-#舊換新 #音圓 #升級有感 #避暑首選 #卡拉OK升級</pre>
-            <button class="btn-copy" onclick="copyToClipboard('text2')">一鍵複製消暑篇</button>
+#音圓 #STAR46 #舊換新 #Party7000 #夏日避暑 #吹冷氣唱歌 #家庭娛樂首選</pre>
+            <button class="btn-copy" onclick="copyToClipboard('text2')">一鍵複製避暑篇</button>
         </div>
 
+        <!-- 文案 3: 畢業青春篇 -->
         <div class="copy-card">
-            <div class="card-tag tag-quick">快速轉發版 (LINE/限動)</div>
-            <pre id="text3">🎤 音圓專業歌唱系統｜舊換新優惠中！
+            <div class="card-tag tag-quick">畢業青春篇 (LINE/限動)</div>
+            <pre id="text3">【鳳凰花開畢業季！用歌聲記錄青春，點歌機該升級囉 🎓🎤】
 
-想要體驗 4K 畫質、手機點歌、AI 評分嗎？
-🚀 現在舊機換新機，享限時折抵優惠！
-讓家裡的點歌機也跟上時代，換一台全家人都愛的「音圓」！
+六月畢業季到來，無論是畢業慶祝派對、同學聚會、還是家庭聚餐，最能炒熱氣氛的絕對是全家一起大聲開唱！
 
-🎁 歡迎預約來店試唱，體驗專業音質。
+歡慶畢業季，音圓特別推出【STAR-46 舊換新】限時優惠！憑家裡任意舊機換購精選 STAR-46，即可享有超值折抵。專業級系統讓年輕人唱得過癮，操作直覺長輩也能輕鬆同樂，三代同堂零代溝！
+
+聚會外帶神隊友推薦 🥳 同場強推【Party7000 獨立型行動點歌機】，免插複雜線路，提了就走！無論在室內還是戶外辦畢業 Party，都能一秒嗨翻全場。
+
+🎁 歡迎私訊或撥打專線，預約來店試唱體驗。
 📞 專線：[請輸入電話]
 📍 地點：[請輸入地址]
-#Inyuan #音圓 #舊換新 #唱歌 #點歌機升級</pre>
-            <button class="btn-copy" onclick="copyToClipboard('text3')">一鍵複製精華版</button>
+#音圓電腦[請輸入您的區域] #STAR46 #舊換新 #Party7000 #畢業季 #青春不畢業 #聚會首選 #行動點歌機</pre>
+            <button class="btn-copy" onclick="copyToClipboard('text3')">一鍵複製畢業篇</button>
         </div>
-
     </div>
 
     <footer>
-        &copy; 2026 音圓服務平台｜文案管理系統
+        &copy; 2026 音圓服務平台｜六月推廣文案管理
     </footer>
 
     <script>
         function copyToClipboard(id) {
             const text = document.getElementById(id).innerText;
             navigator.clipboard.writeText(text).then(() => {
-                alert('文案已成功複製！');
+                alert('文案已成功複製！記得修改 [...] 裡的資訊並填入您的區域標籤喔！');
             }).catch(err => {
                 console.error('複製失敗', err);
             });
