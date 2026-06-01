@@ -1,0 +1,26 @@
+# 系統文件
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# 編輯器
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# 構建輸出
+dist/
+build/
+
+# 環境變量
+.env
+.env.local
+.env.*.local

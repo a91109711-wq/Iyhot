@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音圓節奏大挑戰</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            height: 100vh;
+            max-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #0f3460;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+        }
+
+        /* 主選單 */
+        .menu-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            gap: 40px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .menu-screen.hidden {
+            display: none;
+        }
+
+        .game-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #7c3aed, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .game-subtitle {
+            font-size: 18px;
+            color: #a0aec0;
+            margin-bottom: 40px;
+        }
+
+        .difficulty-section {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .difficulty-label {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #e2e8f0;
+        }
+
+        .difficulty-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .difficulty-btn {
+            padding: 15px;
+            border: 2px solid #4c5282;
+            background: transparent;
+            color: #cbd5e0;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .difficulty-btn:hover {
+            border-color: #7c3aed;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .difficulty-btn.selected {
+            background: #7c3aed;
+            border-color: #7c3aed;
+            color: #fff;
+        }
+
+        .start-btn {
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #7c3aed, #06b6d4);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .start-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+        }
+
+        .start-btn:active {
+            transform: translateY(0);
+        }
+
+        /* 遊戲屏幕 */
+        .game-screen {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 20px;
+            gap: 15px;
+        }
+
+        .game-screen.hidden {
+            display: none;
+        }
+
+        .game-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .game-stats {
+            display: flex;
+            gap: 30px;
+            flex: 1;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #a0aec0;
+            margin-bottom: 5px;
+        }
+
+        .stat-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fbbf24;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #7c3aed, #06b6d4);
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        .game-canvas-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .game-controls {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .control-btn {
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .pause-btn {
+            background: #f59e0b;
+            color: white;
+        }
+
+        .pause-btn:hover {
+            background: #d97706;
+        }
+
+        .quit-btn {
+            background: #ef4444;
+            color: white;
+        }
+
+        .quit-btn:hover {
+            background: #dc2626;
+        }
+
+        /* 結算屏幕 */
+        .results-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            gap: 30px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .results-screen.hidden {
+            display: none;
+        }
+
+        .results-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #fbbf24;
+        }
+
+        .results-score {
+            font-size: 64px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #7c3aed, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 20px 0;
+        }
+
+        .results-rating {
+            font-size: 48px;
+            font-weight: bold;
+            color: #fbbf24;
+            margin: 20px 0;
+        }
+
+        .results-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            width: 100%;
+            max-width: 400px;
+            margin: 30px 0;
+        }
+
+        .results-stat {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .results-stat-label {
+            font-size: 12px;
+            color: #a0aec0;
+            margin-bottom: 8px;
+        }
+
+        .results-stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .results-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .results-btn {
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .results-btn-primary {
+            background: linear-gradient(135deg, #7c3aed, #06b6d4);
+            color: white;
+        }
+
+        .results-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+        }
+
+        .results-btn-secondary {
+            background: transparent;
+            color: #cbd5e0;
+            border: 2px solid #4c5282;
+        }
+
+        .results-btn-secondary:hover {
+            border-color: #7c3aed;
+            color: #fff;
+        }
+
+        /* 暫停菜單 */
+        .pause-menu {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            z-index: 1000;
+            border-radius: 8px;
+        }
+
+        .pause-menu.hidden {
+            display: none;
+        }
+
+        .pause-menu-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #fbbf24;
+        }
+
+        .pause-menu-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .pause-menu-btn {
+            padding: 12px 40px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 200px;
+        }
+
+        .pause-menu-btn-resume {
+            background: #10b981;
+            color: white;
+        }
+
+        .pause-menu-btn-resume:hover {
+            background: #059669;
+        }
+
+        .pause-menu-btn-quit {
+            background: #ef4444;
+            color: white;
+        }
+
+        .pause-menu-btn-quit:hover {
+            background: #dc2626;
+        }
+
+        /* 響應式設計 */
+        @media (max-width: 600px) {
+            .game-title {
+                font-size: 32px;
+            }
+
+            .difficulty-buttons {
+                grid-template-columns: 1fr;
+            }
+
+            .results-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .game-header {
+                font-size: 14px;
+            }
+
+            .stat-value {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 主選單 -->
+        <div class="menu-screen" id="menuScreen">
+            <div>
+                <div class="game-title">🎵 音圓節奏</div>
+                <div class="game-subtitle">大挑戰</div>
+            </div>
+
+            <div class="difficulty-section">
+                <div class="difficulty-label">選擇難度</div>
+                <div class="difficulty-buttons">
+                    <button class="difficulty-btn selected" data-difficulty="easy">簡單</button>
+                    <button class="difficulty-btn" data-difficulty="normal">普通</button>
+                    <button class="difficulty-btn" data-difficulty="hard">困難</button>
+                </div>
+            </div>
+
+            <button class="start-btn" id="startBtn">開始遊戲</button>
+        </div>
+
+        <!-- 遊戲屏幕 -->
+        <div class="game-screen hidden" id="gameScreen">
+            <div class="game-header">
+                <div class="game-stats">
+                    <div class="stat-item">
+                        <div class="stat-label">分數</div>
+                        <div class="stat-value" id="scoreDisplay">0</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">連擊</div>
+                        <div class="stat-value" id="comboDisplay">0</div>
+                    </div>
+                </div>
+                <button class="control-btn pause-btn" id="pauseBtn">暫停</button>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <div class="game-canvas-container" id="canvasContainer">
+                <canvas id="gameCanvas"></canvas>
+            </div>
+
+            <!-- 暫停菜單 -->
+            <div class="pause-menu hidden" id="pauseMenu">
+                <div class="pause-menu-title">遊戲暫停</div>
+                <div class="pause-menu-buttons">
+                    <button class="pause-menu-btn pause-menu-btn-resume" id="resumeBtn">繼續遊戲</button>
+                    <button class="pause-menu-btn pause-menu-btn-quit" id="quitBtn">退出遊戲</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 結算屏幕 -->
+        <div class="results-screen hidden" id="resultsScreen">
+            <div class="results-title">遊戲結束</div>
+            <div class="results-score" id="finalScore">0</div>
+            <div class="results-rating" id="ratingDisplay">D</div>
+
+            <div class="results-stats">
+                <div class="results-stat">
+                    <div class="results-stat-label">Perfect</div>
+                    <div class="results-stat-value" id="perfectCount">0</div>
+                </div>
+                <div class="results-stat">
+                    <div class="results-stat-label">Good</div>
+                    <div class="results-stat-value" id="goodCount">0</div>
+                </div>
+                <div class="results-stat">
+                    <div class="results-stat-label">Miss</div>
+                    <div class="results-stat-value" id="missCount">0</div>
+                </div>
+            </div>
+
+            <div style="color: #a0aec0; font-size: 14px;">
+                最高連擊: <span id="maxComboDisplay">0</span>
+            </div>
+
+            <div class="results-buttons">
+                <button class="results-btn results-btn-primary" id="retryBtn">再玩一次</button>
+                <button class="results-btn results-btn-secondary" id="menuBtn">返回主選單</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
