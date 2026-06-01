@@ -17,7 +17,7 @@
 ### 本地運行
 
 1. 克隆或下載此倉庫
-2. 在瀏覽器中打開 `index.html` 文件
+2. 在瀏覽器中打開 `game.html` 文件
 3. 開始遊戲！
 
 ### 使用 Python 簡單服務器（推薦）
@@ -48,7 +48,7 @@ http-server
 
 1. 在 GitHub 上創建新倉庫，命名為 `username.github.io`（將 `username` 替換為您的 GitHub 用戶名）
 2. 克隆倉庫到本地
-3. 將 `index.html` 和 `game.js` 複製到倉庫根目錄
+3. 將 `game.html` 和 `game.js` 複製到倉庫根目錄
 4. 提交並推送：
    ```bash
    git add .
@@ -60,14 +60,14 @@ http-server
 ### 方法 2：在現有倉庫中創建 `docs` 文件夾
 
 1. 在您的倉庫中創建 `docs` 文件夾
-2. 將 `index.html` 和 `game.js` 放入 `docs` 文件夾
+2. 將 `game.html` 和 `game.js` 放入 `docs` 文件夾
 3. 在 GitHub 倉庫設置中，將 GitHub Pages 源設置為 `docs` 文件夾
 4. 訪問 `https://username.github.io/repo-name` 即可玩遊戲
 
 ### 方法 3：使用 `gh-pages` 分支
 
 1. 創建新分支 `gh-pages`
-2. 將 `index.html` 和 `game.js` 推送到此分支
+2. 將 `game.html` 和 `game.js` 推送到此分支
 3. 在 GitHub 倉庫設置中，將 GitHub Pages 源設置為 `gh-pages` 分支
 4. 訪問 `https://username.github.io/repo-name` 即可玩遊戲
 
@@ -98,7 +98,7 @@ http-server
 
 ```
 rhythm-circle-html/
-├── index.html          # 主 HTML 文件，包含 UI 和樣式
+├── game.html          # 主 HTML 文件，包含 UI 和樣式
 ├── game.js             # 遊戲邏輯和引擎
 └── README.md           # 本文件
 ```
