@@ -5,91 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>最新社群推廣文案 - 音圓服務平台</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #0d1117;
             color: #c9d1d9;
-            padding: 15px;
+            padding: 20px 15px 40px 15px;
             max-width: 600px;
             margin: 0 auto;
         }
         .header {
             text-align: center;
-            padding: 15px 0;
-            border-bottom: 1px solid #30363d;
-            margin-bottom: 20px;
+            padding: 15px 0 25px 0;
         }
         .header h1 {
             color: #58a6ff;
-            font-size: 20px;
-            margin: 0 0 5px 0;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+            text-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
         }
         .header p {
             color: #8b949e;
             font-size: 13px;
-            margin: 0;
+            letter-spacing: 0.5px;
         }
         .notice-box {
             background-color: #161b22;
             border: 1px solid #30363d;
-            border-radius: 6px;
-            padding: 15px;
+            border-radius: 8px;
+            padding: 16px;
             margin-bottom: 25px;
-            font-size: 14px;
+            font-size: 13.5px;
             line-height: 1.6;
         }
         .notice-title {
             color: #ffca28;
             font-weight: bold;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+            font-size: 14.5px;
         }
         .notice-box ul {
-            margin: 0;
-            padding-left: 20px;
+            padding-left: 18px;
+        }
+        .notice-box li {
+            margin-bottom: 6px;
+            color: #c9d1d9;
         }
         .section-container {
             margin-bottom: 30px;
         }
-        .section-title {
+        .pill-tag {
             background-color: #f06292;
             color: #ffffff;
             display: inline-block;
-            padding: 5px 15px;
+            padding: 4px 14px;
             border-radius: 20px;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: bold;
             margin-bottom: 12px;
+            letter-spacing: 0.5px;
         }
         .copy-box {
-            background-color: #161b22;
-            border: 2px dashed #ffca28;
+            background-color: #0d1117;
+            border: 2px dashed #f1c40f;
             border-radius: 8px;
-            padding: 20px;
+            padding: 16px;
             position: relative;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background-color: #238636;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2ea043;
+        }
+        .copy-btn:active {
+            transform: scale(0.96);
         }
         .textarea-content {
             white-space: pre-wrap;
             font-size: 15px;
-            line-height: 1.6;
+            line-height: 1.65;
             color: #e6edf3;
-            margin-top: 35px;
-        }
-        .copy-btn {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background-color: #238636;
-            color: #ffffff;
-            border: none;
-            border-radius: 4px;
-            padding: 6px 12px;
-            font-size: 13px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-        .copy-btn:hover {
-            background-color: #2ea043;
+            margin-top: 38px;
+            word-break: break-word;
         }
     </style>
 </head>
@@ -97,7 +112,7 @@
 
     <div class="header">
         <h1>最新行銷文案分享</h1>
-        <p>經銷商專用－分平台吸客推廣素材</p>
+        <p>經銷商專用 - 分平台吸客推廣素材</p>
     </div>
 
     <div class="notice-box">
@@ -109,85 +124,70 @@
         </ul>
     </div>
 
-    <!-- 1. LINE 專用文案 -->
+    <!-- 第一則文案 -->
     <div class="section-container">
-        <div class="section-title">LINE 專屬溫馨歡唱篇</div>
+        <div class="pill-tag">LINE 專屬溫馨歡唱篇</div>
         <div class="copy-box">
             <button class="copy-btn" onclick="copyText('text1', this)">複製文字</button>
             <div id="text1" class="textarea-content">【暑假家庭聚會首選！客廳一秒變身 VIP 歌友包廂 🎤】
 
 親愛的歌友們好！炎炎夏日報到，孩子們最期待的暑假也來囉！外面天氣熱烘烘，不如把全家人聚在一起，冷氣吹飽、點歌大唱特唱，才是最舒服的休閒娛樂！
 
-別讓家中老舊卡頓、畫質不清的點歌機壞了大家的歡唱興致！
-音圓【STAR-46 舊換新】限時活動熱烈進行中，只要拿家中任何品牌的老舊點歌機來店換購，立刻享有超值折抵優惠！
+別讓家中老舊卡頓、畫質不清的點歌機壞了大家的興致。音圓伴唱機擁有最清晰的曲庫與專業混音人聲，操作直覺好上手，大人小孩都能輕鬆點播自己愛唱的歌！
 
-同場加映：想要帶出門露營或戶外派對？【Party7000 獨立型行動點歌機】一機搞定音響與曲庫，提了就走、隨開隨唱！
+如果週末打算全家出遊烤肉或露營，同場推薦【音圓 Party7000 獨立型行動點歌機】，提了就走、隨開隨唱，走到哪都是全場歡樂焦點！
 
-📢 盛大電器展消息預告：
-7/31~8/3 在「桃園會展中心」（機捷 A19 站旁 / 樂天棒球場旁）舉辦電器展！音圓現場參展推出最強回饋，歡迎大家預留時間，邀請親朋好友一起到現場試聽體驗！
-
-來店體驗再享專屬好禮，有任何機種或配套問題，歡迎直接在 LINE 敲我詢問唷！
-
-📌 [店家名稱]
-🏠 地址：[請輸入地址]
-📞 預約試唱專線：[請輸入電話]
-
-#音圓電腦[請輸入您的區域] #STAR46 #舊換新 #Party7000 #暑假歡唱 #桃園會展中心 #電器展</div>
-        </div>
-    </div>
-
-    <!-- 2. FB 專用文案 -->
-    <div class="section-container">
-        <div class="section-title">FB 社群避暑升級篇</div>
-        <div class="copy-box">
-            <button class="copy-btn" onclick="copyText('text2', this)">複製文字</button>
-            <div id="text2" class="textarea-content">【高溫警報來襲！出門曬太陽，不如在家享受 STAR-46 震撼飆歌 🥵❄️】
-
-動不動就飆破高溫，出門塞車又怕曬？最聰明的避暑方案，就是把客廳老舊點歌機淘汰，換上音圓最新熱銷的【STAR-46】！
-
-音圓【STAR-46 舊換新】感恩企劃正式開跑！
-不管你家舊機是什麼品牌、幾年份，現在帶至店內換購 STAR-46，舊機直接折抵現金！馬上體驗玩家等級的專業音質與高畫質 MV，讓全家大小在家吹冷氣嗨翻天。
-
-聚會外帶神隊友推薦 🥳 同場強推【Party7000 獨立型行動點歌機】，免插複雜線路，提了就走！無論在室內還是戶外辦 Party，都能一秒嗨翻全場。
-
-🚀 7/31~8/3 電器展最強回饋！
-活動地點就在「桃園會展中心」（機捷 A19 站旁 / 樂天棒球場旁）！音圓現場參展獨家祭出超殺優惠，想親自體驗最新旗艦機款的強大震撼，千萬別錯過！
-
-想換掉家中舊機？歡迎私訊粉專或撥打專線，預約來店試唱體驗！
-
-📌 [店家名稱]
-🏠 地址：[請輸入地址]
-📞 預約試唱專線：[請輸入電話]
-
-#音圓電腦[請輸入您的區域] #STAR46 #舊換新 #Party7000 #桃園會展中心 #電器展 #機捷A19 #家庭劇院</div>
-        </div>
-    </div>
-
-    <!-- 3. IG 專用文案 -->
-    <div class="section-container">
-        <div class="section-title">IG / Threads 潮流戶外歡聚篇</div>
-        <div class="copy-box">
-            <button class="copy-btn" onclick="copyText('text3', this)">複製文字</button>
-            <div id="text3" class="textarea-content">夏天就是要開 Party 啦！☀️🎤
-
-放假聚會不知道去哪？把家裡客廳升級成頂級包廂就對了！
-音圓【STAR-46 舊換新】限時活動進行中！
-帶家裡舊機器來換，直接享有驚喜折扣，換一台專業音質點歌機爽唱整個暑假 🔥
-
-戶外控/露營咖必備 👇
-【Party7000 行動點歌機】內建大功率喇叭、專業曲庫，提了就走！走到哪裡，哪裡就是你的主場 ⛺️🎵
-
-👀 7/31~8/3 電器展最強回饋預告：
-展覽地點在「桃園會展中心」（機捷 A19 站旁 / 樂天棒球場旁）！
-音圓現場參展，想感受現場炸裂音效跟現場限定優惠，快跟朋友約起來～
-
-心動快小盒子私訊小編，或直接來店開嗓體驗吧！
+歡迎隨時私訊或來電預約，帶家人一起來店裡開嗓試唱體驗唷！
 
 📍 [店家名稱]
-🏠 [請輸入地址]
-📞 [請輸入電話]
+🏠 地址：[請輸入地址]
+📞 預約試唱專線：[請輸入電話]
 
-#音圓電腦 #音圓電腦[請輸入您的區域] #STAR46 #Party7000 #舊換新 #行動點歌機 #露營神器 #桃園會展中心 #機捷A19 #電器展 #唱歌 #KTV</div>
+#音圓電腦[請輸入您的區域] #音圓伴唱機 #Party7000 #家庭KTV #歡唱首選 #行動點歌機</div>
+        </div>
+    </div>
+
+    <!-- 第二則文案 -->
+    <div class="section-container">
+        <div class="pill-tag">FB/IG 週末消暑開唱篇</div>
+        <div class="copy-box">
+            <button class="copy-btn" onclick="copyText('text2', this)">複製文字</button>
+            <div id="text2" class="textarea-content">【週末消暑不踩雷！在家吹冷氣開唱，打造專屬私人歌劇院 🎵✨】
+
+天氣依然熱烘烘，放假不想出門人擠人曬太陽，最舒服的享受就是待在家吹冷氣、享受專屬頂級包廂！
+
+【音圓電腦伴唱機】操作簡單直覺，連長輩都能秒上手！高畫質畫面搭配專業音效處理，讓您在家開嗓就像在巨星舞台，唱得過癮又舒壓！
+
+不論是週末家庭聚會、朋友相約小酌，還是全家飯後娛樂，一機搞定所有歡樂時光。店內多款熱門機種展示中，現場備有專業試唱空間，歡迎隨時來店開嗓體驗！
+
+📍 [店家名稱]
+🏠 地址：[請輸入地址]
+📞 預約試唱專線：[請輸入電話]
+
+#音圓電腦[請輸入您的區域] #音圓伴唱機 #家庭劇院 #消暑首選 #客廳KTV #試唱體驗</div>
+        </div>
+    </div>
+
+    <!-- 第三則文案 -->
+    <div class="section-container">
+        <div class="pill-tag">社群限動中秋早鳥篇</div>
+        <div class="copy-box">
+            <button class="copy-btn" onclick="copyText('text3', this)">複製文字</button>
+            <div id="text3" class="textarea-content">【中秋烤肉歡唱早鳥預約！把客廳庭院一秒變身頂級包廂 🎤🌕】
+
+轉眼就要迎接大家最期待的中秋連假了！除了烤肉賞月，全家人聚在一起最不可或缺的重頭戲就是大聲開唱！
+
+想讓今年的中秋聚會比往年更嗨嗎？店內熱烈推薦【音圓電腦伴唱機】！擁有專業級的人聲混音與震撼音質，海量新歌與經典老歌隨點隨唱，大人小孩都能輕鬆同樂！
+
+如果中秋打算在庭院烤肉或戶外露營，同場推薦【音圓 Party7000 行動點歌機】，音響曲庫一體成型，提了就走、免拉繁雜電線，走到哪唱到哪！
+
+連假聚會不卡關，設備提前準備好！歡迎帶全家人來店免費試唱體驗，讓我們為您規劃最合適的家庭歡唱組合！
+
+📍 [店家名稱]
+🏠 地址：[請輸入地址]
+📞 預約試唱專線：[請輸入電話]
+
+#音圓電腦[請輸入您的區域] #Party7000 #中秋烤肉 #家庭KTV #行動點歌機 #歡聚開唱</div>
         </div>
     </div>
 
@@ -196,7 +196,7 @@
             var text = document.getElementById(elementId).innerText;
             navigator.clipboard.writeText(text).then(function() {
                 var originalText = btn.innerText;
-                btn.innerText = "✓ 複製成功";
+                btn.innerText = "✓ 已複製";
                 btn.style.backgroundColor = "#216e39";
                 setTimeout(function() {
                     btn.innerText = originalText;
